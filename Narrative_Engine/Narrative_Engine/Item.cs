@@ -32,15 +32,15 @@ public class Item
     public void pickUpItem(){
         if(!pickUp){
             pickUp = true;
-            owner.addItem(this);
+            owner.AddItemToInventory(this);
         }
     }
 
     //Cambio de dueño
     public void setOwner(Character newOwner){
-        owner.removeItem(this);
+        owner.RemoveItemFromInventory(this);
         this.owner = newOwner;
-        owner.addItem(this);
+        owner.AddItemToInventory(this);
     }
 
 }
