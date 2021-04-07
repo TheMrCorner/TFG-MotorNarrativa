@@ -1,9 +1,8 @@
 public class Item
 {
-    public Item(string name, ItemType type, bool pickedUp, bool used, Character character){
+    public Item(string name, ItemType type, bool used, Character character){
         this.type = type;
         this.itemName = name;
-        this.pickUp = pickedUp;
         this.used = used;
         this.owner = character;
     } 
@@ -15,32 +14,25 @@ public class Item
     }
     
     //Nombre del objeto
-    public string itemName;
+    private string itemName;
     //Tipo clave o consumible
-    public ItemType type;
-    //Está en el invetario
-    public bool pickUp;
+    private ItemType type;
+ 
     //Usado o Consumido
-    public bool used;
+    private bool used;
     //Poseedor
-    public Character owner;
+    private Character owner;
 
     //Funcion de efecto
     public virtual void Effect(){}
 
-    //Add Inventory
-    public void pickUpItem(){
-        if(!pickUp){
-            pickUp = true;
-            owner.AddItemToInventory(this);
-        }
+    //Get owner
+    public Character getOwner(){
+        return owner;
     }
 
     //Cambio de dueño
     public void setOwner(Character newOwner){
-        owner.RemoveItemFromInventory(this);
         this.owner = newOwner;
-        owner.AddItemToInventory(this);
     }
-
 }
