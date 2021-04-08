@@ -14,12 +14,12 @@ namespace Narrative_Engine
 
     public class Node
     {
-        public int character;
+        public Character character;
         public int nextNode;
         public string text;
         public Option[] options;
 
-        public int GetCharacter()
+        public Character GetCharacter()
         {
             return character;
         } // GetCharacter
@@ -37,12 +37,12 @@ namespace Narrative_Engine
 
     class Dialog
     {
+        public Character initCharacter; // Character that initializes the dialog
         public bool rewarded = true;
-        public Node[] nodeList; 
+        public Node[] nodeList;
 
-        public bool GetRewarded()
-        {
-            return rewarded;
-        } // GetRewarded
+        public bool GetRewarded() => rewarded;
+
+        public Character GetCharacter() => initCharacter;
     } // Dialog
 } // namespace
