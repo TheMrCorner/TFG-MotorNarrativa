@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30320.27
+VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narrative_Engine", "Narrative_Engine\Narrative_Engine.csproj", "{0EF6FEC0-D542-4887-9944-E4EB405ECCF0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narrative_Engine", "Narrative_Engine\Narrative_Engine.csproj", "{34923D6A-317A-430C-AB95-D666BA526BB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0EF6FEC0-D542-4887-9944-E4EB405ECCF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0EF6FEC0-D542-4887-9944-E4EB405ECCF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0EF6FEC0-D542-4887-9944-E4EB405ECCF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0EF6FEC0-D542-4887-9944-E4EB405ECCF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34923D6A-317A-430C-AB95-D666BA526BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34923D6A-317A-430C-AB95-D666BA526BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34923D6A-317A-430C-AB95-D666BA526BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34923D6A-317A-430C-AB95-D666BA526BB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BF79F75A-46AC-42D3-B157-F633A6BF5942}
+		SolutionGuid = {4ECDDA70-DECE-465A-860F-4C7E2DB293A7}
 	EndGlobalSection
 EndGlobal
