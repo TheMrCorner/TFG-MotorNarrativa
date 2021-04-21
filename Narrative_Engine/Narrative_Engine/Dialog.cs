@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    public class Option
+    class Option
     {
         public int nextNode;
         public string text;
     } // Option
 
-    public class Node
+    class Node
     {
         public Character character;
         public int nextNode;

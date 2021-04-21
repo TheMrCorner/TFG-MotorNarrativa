@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 
 namespace Narrative_Engine
 {
-    class FileManager
+    public class FileManager
     {
         static FileManager s_instance;
 

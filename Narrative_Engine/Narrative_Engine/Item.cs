@@ -9,7 +9,7 @@ namespace Narrative_Engine
     class Item
     {
         public Item(string name, ItemType type, bool used, Character character){
-            this.type = type;
+            this.Type = type;
             this.itemName = name;
             this.used = used;
             this.owner = character;
@@ -30,6 +30,8 @@ namespace Narrative_Engine
         private bool used;
         //Poseedor
         private Character owner;
+
+        internal ItemType Type { get => type; set => type = value; }
 
         //Funcion de efecto
         public virtual void Effect(){}

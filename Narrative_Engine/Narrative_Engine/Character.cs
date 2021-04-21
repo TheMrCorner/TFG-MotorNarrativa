@@ -16,7 +16,7 @@ namespace Narrative_Engine
         }
 
         private string characterName;
-        // private Place place;
+        private Place place;
         private CharacterType type;
         private Dictionary<Item.ItemType, List<Item>> inventory;
         // List<Dialog> dialogs; TODO
@@ -38,7 +38,7 @@ namespace Narrative_Engine
         public Place GetPlace() => place;
         public CharacterType GetCharacterType() => type;
         public void SetPlace(Place place) => this.place = place;
-        public void AddItemToInventory(Item item) => inventory[item.type].Add(item);
-        public void RemoveItemFromInventory(Item item) => inventory[item.type].Remove(item);
+        public void AddItemToInventory(Item item) => inventory[item.Type].Add(item);
+        public void RemoveItemFromInventory(Item item) => inventory[item.Type].Remove(item);
     }
 }

@@ -3,5 +3,25 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Characters\**" />
+    <Compile Remove="Dialogs\**" />
+    <Compile Remove="Items\**" />
+    <Compile Remove="Places\**" />
+    <Compile Remove="Stories\**" />
+    <EmbeddedResource Remove="Characters\**" />
+    <EmbeddedResource Remove="Dialogs\**" />
+    <EmbeddedResource Remove="Items\**" />
+    <EmbeddedResource Remove="Places\**" />
+    <EmbeddedResource Remove="Stories\**" />
+    <None Remove="Characters\**" />
+    <None Remove="Dialogs\**" />
+    <None Remove="Items\**" />
+    <None Remove="Places\**" />
+    <None Remove="Stories\**" />
+  </ItemGroup>
 
 </Project>
