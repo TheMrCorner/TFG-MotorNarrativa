@@ -80,6 +80,11 @@ namespace Narrative_Engine
 
         public void makeExampleFiles()
         {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+            };
+
             List<Story> example_stories = new List<Story>();
 
             example_stories.Add(new Story(StoryType.SECONDARY));
@@ -111,11 +116,11 @@ namespace Narrative_Engine
             example_places.Add("Tower of Salvation", new Place("Tower of Salvation", towerPlaces));
 
 
-            var jsonString = JsonSerializer.Serialize(example_characters);
+            var jsonString = JsonSerializer.Serialize(example_characters, options);
             File.WriteAllText("Example_characters.json", jsonString);
 
 
-            jsonString = JsonSerializer.Serialize(example_places);
+            jsonString = JsonSerializer.Serialize(example_places, options);
             File.WriteAllText("Example_places.json", jsonString);
         }
     }

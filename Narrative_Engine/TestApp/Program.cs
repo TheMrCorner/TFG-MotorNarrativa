@@ -8,7 +8,7 @@ namespace TestApp
         static void Main(string[] args)
         {
             FileManager fileManager = new FileManager("Stories", "Dialogs", "Characters\\Characters.json", "Items", "Places");
-            fileManager.readFiles();
+            fileManager.makeExampleFiles();
             return;
         }
     }

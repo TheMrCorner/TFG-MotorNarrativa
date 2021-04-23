@@ -9,7 +9,7 @@ namespace Narrative_Engine
     class Place
     {
         public string m_name { get; }
-        public List<string> m_adjacentPlacesNames;
+        public List<string> m_adjacentPlacesNames { get; }
         List<Place> m_adjacentPlaces;
         public List<string> m_itemsFound;
 
