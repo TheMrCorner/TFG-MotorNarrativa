@@ -1,0 +1,101 @@
+{
+  "Fyrst": {
+    "m_name": "Fyrst",
+    "m_adjacentPlacesNames": [
+      "Ruta_1",
+      "Ayuntamiento_Fyrst",
+	  "Tienda_Fyrst",
+	  "Casa_1_Fyrst",
+	  "Casa_2_Fyrst"
+    ]
+  },
+  "Casa_1_Fyrst": {
+    "m_name": "Casa_1_Fyrst",
+    "m_adjacentPlacesNames": [
+		"Fyrst"
+	]
+  },
+  "Casa_2_Fyrst": {
+    "m_name": "Casa_2_Fyrst",
+    "m_adjacentPlacesNames": [
+		"Fyrst"
+	]
+  },
+  "Tienda_Fyrst": {
+    "m_name": "Tienda_Fyrst",
+    "m_adjacentPlacesNames": [
+		"Fyrst"
+	]
+  },
+  "Ayuntamiento_Fyrst": {
+    "m_name": "Ayuntamiento_Fyrst",
+    "m_adjacentPlacesNames": [
+		"Fyrst"
+	]
+  },
+  "Dara": {
+    "m_name": "Dara",
+    "m_adjacentPlacesNames": [
+      "Ruta_1",
+      "Ruta_2",
+      "Ayuntamiento_Dara",
+      "Tienda_Dara",
+	  "Casa_1_Dara",
+	  "Casa_2_Dara"
+    ]
+  },
+  "Casa_1_Dara": {
+    "m_name": "Casa_1_Dara",
+    "m_adjacentPlacesNames": [
+		"Dara"
+	]
+  },
+  "Casa_2_Dara": {
+    "m_name": "Casa_2_Dara",
+    "m_adjacentPlacesNames": [
+		"Dara"
+	]
+  },
+  "Tienda_Dara": {
+    "m_name": "Tienda_Dara",
+    "m_adjacentPlacesNames": [
+		"Dara"
+	]
+  },
+  "Ayuntamiento_Dara": {
+    "m_name": "Ayuntamiento_Dara",
+    "m_adjacentPlacesNames": [
+		"Dara",
+		"Mazmorra_1"
+	]
+  },
+  "Ruta_1": {
+    "m_name": "Ruta_1",
+    "m_adjacentPlacesNames": [
+		"Fyrst",
+		"Dara",
+		"Cueva_1"
+	]
+  },
+  "Ruta_2": {
+	"m_name": "Ruta_2",
+	"m_adjacentPlacesNames": [
+		"Dara",
+		"Bosque_1"
+	]
+  },
+  "Cueva_1": {
+    "m_name": "Cueva_1",
+    "m_adjacentPlacesNames": [
+		"Ruta_1",
+		"Mazmorra_1"
+	]
+  },
+  "Mazmorra_1": {
+    "m_name": "Mazmorra_1",
+    "m_adjacentPlacesNames": [
+		"Cueva_1",
+		"Ayuntamiento_Dara"
+	]
+  },
+}
