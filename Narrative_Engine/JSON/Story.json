@@ -1,6 +1,6 @@
 {
   "StoryP1": {
-    "type": "",
+    "type": 0,
     "chapters": [
       "chapter1_P1",
       "chapter2_P1",
@@ -8,7 +8,7 @@
     ]
   },
   "StoryS1": {
-    "type": "",
+    "type": 1,
     "chapters": [
       "chapter1_S1",
       "chapter2_S1",
@@ -16,14 +16,14 @@
     ]
   },
   "StoryS2": {
-    "type": "",
+    "type": 1,
     "chapters": [
       "chapter1_S2",
       "chapter2_S2"
     ]
   },
   "StoryS3": {
-    "type": "",
+    "type": 1,
     "chapters": [
       "chapter1_S3"
     ]

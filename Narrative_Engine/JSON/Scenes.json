@@ -58,31 +58,183 @@
   "scene2_C3_P1": {
     "id": "scene2_C3_P1",
     "place": "Ruta_2"
-	"next": "scene2_C3_P1",
+	"next": "",
 	"dialogues": [
 		""
 	]
   },
-    "scene1_C1_S1": {
+  "scene1_C1_S1": {
     "id": "scene1_C1_S1",
-    "place": "Ruta_2"
+    "place": "Ayuntamiento_Fyrst"
 	"next": "scene2_C1_S1",
 	"dialogues": [
 		""
 	]
   },
-    "scene2_C1_S1": {
-    "id": "scene2_C1_P1",
-    "place": "Ruta_2"
-	"next": "scene2_C1_S1",
+  "scene2_C1_S1": {
+    "id": "scene2_C1_S1",
+    "place": "Ruta_1"
+	"next": "scene3_C1_S1",
 	"dialogues": [
 		""
 	]
   },
-    "scene3_C1_S1": {
-    "id": "scene2_C1_P1",
-    "place": "Ruta_2"
-	"next": "scene2_C1_S1",
+  "scene3_C1_S1": {
+    "id": "scene3_C1_S1",
+    "place": "Cueva_1"
+	"next": "",
+	"dialogues": [
+		""
+	]
+  },
+  "scene1_C2_S1": {
+    "id": "scene1_C2_S1",
+    "place": "Mazmorra_1"
+	"next": "scene2_C2_S1",
+	"dialogues": [
+		""
+	]
+  },
+  "scene2_C2_S1": {
+    "id": "scene2_C2_S1",
+    "place": "Sala_M_1"
+	"next": "scene3_C2_S1",
+	"dialogues": [
+		""
+	]
+  },
+  "scene3_C2_S1": {
+    "id": "scene3_C2_S1",
+    "place": "Sala_M_3"
+	"next": "",
+	"dialogues": [
+		""
+	]
+  },
+  "scene1_C3_S1": {
+    "id": "scene1_C3_S1",
+    "place": "Dara"
+	"next": "scene2_C3_S1",
+	"dialogues": [
+		""
+	]
+  },
+  "scene2_C3_S1": {
+    "id": "scene2_C3_S1",
+    "place": "Casa_2_Dara"
+	"next": "",
+	"dialogues": [
+		""
+	]
+  },
+  "scene1_C1_S2": {
+    "id": "scene1_C1_S2",
+    "place": "Fyrst"
+	"next": "scene2_C1_S2",
+	"dialogues": [
+		""
+	]
+  },
+  "scene2_C1_S2": {
+    "id": "scene2_C1_S2",
+    "place": "Taberna_Fyrst"
+	"next": "scene3_C1_S2",
+	"dialogues": [
+		""
+	]
+  },
+  "scene3_C1_S2": {
+    "id": "scene3_C1_S2",
+    "place": "Ruta_1"
+	"next": "scene4_C1_S2",
+	"dialogues": [
+		""
+	]
+  },
+  "scene4_C1_S2": {
+    "id": "scene4_C1_S2",
+    "place": "Dara"
+	"next": "",
+	"dialogues": [
+		""
+	]
+  },
+  "scene1_C2_S2": {
+    "id": "scene1_C2_S2",
+    "place": "Bosque_1"
+	"next": "",
+	"dialogues": [
+		""
+	]
+  },
+  "scene1_C1_S3": {
+    "id": "scene1_C1_S3",
+    "place": "Fyrst"
+	"next": "scene2_C1_S3",
+	"dialogues": [
+		""
+	]
+  },
+  "scene2_C1_S3": {
+    "id": "scene2_C1_S3",
+    "place": "Ruta_1"
+	"next": "scene3_C1_S3",
+	"dialogues": [
+		""
+	]
+  },
+  "scene3_C1_S3": {
+    "id": "scene3_C1_S3",
+    "place": "Dara"
+	"next": "scene4_C1_S3",
+	"dialogues": [
+		""
+	]
+  },
+  "scene4_C1_S3": {
+    "id": "scene4_C1_S3",
+    "place": "Taberna_Dara"
+	"next": "scene5_C1_S3",
+	"dialogues": [
+		""
+	]
+  },
+  "scene5_C1_S3": {
+    "id": "scene5_C1_S3",
+    "place": "Cueva_1"
+	"next": "scene6_C1_S3",
+	"dialogues": [
+		""
+	]
+  },
+  "scene6_C1_S3": {
+    "id": "scene6_C1_S3",
+    "place": "Mazmorra_1"
+	"next": "scene7_C1_S3",
+	"dialogues": [
+		""
+	]
+  },
+  "scene7_C1_S3": {
+    "id": "scene7_C1_S3",
+    "place": "Mazmorra_1"
+	"next": "scene8_C1_S3",
+	"dialogues": [
+		""
+	]
+  },
+  "scene8_C1_S3": {
+    "id": "scene8_C1_S3",
+    "place": "Bosque_1"
+	"next": "scene9_C1_S3",
+	"dialogues": [
+		""
+	]
+  },
+  "scene9_C1_S3": {
+    "id": "scene9_C1_S3",
+    "place": "Fyrst"
+	"next": "",
 	"dialogues": [
 		""
 	]

@@ -4,71 +4,62 @@
     "scenes": [
 		""
     ],
-	"origin": "",
-	"destiny": "chapter1_P2"
+	"next": "chapter2_P1"
   },
   "chapter2_P1": {
     "id": "chapter2_P1",
     "scenes": [
 		""
     ],
-	"origin": "chapter1_P1",
-	"destiny": "chapter3_P2"
+	"next": "chapter3_P1"
   },
   "chapter3_P1": {
     "id": "chapter3_P1",
     "scenes": [
 		""
     ],
-	"origin": "chapter2_P1",
-	"destiny": "chapter3_P1"
+	"next": ""
   },
   "chapter1_S1": {
     "id": "chapter1_S1",
     "scenes": [
 		""
     ],
-	"origin": "chapter1_S1",
-	"destiny": "chapter2_S1"
+	"next": "chapter2_S1"
   },
   "chapter2_S1": {
     "id": "chapter2_S1",
     "scenes": [
 		""
     ],
-	"origin": "chapter1_S1",
-	"destiny": "chapter3_S1"
+	"next": "chapter3_S1"
   },
   "chapter3_S1": {
     "id": "chapter3_S1",
     "scenes": [
 		""
     ],
-	"origin": "chapter2_S1",
-	"destiny": "chapter3_S1"
+	"next": ""
   },
   "chapter1_S2": {
     "id": "chapter1_S2",
     "scenes": [
 		""
     ],
-	"origin": "chapter1_S2",
-	"destiny": "chapter2_S2"
+	"next": "chapter2_S2"
   },
   "chapter2_S2": {
     "id": "chapter2_S2",
     "scenes": [
 		""
     ],
-	"origin": "chapter1_S2",
-	"destiny": "chapter2_S2"
+	"next": ""
   },
   "chapter1_S3": {
     "id": "chapter1_S3",
     "scenes": [
 		""
     ],
-	"origin": "chapter1_S3",
-	"destiny": "chapter1_S3"
+	"next": ""
   }
 }
