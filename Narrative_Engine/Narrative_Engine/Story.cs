@@ -14,7 +14,7 @@ namespace Narrative_Engine
     class Story
     {
         public readonly StoryType m_storyType;
-        // private List<Quest> m_quests;
+        private List<Quest> m_quests;
 
         public Story(StoryType type)
         {

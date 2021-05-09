@@ -22,7 +22,7 @@ namespace Narrative_Engine
         private Dictionary<string, Tuple<Dialog, bool>> dialogMap;
         private NarrativeEngine listener; // Control and comms
 
-        private 
+        
 
         public DialogController(NarrativeEngine ne, FileManager man)
         {
