@@ -24,10 +24,12 @@ namespace Narrative_Engine
 
         public DialogController(NarrativeEngine ne, FileManager man)
         {
-            dialogMap = new Dictionary<Dialog, bool>();
+            dialogMap = new Dictionary<string, Tuple<Dialog, bool>>();
 
             // TODO: Maybe using the name of the file...
-            List<Dialog> readDialogs = man.readFiles(); // Future version etc.
+            // Search for all available files of dialog and generate a list with the names and paths
+            // to those files.
+            List<Dialog> readDialogs = null; // Future version etc.
 
             foreach(Dialog d in readDialogs)
             {
@@ -54,7 +56,7 @@ namespace Narrative_Engine
 
         public void DialogEnded(string d)
         {
-            dialogMap[d].Item2;
+            Tuple<Dialog, bool> diag = dialogMap[d];
 
             // Notify Engine to update scenes and quests
         } // Dialog Ended

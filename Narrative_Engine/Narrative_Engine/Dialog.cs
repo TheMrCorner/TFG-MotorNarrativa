@@ -13,6 +13,14 @@
         public string text;
         public Option[] options;
 
+        public Node(Character c, int next, string tx, Option[] opts)
+        {
+            character = c;
+            nextNode = next;
+            text = tx;
+            options = opts;
+        }
+
         public Character GetCharacter()
         {
             return character;
@@ -27,6 +35,8 @@
         {
             return options.Length;
         } // GetNumOptions
+
+        public string GetText() => text;
     } // Node
 
     class Dialog
@@ -35,8 +45,16 @@
         public bool rewarded = true;
         public Node[] nodeList;
 
+        public Dialog(Character init, Node[] list)
+        {
+            initCharacter = init;
+            nodeList = list;
+        }
+
         public bool GetRewarded() => rewarded;
 
         public Character GetCharacter() => initCharacter;
+
+        public Node[] GetNodes() => nodeList;
     } // Dialog
 } // namespace

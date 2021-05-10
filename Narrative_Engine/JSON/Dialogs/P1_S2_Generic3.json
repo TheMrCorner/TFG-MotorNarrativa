@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    {
+      "character": 6,
+      "emotion": 2,
+      "nextNode": -2,
+      "text": "La taberna está hoy hasta arriba, corren rumores de que Dana ha organizado algo con toda esa gente.",
+      "options": []
+    }
+  ]
+}

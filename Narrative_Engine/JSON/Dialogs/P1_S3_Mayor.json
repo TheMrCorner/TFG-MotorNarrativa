@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    {
+      "character": 6,
+      "emotion": 2,
+      "nextNode": -2,
+      "text": "El alcalde parecía bastante nervioso esta mañana.",
+      "options": []
+    }
+  ]
+}

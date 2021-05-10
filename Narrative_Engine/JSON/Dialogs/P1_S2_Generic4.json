@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    {
+      "character": 6,
+      "emotion": 2,
+      "nextNode": -2,
+      "text": "Pobre Jaste, lleva buscando a su padre días, creo que iba a pedir ayuda al alcalde y los alguaciles.",
+      "options": []
+    }
+  ]
+}

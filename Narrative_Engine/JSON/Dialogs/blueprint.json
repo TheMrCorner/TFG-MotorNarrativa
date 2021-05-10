@@ -1,0 +1,39 @@
+Con opciones
+{
+    "character": 1,
+    "emotion": 2,
+    "nextNode": -1,
+    "text": "Esto es un texto de prueba. No le presteis atención.",
+    "options": [
+      {
+        "nodePtr": 1,
+        "text": "Esto es una opción. 1"
+      },
+      {
+        "nodePtr": 2,
+        "text": "Esto es una opción. 2"
+      },
+      {
+        "nodePtr": 3,
+        "text": "Esto es una opción. 3"
+      }
+    ]
+  }
+
+  Sin opciones
+  {
+    "character": 1,
+    "emotion": 2,
+    "nextNode": 4,
+    "text": "Vaya, más textos de prueba.",
+    "options": []
+  }
+
+  Nodo final
+  {
+    "character": 1,
+    "emotion": 2,
+    "nextNode": -2,
+    "text": "The second secret you found, you may now be a jedi",
+    "options": []
+  }

@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "character": 2,
+      "emotion": 2,
+      "nextNode": -1,
+      "text": "Buenos días, despierte de una vez. ",
+      "options": [
+        {
+          "nodePtr": 1,
+          "text": "Déjeme dormir, necesito descansar."
+        },
+        {
+          "nodePtr": 2,
+          "text": "Podría haber llamado a la puerta."
+        },
+        {
+          "nodePtr": 3,
+          "text": "¿Qué pasa?"
+        }
+      ]
+    },
+    {
+      "character": 2,
+      "emotion": 2,
+      "nextNode": 4,
+      "text": "No es momento para dormir, el alcalde le requiere.",
+      "options": []
+    },
+    {
+      "character": 2,
+      "emotion": 2,
+      "nextNode": 4,
+      "text": "Estaba abierta así que he pasado. Dese prisa el alcalde le requiere.",
+      "options": []
+    },
+    {
+      "character": 2,
+      "emotion": 2,
+      "nextNode": 4,
+      "text": "El alcalde requiere de su presencia en el ayuntamiento inmediatamente.",
+      "options": []
+    },
+    {
+      "character": 1,
+      "emotion": 2,
+      "nextNode": -2,
+      "text": "Qué querrá ese viejo ahora... Vale, iré, pero déjeme vestirme en paz.",
+      "options": []
+    }
+  ]
+}
