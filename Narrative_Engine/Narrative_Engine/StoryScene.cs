@@ -14,13 +14,17 @@ namespace Narrative_Engine
         public StoryScene[] nextScene; // This is set for different story branching and etc.
         public bool consumed;
 
-        public StoryScene(Character[] c, Place p, Dialog[] d, StoryScene[] next)
+        public string m_id { get; }
+        public string m_place { get; }
+        public string m_next { get; }
+        public List<string> m_dialogs { get; }
+
+        public StoryScene(string m_id, string m_place, string m_next, List<string> m_dialogs)
         {
-            characters = c;
-            place = p;
-            dialogs = d;
-            nextScene = next;
-            consumed = false;
+            this.m_id = m_id;
+            this.m_place = m_place;
+            this.m_next = m_next;
+            this.m_dialogs = m_dialogs;
         } // Constructor
 
         /// <summary>

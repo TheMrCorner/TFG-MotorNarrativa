@@ -13,12 +13,13 @@ namespace Narrative_Engine
         private Place destination;
         private List<StoryScene> scenes;
 
-        public Quest(Place origin, Place destination, List<StoryScene> scenes)
+		public string m_id { get; }
+        public List<string> m_scenes { get; }
+
+        public Quest(string m_id, List<string>m_scenes)
         {
-            currentScene = 0;
-            this.origin = origin;
-            this.destination = destination;
-            this.scenes = scenes;
+            this.m_id = m_id;
+            this.m_scenes = m_scenes;
         }
 
         public StoryScene GetCurrentScene()

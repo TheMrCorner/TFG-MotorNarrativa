@@ -24,7 +24,7 @@ namespace Narrative_Engine
 
         public DialogController(NarrativeEngine ne, FileManager man)
         {
-            dialogMap = new Dictionary<string, Tuple<Dialog, bool>>();
+            dialogMap = new Dictionary<Dialog, bool>();
 
             // TODO: Maybe using the name of the file...
             // Search for all available files of dialog and generate a list with the names and paths
@@ -34,7 +34,7 @@ namespace Narrative_Engine
             foreach(Dialog d in readDialogs)
             {
                 dialogMap.Add(d.GetCharacter().GetCharacterName(), new Tuple<Dialog, bool>(d, false));
-            } // foreach
+            } // foreach*/
         } // Constructor
 
         public Dialog GetDialog(string d)

@@ -7,10 +7,9 @@ namespace TestApp
     {
         static void Main(string[] args)
         {
-            FileManager fileManager = new FileManager("Stories", "Dialogs", "Characters\\Characters.json", "Items", "Places");
-            //fileManager.makeExampleFiles();
-
-            Console.WriteLine("Loaded");
+            FileManager fileManager = new FileManager("Story.json", "Chapters.json", "Scenes.json", "Dialogs.json", "Characters.json", "Items.json", "Place.json");
+            fileManager.makeExampleFiles();
+			//fileManager.readFiles();
             return;
         }
     }

@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    class Place
+    public class Place
     {
         public string m_name { get; }
         public List<string> m_adjacentPlacesNames { get; }
         List<Place> m_adjacentPlaces;
         public List<string> m_itemsFound;
 
-        public Place(string name, List<string> adjacentPlacesNames)
+        public Place(string m_name, List<string> m_adjacentPlacesNames)
         {
-            m_name = name;
-            m_adjacentPlacesNames = adjacentPlacesNames;
+           this.m_name = m_name;
+           this.m_adjacentPlacesNames = m_adjacentPlacesNames;
         }
 
         public void searchAdjacent(Dictionary<string, Place> places)
