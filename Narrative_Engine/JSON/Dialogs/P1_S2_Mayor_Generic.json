@@ -1,0 +1,11 @@
+{
+  "nodes": [
+    {
+      "character": 2,
+      "emotion": 2,
+      "nextNode": -2,
+      "text": "Venga, sal hacia Dara que tengo a mi amigo esperando.",
+      "options": []
+    }
+  ]
+}
