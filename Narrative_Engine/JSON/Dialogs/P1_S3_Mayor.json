@@ -75,8 +75,63 @@
     {
       "character": 0,
       "emotion": 2,
-      "nextNode": 9,
+      "nextNode": 10,
       "text": "Por cierto, si puedes evitar preguntas incómodas y hablar del caliz con quien sea, mucho mejor.",
+      "options": []
+    },
+    {
+      "character": 0,
+      "emotion": 2,
+      "nextNode": -1,
+      "text": "Tienes alguna duda?",
+      "options": [
+        {
+          "nodePtr": 14,
+          "text": "No"
+        },
+        {
+          "nodePtr": 11,
+          "text": "¿Para qué habías dicho que servía el cáliz?"
+        }
+      ]
+    },
+    {
+      "character": 0,
+      "emotion": 2,
+      "nextNode": 10,
+      "text": "No lo he dicho... es verdad. Pero tampoco es algo que necesites conocer, por ahora.",
+      "options": [
+        {
+          "nodePtr": 14,
+          "text": "Vale."
+        },
+        {
+          "nodePtr": 13,
+          "text": "Pero si es tan importante..."
+        }
+      ]
+    },
+    {
+      "character": 2,
+      "emotion": 2,
+      "nextNode": -1,
+      "text": "Por eso mismo, hay prisa. Ya te lo explicaré cuando vuelvas.",
+      "options": [
+        {
+          "nodePtr": 14,
+          "text": "Vale."
+        },
+        {
+          "nodePtr": 14,
+          "text": "Bueno... vale."
+        }
+      ]
+    },
+    {
+      "character": 2,
+      "emotion": 2,
+      "nextNode": -2,
+      "text": "Perfecto entonces, sal en cuanto puedas. Y ten mucho cuidado.",
       "options": []
     }
   ]
