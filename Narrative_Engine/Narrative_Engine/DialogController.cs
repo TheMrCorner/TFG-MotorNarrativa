@@ -22,8 +22,6 @@ namespace Narrative_Engine
         private Dictionary<string, Tuple<Dialog, bool>> dialogMap;
         private NarrativeEngine listener; // Control and comms
 
-        
-
         public DialogController(NarrativeEngine ne, FileManager man)
         {
             /*dialogMap = new Dictionary<Dialog, bool>();
@@ -56,7 +54,11 @@ namespace Narrative_Engine
 
         public void DialogEnded(string d)
         {
+<<<<<<< HEAD
             //dialogMap[d].Item2 = true;
+=======
+            dialogMap[d].Item2;
+>>>>>>> 875e5ded8cf84d96d8e0fc0270e9c8aebd7d01fc
 
             // Notify Engine to update scenes and quests
         } // Dialog Ended
