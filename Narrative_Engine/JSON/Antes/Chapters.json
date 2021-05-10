@@ -1,7 +1,7 @@
-[
-  {
-    "m_id": "chapter1_P1",
-    "m_scenes": [
+{
+  "chapter1_P1": {
+    "id": "chapter1_P1",
+    "scenes": [
 		"scene1_C1_P1",
 		"scene2_C1_P1",
 		"scene3_C1_P1",
@@ -9,51 +9,51 @@
     ],
 	"next": "chapter2_P1"
   },
-  {
-    "m_id": "chapter2_P1",
-    "m_scenes": [
+  "chapter2_P1": {
+    "id": "chapter2_P1",
+    "scenes": [
 		"scene1_C2_P1",
 		"scene2_C2_P1"
     ],
 	"next": "chapter3_P1"
   },
-  {
-    "m_id": "chapter3_P1",
-    "m_scenes": [
+  "chapter3_P1": {
+    "id": "chapter3_P1",
+    "scenes": [
 		"scene1_C3_P1",
 		"scene2_C3_P1"
     ],
 	"next": ""
   },
-  {
-    "m_id": "chapter1_S1",
-    "m_scenes": [
+  "chapter1_S1": {
+    "id": "chapter1_S1",
+    "scenes": [
 		"scene1_C1_S1",
 		"scene2_C1_S1",
 		"scene3_C1_S1"
     ],
 	"next": "chapter2_S1"
   },
-  {
-    "m_id": "chapter2_S1",
-    "m_scenes": [
+  "chapter2_S1": {
+    "id": "chapter2_S1",
+    "scenes": [
 		"scene1_C2_S1",
 		"scene2_C2_S1",
 		"scene3_C2_S1"
     ],
 	"next": "chapter3_S1"
   },
-  {
-    "m_id": "chapter3_S1",
-    "m_scenes": [
+  "chapter3_S1": {
+    "id": "chapter3_S1",
+    "scenes": [
 		"scene1_C3_S1",
 		"scene2_C3_S1"
     ],
 	"next": ""
   },
-  {
-    "m_id": "chapter1_S2",
-    "m_scenes": [
+  "chapter1_S2": {
+    "id": "chapter1_S2",
+    "scenes": [
 		"scene1_C1_S2",
 		"scene2_C1_S2",
 		"scene3_C1_S2",
@@ -61,16 +61,16 @@
     ],
 	"next": "chapter2_S2"
   },
-  {
-    "m_id": "chapter2_S2",
-    "m_scenes": [
+  "chapter2_S2": {
+    "id": "chapter2_S2",
+    "scenes": [
 		"scene1_C2_S2"
     ],
 	"next": ""
   },
-  {
-    "m_id": "chapter1_S3",
-    "m_scenes": [
+  "chapter1_S3": {
+    "id": "chapter1_S3",
+    "scenes": [
 		"scene1_C1_S3",
 		"scene2_C1_S3",
 		"scene3_C1_S3",
@@ -83,4 +83,4 @@
     ],
 	"next": ""
   }
-]
+}

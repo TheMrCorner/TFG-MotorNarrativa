@@ -26,7 +26,7 @@ namespace Narrative_Engine
 
         public DialogController(NarrativeEngine ne, FileManager man)
         {
-            dialogMap = new Dictionary<Dialog, bool>();
+            /*dialogMap = new Dictionary<Dialog, bool>();
 
             // TODO: Maybe using the name of the file...
             List<Dialog> readDialogs = man.readFiles(); // Future version etc.
@@ -34,7 +34,7 @@ namespace Narrative_Engine
             foreach(Dialog d in readDialogs)
             {
                 dialogMap.Add(d.GetCharacter().GetCharacterName(), new Tuple<Dialog, bool>(d, false));
-            } // foreach
+            } // foreach*/
         } // Constructor
 
         public Dialog GetDialog(string d)
@@ -56,7 +56,7 @@ namespace Narrative_Engine
 
         public void DialogEnded(string d)
         {
-            dialogMap[d].Item2 = true;
+            //dialogMap[d].Item2 = true;
 
             // Notify Engine to update scenes and quests
         } // Dialog Ended

@@ -16,9 +16,12 @@ namespace Narrative_Engine
         public readonly StoryType m_storyType;
         private List<Quest> m_quests;
 
-        public Story(StoryType type)
+        public List<string> m_chapters;
+
+        public Story(StoryType m_storyType, List<string> m_chapters)
         {
-            m_storyType = type;
-        }     
+            this.m_storyType = m_storyType;
+            this.m_chapters = m_chapters;
+        }    
     }
 }

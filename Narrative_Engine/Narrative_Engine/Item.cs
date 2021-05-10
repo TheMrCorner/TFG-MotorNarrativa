@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    class Item
+    public class Item
     {
-        public Item(string name, ItemType type, bool used, Character character){
-            this.Type = type;
+        public Item(string name){
+            //this.Type = type;
             this.itemName = name;
-            this.used = used;
-            this.owner = character;
+            //this.used = used;
+            //this.owner = character;
         } 
 
         public enum ItemType
@@ -36,14 +36,6 @@ namespace Narrative_Engine
         //Funcion de efecto
         public virtual void Effect(){}
 
-        //Get owner
-        public Character getOwner(){
-            return owner;
-        }
 
-        //Cambio de dueño
-        public void setOwner(Character newOwner){
-            this.owner = newOwner;
-        }
     }
 }

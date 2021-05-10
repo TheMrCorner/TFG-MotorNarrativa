@@ -19,6 +19,8 @@ namespace Narrative_Engine
         string m_charactersPath;
         string m_itemsPath;
         string m_placesPath;
+        string m_chaptersPath;
+        string m_scenesPath;
 
         List<Story> m_stories;
         List<Dialog> m_dialogues;
@@ -26,14 +28,18 @@ namespace Narrative_Engine
         List<string> m_items;
 
         Dictionary<string, Place> m_places;
+        Dictionary<string, Quest> m_chapters;
+        Dictionary<string, StoryScene> m_storyScenes;
 
-        public FileManager(string storyFolder, string dialogFolder, string charactersPath, string itemsPath, string placesPath)
+        public FileManager(string storyFolder, string chapterPath, string scenePath, string dialogFolder, string charactersPath, string itemsPath, string placesPath)
         {
             m_storyFolder = storyFolder;
             m_dialogFolder = dialogFolder;
             m_charactersPath = charactersPath;
             m_itemsPath = itemsPath;
             m_placesPath = placesPath;
+            m_chaptersPath = chapterPath;
+            m_scenesPath = scenePath;
         }
 
         static void initConfiguration(string configurationPath)
@@ -58,17 +64,28 @@ namespace Narrative_Engine
             jsonstring = File.ReadAllText(m_placesPath);
             var placesList = JsonSerializer.Deserialize<List<Place>>(jsonstring);
 
+            m_places = new Dictionary<string, Place>();
             foreach (var place in placesList)
                 m_places.Add(place.m_name, place);
 
-            int i = 0;
+            jsonstring = File.ReadAllText(m_storyFolder);
+            var storyList = JsonSerializer.Deserialize<List<Story>>(jsonstring);
 
-            while (File.Exists(m_storyFolder + i.ToString()))
-            {
-                jsonstring = File.ReadAllText(m_storyFolder + i.ToString());
-                m_stories = JsonSerializer.Deserialize<List<Story>>(jsonstring);
-                ++i;
-            }
+            jsonstring = File.ReadAllText(m_chaptersPath);
+            var chaptersList = JsonSerializer.Deserialize<List<Quest>>(jsonstring);
+
+            m_chapters = new Dictionary<string, Quest>();
+            foreach (var quest in chaptersList)
+                m_chapters.Add(quest.m_id, quest);
+
+            jsonstring = File.ReadAllText(m_scenesPath);
+            var scenesList = JsonSerializer.Deserialize<List<StoryScene>>(jsonstring);
+
+            m_storyScenes = new Dictionary<string, StoryScene>();
+            foreach (var scene in scenesList)
+                m_storyScenes.Add(scene.m_id, scene);
+
+            int i = 0;
 
             while (File.Exists(m_dialogFolder + i.ToString()))
             {
@@ -87,7 +104,8 @@ namespace Narrative_Engine
 
             List<Story> example_stories = new List<Story>();
 
-            example_stories.Add(new Story(StoryType.SECONDARY));
+            List<string> example_quest = new List<string>();
+            example_stories.Add(new Story(StoryType.SECONDARY, example_quest));
             // TODO: Crear constructor con todos los valores de historia que irán en el JSON
 
 
@@ -122,6 +140,11 @@ namespace Narrative_Engine
 
             jsonString = JsonSerializer.Serialize(example_places, options);
             File.WriteAllText("Example_places.json", jsonString);
+        }
+
+        public List<string> getItems()
+        {
+            return m_items;
         }
     }
 }
