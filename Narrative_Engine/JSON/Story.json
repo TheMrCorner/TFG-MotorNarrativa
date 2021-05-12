@@ -1,31 +1,18 @@
 [
- {
+  {
     "m_storyType": "(StoryType)0",
-    "m_chapters": [
-      "chapter1_P1",
-      "chapter2_P1",
-	  "chapter3_P1"
-    ]
+    "m_chapters": ["chapter1_P1", "chapter2_P1", "chapter3_P1"]
   },
   {
     "m_storyType": "(StoryType)1",
-    "m_chapters": [
-      "chapter1_S1",
-      "chapter2_S1",
-	  "chapter3_S1"
-    ]
+    "m_chapters": ["chapter1_S1", "chapter2_S1", "chapter3_S1"]
   },
   {
     "m_storyType": "(StoryType)1",
-    "m_chapters": [
-      "chapter1_S2",
-      "chapter2_S2"
-    ]
+    "m_chapters": ["chapter1_S2", "chapter2_S2"]
   },
   {
     "m_storyType": "(StoryType)1",
-    "m_chapters": [
-      "chapter1_S3"
-    ]
-  },
+    "m_chapters": ["chapter1_S3"]
+  }
 ]

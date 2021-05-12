@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {
+      "character": 0,
+      "emotion": 2,
+      "nextNode": 1,
+      "text": "Cuanta gente hay aquí. Esta ciudad está más viva que mi pueblo.",
+      "options": []
+    },
+    {
+      "character": 0,
+      "emotion": 2,
+      "nextNode": -2,
+      "text": "En fin, debería ir a buscar al amigo del alcalde.",
+      "options": []
+    }
+  ]
+}

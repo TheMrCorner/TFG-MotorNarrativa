@@ -9,7 +9,6 @@ namespace TestApp
         {
             FileManager fileManager = new FileManager("Story.json", "Chapters.json", "Scenes.json", "Dialogs.json", "Characters.json", "Items.json", "Place.json");
             fileManager.makeExampleFiles();
-			//fileManager.readFiles();
             return;
         }
     }
