@@ -24,7 +24,7 @@ namespace Narrative_Engine
 
         public DialogController(NarrativeEngine ne, FileManager man)
         {
-            dialogMap = new Dictionary<Dialog, bool>();
+            //dialogMap = new Dictionary<Dialog, bool>();
 
             // TODO: Maybe using the name of the file...
             // Search for all available files of dialog and generate a list with the names and paths
@@ -37,7 +37,7 @@ namespace Narrative_Engine
             } // foreach*/
         } // Constructor
 
-        public Dialog GetDialog(string d)
+        /*public Dialog GetDialog(string d)
         {
             if (dialogMap[d].Item2)
             {
@@ -59,6 +59,7 @@ namespace Narrative_Engine
             Tuple<Dialog, bool> diag = dialogMap[d];
 
             // Notify Engine to update scenes and quests
-        } // Dialog Ended
+        } // Dialog Ended */
     } // DialogController
+        
 } // namespace
