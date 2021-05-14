@@ -8,7 +8,7 @@ namespace Narrative_Engine
 {
     class PlaceController
     {
-        static private Dictionary<string, Place> m_places { get; set; }
+        static public Dictionary<string, Place> m_places { get; set; }
 
         static public void completePlaces()
         {
