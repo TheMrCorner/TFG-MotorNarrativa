@@ -63,10 +63,10 @@ namespace Narrative_Engine
         {
             foreach(Dialog d in dialogs)
             {
-                if(d.GetCharacter() == c)
-                {
-                    return d;
-                } // if
+                //if(d.GetCharacter() == c)
+                //{
+                //    return d;
+                //} // if
             } // foreach
 
             return null; // Return null if no dialog register for this character

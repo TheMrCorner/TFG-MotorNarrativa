@@ -1,60 +1,65 @@
-﻿namespace Narrative_Engine
+﻿using System.Collections.Generic;
+
+namespace Narrative_Engine
 {
-    class Option
+    /// <summary>
+    /// 
+    /// Option object. Represents the option that is going to be shown to the player, having
+    /// the text that will be written and the node that will load next. 
+    /// 
+    /// </summary>
+    public class Option
     {
-        public int nextNode;
-        public string text;
+        public int nodePtr { get; }
+        public string text { get; }
+
+        public Option(int nodePtr, string text)
+        {
+            this.nodePtr = nodePtr;
+            this.text = text;
+        } // Constructor
     } // Option
 
-    class Node
+    /// <summary>
+    /// 
+    /// Node object. Represents the minimum expression of a dialog, which represents the
+    /// character, the next node in the conversation, the options that it has and the text
+    /// of the current node. 
+    /// 
+    /// </summary>
+    public class Node
     {
-        public Character character;
-        public int nextNode;
-        public string text;
-        public Option[] options;
+        public int character { get; }
+        public int emotion { get; }
+        public int nextNode { get; }
+        public string text { get; }
+        public List<Option> options { get; }
 
-        public Node(Character c, int next, string tx, Option[] opts)
+        public Node(int character, int emotion, int nextNode, string text, List<Option> options)
         {
-            character = c;
-            nextNode = next;
-            text = tx;
-            options = opts;
-        }
-
-        public Character GetCharacter()
-        {
-            return character;
-        } // GetCharacter
-
-        public int GetNextNode()
-        {
-            return nextNode;
-        } // GetNextNode
-
-        public int GetNumOptions()
-        {
-            return options.Length;
-        } // GetNumOptions
-
-        public string GetText() => text;
+            this.emotion = emotion;
+            this.character = character;
+            this.nextNode = nextNode;
+            this.text = text;
+            this.options = options;
+        } // Constructor
     } // Node
 
-    class Dialog
+    /// <summary>
+    /// 
+    /// Dialog object. Holds a list with all the different Nodes that shape the dialog and
+    /// the name of the character that initiates it. 
+    /// 
+    /// </summary>
+    public class Dialog
     {
-        public Character initCharacter; // Character that initializes the dialog
-        public bool rewarded = true;
-        public Node[] nodeList;
+        public int init { get; } // Character that initializes the dialog
+        public List<Node> nodes { get; }
 
-        public Dialog(Character init, Node[] list)
+        public Dialog(int init, List<Node> nodes)
         {
-            initCharacter = init;
-            nodeList = list;
-        }
-
-        public bool GetRewarded() => rewarded;
-
-        public Character GetCharacter() => initCharacter;
-
-        public Node[] GetNodes() => nodeList;
+            this.init = init;
+            this.nodes = nodes;
+        } // Constructor
     } // Dialog
 } // namespace

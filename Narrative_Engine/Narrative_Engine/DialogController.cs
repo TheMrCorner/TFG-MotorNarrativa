@@ -10,55 +10,65 @@ using System.Text.Json.Serialization;
 
 namespace Narrative_Engine
 {
-    class DialogController
+    public class DialogController
     {
 
-        /// <summary>
-        /// 
-        /// Dictionary containing all dialogs and a flag notifying wether 
-        /// the dialog has been used or not. 
-        /// 
-        /// </summary>
-        private Dictionary<string, Tuple<Dialog, bool>> dialogMap;
         private NarrativeEngine listener; // Control and comms
+        private Dialog currentD;
+        private string currentDFile;
+        private Tuple<string, bool>[] filePaths;
+        private FileManager fman;
 
-        public DialogController(NarrativeEngine ne, FileManager man)
+        public DialogController(FileManager man)
         {
-            dialogMap = new Dictionary<Dialog, bool>();
+            fman = man;
 
-            // TODO: Maybe using the name of the file...
-            // Search for all available files of dialog and generate a list with the names and paths
-            // to those files.
-            List<Dialog> readDialogs = null; // Future version etc.
+            string[] files = fman.locateDialogFiles();
 
-            foreach(Dialog d in readDialogs)
+            filePaths = new Tuple<string, bool>[files.Length];
+
+            int i = 0;
+
+            foreach (string f in files)
             {
-                dialogMap.Add(d.GetCharacter().GetCharacterName(), new Tuple<Dialog, bool>(d, false));
-            } // foreach*/
+                Tuple<string, bool> file = new Tuple<string, bool>(f, false);
+
+                filePaths[i] = file;
+
+                i++;
+            } // foreach
         } // Constructor
 
         public Dialog GetDialog(string d)
         {
-            if (dialogMap[d].Item2)
+            foreach(var data in filePaths)
             {
-                return null;
-            } // if
-            else
-            {
-                return dialogMap[d].Item1;
-            } // else
+                if(data.Item1.Contains(d) && !data.Item2)
+                {
+                    Dialog diag = fman.ReadDialogFile(data.Item1);
+                    return diag;
+                } // if
+            } // foreach
+
+            return null;
         } // GetDialog
 
         public bool IsDialogConsumed(string d)
         {
-            return dialogMap[d].Item2;
+            foreach (var data in filePaths)
+            {
+                if (data.Item1.Contains(d))
+                {
+                    return data.Item2;
+                } // if
+            } // foreach
+
+            return false;
         } // IsDialogConsumed
 
         public void DialogEnded(string d)
         {
-            Tuple<Dialog, bool> diag = dialogMap[d];
-
-            // Notify Engine to update scenes and quests
+            // TODO: Implement, this should notify when a dialog has ended.
         } // Dialog Ended
     } // DialogController
 } // namespace

@@ -85,15 +85,62 @@ namespace Narrative_Engine
             foreach (var scene in scenesList)
                 m_storyScenes.Add(scene.m_id, scene);
 
-            int i = 0;
+            //int i = 0;
 
-            while (File.Exists(m_dialogFolder + i.ToString()))
-            {
-                jsonstring = File.ReadAllText(m_dialogFolder + i.ToString());
-                m_dialogues = JsonSerializer.Deserialize<List<Dialog>>(jsonstring);
-                ++i;
-            }
+            //while (File.Exists(m_dialogFolder + i.ToString()))
+            //{
+            //    jsonstring = File.ReadAllText(m_dialogFolder + i.ToString());
+            //    m_dialogues = JsonSerializer.Deserialize<List<Dialog>>(jsonstring);
+            //    ++i;
+            //}
         }
+
+        /// <summary>
+        /// 
+        /// Function to read a specific Dialog file. Reads all the text 
+        /// contained in that file (if it exists) and then creates a new
+        /// Dialog object from that JSON text. 
+        /// 
+        /// </summary>
+        /// <param name="filePath"> (string) Path to the file. </param>
+        /// <returns> (Dialog) New dialog created from the JSON text. </returns>
+        public Dialog ReadDialogFile(string filePath)
+        {
+            try
+            {
+                // Open and read file 
+                string jsonString = File.ReadAllText(filePath);
+                return JsonSerializer.Deserialize<Dialog>(jsonString);
+            } // try
+            catch(FileLoadException e1)
+            {
+                // If there is any problem loading the file, throw exception
+                Console.Error.WriteLine("File not loaded correctly: " + filePath);
+
+                throw new FileLoadException("File not loaded correctly: " + filePath, e1);
+            } // catch
+            catch(FileNotFoundException e2)
+            {
+                // If the file does not exist, throw exception
+                Console.Error.WriteLine("File not found: " + filePath);
+
+                throw new FileNotFoundException("File not found: " + filePath, e2);
+            } // catch
+
+            return null;
+        } // readDialogFile
+        
+        /// <summary>
+        /// 
+        /// Searchs for all dialog diles available in the dialog folder. Returns a 
+        /// list with all the paths to those files.
+        /// 
+        /// </summary>
+        /// <returns> (string[]) Files' paths list. </returns>
+        public string[] locateDialogFiles()
+        {
+            return Directory.GetFiles(m_dialogFolder, "*.json", SearchOption.AllDirectories);
+        } // locateDialogFiles
 
         public void makeExampleFiles()
         {
