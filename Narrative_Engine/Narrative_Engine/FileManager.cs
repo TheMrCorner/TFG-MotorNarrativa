@@ -126,8 +126,6 @@ namespace Narrative_Engine
 
                 throw new FileNotFoundException("File not found: " + filePath, e2);
             } // catch
-
-            return null;
         } // readDialogFile
         
         /// <summary>
@@ -152,7 +150,10 @@ namespace Narrative_Engine
             List<Story> example_stories = new List<Story>();
 
             List<string> example_quest = new List<string>();
+            example_quest.Add("C1");
+            example_quest.Add("C2");
             example_stories.Add(new Story(StoryType.SECONDARY, example_quest));
+
             // TODO: Crear constructor con todos los valores de historia que irán en el JSON
 
 
@@ -184,6 +185,8 @@ namespace Narrative_Engine
             var jsonString = JsonSerializer.Serialize(example_characters, options);
             File.WriteAllText("Example_characters.json", jsonString);
 
+            jsonString = JsonSerializer.Serialize(example_stories, options);
+            File.WriteAllText("Example_stories.json", jsonString);
 
             jsonString = JsonSerializer.Serialize(example_places, options);
             File.WriteAllText("Example_places.json", jsonString);

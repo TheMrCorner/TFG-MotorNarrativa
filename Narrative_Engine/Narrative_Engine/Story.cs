@@ -8,15 +8,15 @@ namespace Narrative_Engine
 {
     public enum StoryType
     {
-        MAIN,
-        SECONDARY
+        MAIN = 0,
+        SECONDARY = 1
     }
     class Story
     {
-        public readonly StoryType m_storyType;
+        public StoryType m_storyType { get; }
         private List<Quest> m_quests;
 
-        public List<string> m_chapters;
+        public List<string> m_chapters { get; }
 
         public Story(StoryType m_storyType, List<string> m_chapters)
         {

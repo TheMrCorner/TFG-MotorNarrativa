@@ -71,4 +71,5 @@ namespace Narrative_Engine
             // TODO: Implement, this should notify when a dialog has ended.
         } // Dialog Ended
     } // DialogController
+        
 } // namespace
