@@ -1,9 +1,8 @@
 {
-  "init": 2,
+  "init": "Messenger",
   "nodes": [
     {
-      "character": 2,
-      "emotion": 2,
+      "character": "Messenger",
       "nextNode": -1,
       "text": "Buenos días, despierte de una vez. ",
       "options": [
@@ -22,29 +21,25 @@
       ]
     },
     {
-      "character": 2,
-      "emotion": 2,
+      "character": "Messenger",
       "nextNode": 4,
       "text": "No es momento para dormir, el alcalde le requiere.",
       "options": []
     },
     {
-      "character": 2,
-      "emotion": 2,
+      "character": "Messenger",
       "nextNode": 4,
       "text": "Estaba abierta así que he pasado. Dese prisa el alcalde le requiere.",
       "options": []
     },
     {
-      "character": 2,
-      "emotion": 2,
+      "character": "Messenger",
       "nextNode": 4,
       "text": "El alcalde requiere de su presencia en el ayuntamiento inmediatamente.",
       "options": []
     },
     {
-      "character": 1,
-      "emotion": 2,
+      "character": "Messenger",
       "nextNode": -2,
       "text": "Qué querrá ese viejo ahora... Vale, iré, pero déjeme vestirme en paz.",
       "options": []

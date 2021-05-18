@@ -39,34 +39,55 @@ namespace Narrative_Engine
             } // foreach
         } // Constructor
 
-        public Dialog GetDialog(string d)
-        {
-            foreach(var data in filePaths)
-            {
-                if(data.Item1.Contains(d) && !data.Item2)
-                {
-                    Dialog diag = fman.ReadDialogFile(data.Item1);
-                    return diag;
-                } // if
-            } // foreach
-
-            return null;
-        } // GetDialog
-
-        public bool IsDialogConsumed(string d)
+        private Tuple<string, bool> SearchDialog(string d)
         {
             foreach (var data in filePaths)
             {
                 if (data.Item1.Contains(d))
                 {
-                    return data.Item2;
+                    return data;
                 } // if
             } // foreach
 
-            return false;
+            return null;
+        } // SearchDialog
+
+        public Dialog GetDialog(string d)
+        {
+            Tuple<string, bool> dat = SearchDialog(d);
+
+            if(dat != null)
+            {
+                Dialog diag = fman.ReadDialogFile(dat.Item1);
+                return diag;
+            } // if
+            else
+            { 
+                return null;
+            } // else
+        } // GetDialog
+
+        public bool IsDialogConsumed(string d)
+        {
+            Tuple<string, bool> dat = SearchDialog(d);
+
+            if (dat != null)
+            {
+                return dat.Item2;
+            } // if
+            else
+            {
+                return false;
+            } // else
         } // IsDialogConsumed
 
-        public void DialogEnded(string d)
+        public void StartDialog(string p, Dialog d)
+        {
+            currentD = d;
+            currentDFile = p;
+        }
+
+        public void DialogEnded()
         {
             // TODO: Implement, this should notify when a dialog has ended.
         } // Dialog Ended

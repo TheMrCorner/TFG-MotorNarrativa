@@ -1,7 +1,6 @@
 Con opciones
 {
     "character": 1,
-    "emotion": 2,
     "nextNode": -1,
     "text": "Esto es un texto de prueba. No le presteis atención.",
     "options": [
@@ -23,7 +22,6 @@ Con opciones
   Sin opciones
   {
     "character": 1,
-    "emotion": 2,
     "nextNode": 4,
     "text": "Vaya, más textos de prueba.",
     "options": []
@@ -32,7 +30,6 @@ Con opciones
   Nodo final
   {
     "character": 1,
-    "emotion": 2,
     "nextNode": -2,
     "text": "The second secret you found, you may now be a jedi",
     "options": []

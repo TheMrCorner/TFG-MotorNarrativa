@@ -3,14 +3,12 @@
   "nodes": [
     {
       "character": 0,
-      "emotion": 2,
       "nextNode": 1,
       "text": "¡Oh no! ¡Han asesinado al amigo del alcalde!",
       "options": []
     },
     {
       "character": 0,
-      "emotion": 2,
       "nextNode": 2,
       "text": "Debería salir de aquí y poner el cáliz a salvo.",
       "options": []

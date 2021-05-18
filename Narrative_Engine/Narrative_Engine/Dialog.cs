@@ -29,15 +29,13 @@ namespace Narrative_Engine
     /// </summary>
     public class Node
     {
-        public int character { get; }
-        public int emotion { get; }
+        public string character { get; }
         public int nextNode { get; }
         public string text { get; }
         public List<Option> options { get; }
 
-        public Node(int character, int emotion, int nextNode, string text, List<Option> options)
+        public Node(string character, int nextNode, string text, List<Option> options)
         {
-            this.emotion = emotion;
             this.character = character;
             this.nextNode = nextNode;
             this.text = text;
@@ -53,10 +51,10 @@ namespace Narrative_Engine
     /// </summary>
     public class Dialog
     {
-        public int init { get; } // Character that initializes the dialog
+        public string init { get; } // Character that initializes the dialog
         public List<Node> nodes { get; }
 
-        public Dialog(int init, List<Node> nodes)
+        public Dialog(string init, List<Node> nodes)
         {
             this.init = init;
             this.nodes = nodes;

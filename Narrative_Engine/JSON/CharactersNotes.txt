@@ -1,0 +1,53 @@
+Main Story:
+    Messenger    
+    Mayor 
+    Mayka the Elder
+
+
+Secondary Story 1:
+    Dener (Es el señor mayor)
+    Julie (Muchacha)
+    Hang (Tío de Julie)
+    Jesp (Marido de Hang)
+
+
+Secondary Story 2: 
+    Aksana (Mujer que da la misión)
+
+    Taberna:
+        Artyom (Mercenario)
+        Irina (Campesina)
+        Jelena (Cazadora)
+        Tanya (Zapatera)
+        Vassi (Herrero)
+        Ganya (Músico)
+        Helge (Alguacil)
+    
+    Kena (Escritora)
+
+
+Secondary Story 3: 
+    Kanda (Niño)
+    Jask (Tabernero Dara)
+    Marm (Anciana que está a la salida)
+
+
+Generic Characters: (NPCs with dialog but non relevant) 
+    Dant
+    Heren
+    Jucata
+    Kevin
+    Londar
+    Keipen
+    Gerten
+    Nuno
+    Pentoc
+    Quim
+    Mark
+    Teiko
+    Huan
+    Jose
+    Dimitri
+    Adrik
+    Cyzarine
+

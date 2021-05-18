@@ -3,7 +3,6 @@
   "nodes": [
     {
       "character": 6,
-      "emotion": 2,
       "nextNode": -2,
       "text": "He visto a Jesper bastante preocupado hoy, pobre. Ha ido a hablar con el alcalde.",
       "options": []
