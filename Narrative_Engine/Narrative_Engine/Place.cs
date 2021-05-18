@@ -17,6 +17,7 @@ namespace Narrative_Engine
         {
            this.m_name = m_name;
            this.m_adjacentPlacesNames = m_adjacentPlacesNames;
+            m_adjacentPlaces = new List<Place>();
         }
 
         public void searchAdjacent(Dictionary<string, Place> places)

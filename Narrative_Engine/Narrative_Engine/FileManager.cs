@@ -13,7 +13,7 @@ namespace Narrative_Engine
     public class FileManager
     {
         static FileManager s_instance;
-
+        string m_generalPath;
         string m_storyFolder;
         string m_dialogFolder;
         string m_charactersPath;
@@ -27,19 +27,19 @@ namespace Narrative_Engine
         List<string> m_characters;
         List<string> m_items;
 
-        Dictionary<string, Place> m_places;
         Dictionary<string, Quest> m_chapters;
         Dictionary<string, StoryScene> m_storyScenes;
 
-        public FileManager(string storyFolder, string chapterPath, string scenePath, string dialogFolder, string charactersPath, string itemsPath, string placesPath)
+        public FileManager(string generalPath, string storyFolder, string chapterPath, string scenePath, string dialogFolder, string charactersPath, string itemsPath, string placesPath)
         {
-            m_storyFolder = storyFolder;
-            m_dialogFolder = dialogFolder;
-            m_charactersPath = charactersPath;
-            m_itemsPath = itemsPath;
-            m_placesPath = placesPath;
-            m_chaptersPath = chapterPath;
-            m_scenesPath = scenePath;
+            m_generalPath = "../../../" + generalPath + "/";
+            m_storyFolder = m_generalPath + storyFolder;
+            m_dialogFolder = m_generalPath + dialogFolder;
+            m_charactersPath = m_generalPath + charactersPath;
+            m_itemsPath = m_generalPath + itemsPath;
+            m_placesPath = m_generalPath + placesPath;
+            m_chaptersPath = m_generalPath + chapterPath;
+            m_scenesPath = m_generalPath + scenePath;
         }
 
         static void initConfiguration(string configurationPath)
@@ -64,9 +64,11 @@ namespace Narrative_Engine
             jsonstring = File.ReadAllText(m_placesPath);
             var placesList = JsonSerializer.Deserialize<List<Place>>(jsonstring);
 
-            m_places = new Dictionary<string, Place>();
+            PlaceController.m_places = new Dictionary<string, Place>();
             foreach (var place in placesList)
-                m_places.Add(place.m_name, place);
+                PlaceController.m_places.Add(place.m_name, place);
+
+            PlaceController.completePlaces();
 
             jsonstring = File.ReadAllText(m_storyFolder);
             var storyList = JsonSerializer.Deserialize<List<Story>>(jsonstring);
@@ -84,6 +86,7 @@ namespace Narrative_Engine
             m_storyScenes = new Dictionary<string, StoryScene>();
             foreach (var scene in scenesList)
                 m_storyScenes.Add(scene.m_id, scene);
+
 
             //int i = 0;
 
