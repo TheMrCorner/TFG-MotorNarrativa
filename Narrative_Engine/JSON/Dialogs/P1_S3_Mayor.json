@@ -1,14 +1,14 @@
 {
-  "init": 2,
+  "init": "Mayor",
   "nodes": [
     {
-      "character": 2,
+      "character": "Mayor",
       "nextNode": 1,
       "text": "Vaya, por fin has llegado. Sí que has tardado en levantarte.",
       "options": []
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": -1,
       "text": "Bueno, asumo que Pierre te ha contado para qué te he hecho venir, ¿no?.",
       "options": [
@@ -23,55 +23,55 @@
       ]
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": 4,
       "text": "No suenas con mucha convicción...",
       "options": []
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": 4,
       "text": "Vaya, le dije que era muy importante que te lo contara... ",
       "options": []
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": 6,
       "text": "Bueno, te haré un resumen rápido. ",
       "options": []
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": 6,
       "text": "No suenas con mucha convicción...",
       "options": []
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": 7,
       "text": "Verás, necesito que lleves un cáliz muy valioso a un amigo que vive en Dara, al norte. ",
       "options": []
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": 8,
       "text": "Es muy importante que llegue sano y salvo, sin ningún tipo de rasguño.  ",
       "options": []
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": 9,
       "text": "De esto dependen muchas cosas, así que ten mucho cuidado. ",
       "options": []
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": 10,
       "text": "Por cierto, si puedes evitar preguntas incómodas y hablar del caliz con quien sea, mucho mejor.",
       "options": []
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": -1,
       "text": "Tienes alguna duda?",
       "options": [
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "character": 0,
+      "character": "Mayor",
       "nextNode": 10,
       "text": "No lo he dicho... es verdad. Pero tampoco es algo que necesites conocer, por ahora.",
       "options": [
@@ -101,7 +101,7 @@
       ]
     },
     {
-      "character": 2,
+      "character": "Mayor",
       "nextNode": -1,
       "text": "Por eso mismo, hay prisa. Ya te lo explicaré cuando vuelvas.",
       "options": [
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "character": 2,
+      "character": "Mayor",
       "nextNode": -2,
       "text": "Perfecto entonces, sal en cuanto puedas. Y ten mucho cuidado.",
       "options": []

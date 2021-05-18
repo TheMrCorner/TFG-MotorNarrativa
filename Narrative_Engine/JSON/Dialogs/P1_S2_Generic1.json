@@ -1,8 +1,8 @@
 {
-  "init": 6,
+  "init": "Heren",
   "nodes": [
     {
-      "character": 6,
+      "character": "Heren",
       "nextNode": -2,
       "text": "El alcalde parecía bastante nervioso esta mañana.",
       "options": []

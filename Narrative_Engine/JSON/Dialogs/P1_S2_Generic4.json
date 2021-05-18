@@ -1,10 +1,10 @@
 {
-  "init": 6,
+  "init": "Dimitri",
   "nodes": [
     {
-      "character": 6,
+      "character": "Dimitri",
       "nextNode": -2,
-      "text": "Pobre Jaste, lleva buscando a su padre días, creo que iba a pedir ayuda al alcalde y los alguaciles.",
+      "text": "Pobre Kanda, lleva buscando a su padre días, creo que iba a pedir ayuda al alcalde y los alguaciles.",
       "options": []
     }
   ]
