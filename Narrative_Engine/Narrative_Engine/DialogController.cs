@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 
 namespace Narrative_Engine
 {
-    public class DialogController
+    internal class DialogController
     {
 
         private NarrativeEngine listener; // Control and comms

@@ -10,7 +10,7 @@ using System.Text.Json.Serialization;
 
 namespace Narrative_Engine
 {
-    public class FileManager
+    class FileManager
     {
         static FileManager s_instance;
         string m_generalPath;
@@ -22,13 +22,10 @@ namespace Narrative_Engine
         string m_chaptersPath;
         string m_scenesPath;
 
-        List<Story> m_stories;
         List<Dialog> m_dialogues;
         List<string> m_characters;
         List<string> m_items;
 
-        Dictionary<string, Quest> m_chapters;
-        Dictionary<string, StoryScene> m_storyScenes;
 
         public FileManager(string generalPath, string storyFolder, string chapterPath, string scenePath, string dialogFolder, string charactersPath, string itemsPath, string placesPath)
         {
@@ -71,21 +68,19 @@ namespace Narrative_Engine
             PlaceController.completePlaces();
 
             jsonstring = File.ReadAllText(m_storyFolder);
-            var storyList = JsonSerializer.Deserialize<List<Story>>(jsonstring);
+            NarrativeEngine.m_stories = JsonSerializer.Deserialize<List<Story>>(jsonstring);
 
             jsonstring = File.ReadAllText(m_chaptersPath);
             var chaptersList = JsonSerializer.Deserialize<List<Quest>>(jsonstring);
 
-            m_chapters = new Dictionary<string, Quest>();
             foreach (var quest in chaptersList)
-                m_chapters.Add(quest.m_id, quest);
+                NarrativeEngine.m_chapters.Add(quest.m_id, quest);
 
             jsonstring = File.ReadAllText(m_scenesPath);
             var scenesList = JsonSerializer.Deserialize<List<StoryScene>>(jsonstring);
 
-            m_storyScenes = new Dictionary<string, StoryScene>();
             foreach (var scene in scenesList)
-                m_storyScenes.Add(scene.m_id, scene);
+                NarrativeEngine.m_storyScenes.Add(scene.m_id, scene);
 
 
             //int i = 0;

@@ -7,9 +7,7 @@ namespace TestApp
     {
         static void Main(string[] args)
         {
-            FileManager fileManager = new FileManager("JSON", "Story.json", "Chapters.json", "Scenes.json", "Dialogs", "Characters.json", "Items.json", "Place.json");
-            //fileManager.makeExampleFiles();
-			fileManager.readFiles();
+            NarrativeEngine.init();
             return;
         }
     }

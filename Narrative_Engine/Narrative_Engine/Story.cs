@@ -14,7 +14,7 @@ namespace Narrative_Engine
     class Story
     {
         public StoryType m_storyType { get; }
-        private List<Quest> m_quests;
+        private List<Quest> m_quests = new List<Quest>();
 
         public List<string> m_chapters { get; }
 
@@ -22,6 +22,12 @@ namespace Narrative_Engine
         {
             this.m_storyType = m_storyType;
             this.m_chapters = m_chapters;
-        }    
+        } 
+
+        public void addQuest(Quest quest)
+        {
+            if (!m_quests.Contains(quest))
+                m_quests.Add(quest);
+        }
     }
 }
