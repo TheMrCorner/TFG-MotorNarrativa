@@ -14,13 +14,13 @@
   {
     "m_id": "scene3_C1_P1",
     "m_place": "Ayuntamiento_Fyrst",
-	"m_next": "scene3_C1_P1",
+	"m_next": "scene4_C1_P1",
 	"m_dialogs": []
   },
   {
     "m_id": "scene4_C1_P1",
     "m_place": "Ruta_1",
-	"m_next": "scene4_C1_P1",
+	"m_next": "",
 	"m_dialogs": []
   },
   {
@@ -32,13 +32,13 @@
   {
     "m_id": "scene2_C2_P1",
     "m_place": "Casa_1_Dara",
-	"m_next": "scene2_C2_P1",
+	"m_next": "",
 	"m_dialogs": []
   },
   {
     "m_id": "scene1_C3_P1",
     "m_place": "Casa_1_Dara",
-	"m_next": "scene2_C2_P1",
+	"m_next": "scene2_C3_P1",
 	"m_dialogs": []
   },
   {
