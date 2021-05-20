@@ -1,22 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 namespace Narrative_Engine
 {
     public class DialogController
     {
+        struct DialogFileData
+        {
+            public string path;
+            public bool consumed;
 
-        private NarrativeEngine listener; // Control and comms
-        private Dialog currentD;
-        private string currentDFile;
-        private Tuple<string, bool>[] filePaths;
+            public DialogFileData(string p)
+            {
+                path = p;
+                consumed = false;
+            } // Constructor
+        }; // DialogFileData
+
+        private string currentDName;
+        private Dictionary<string, DialogFileData> filesData;
+        
         private FileManager fman;
 
         public DialogController(FileManager man)
@@ -25,71 +30,70 @@ namespace Narrative_Engine
 
             string[] files = fman.locateDialogFiles();
 
-            filePaths = new Tuple<string, bool>[files.Length];
-
-            int i = 0;
+            filesData = new Dictionary<string, DialogFileData>();
 
             foreach (string f in files)
             {
-                Tuple<string, bool> file = new Tuple<string, bool>(f, false);
+                DialogFileData d = new DialogFileData(f);
+                string name = Path.GetFileName(f);
 
-                filePaths[i] = file;
-
-                i++;
+                filesData.Add(name, d);                
             } // foreach
         } // Constructor
 
-        private Tuple<string, bool> SearchDialog(string d)
-        {
-            foreach (var data in filePaths)
-            {
-                if (data.Item1.Contains(d))
-                {
-                    return data;
-                } // if
-            } // foreach
-
-            return null;
-        } // SearchDialog
 
         public Dialog GetDialog(string d)
         {
-            Tuple<string, bool> dat = SearchDialog(d);
-
-            if(dat != null)
+            try
             {
-                Dialog diag = fman.ReadDialogFile(dat.Item1);
-                return diag;
-            } // if
-            else
-            { 
+                DialogFileData dat = filesData[d];
+
+                if (!dat.consumed)
+                {
+                    Dialog diag = fman.ReadDialogFile(dat.path);
+                    return diag;
+                } // if
+                else
+                {
+                    return null;
+                } // else
+            } // try
+            catch(Exception e)
+            {
                 return null;
-            } // else
+            } // catch
         } // GetDialog
 
         public bool IsDialogConsumed(string d)
         {
-            Tuple<string, bool> dat = SearchDialog(d);
-
-            if (dat != null)
+            try
             {
-                return dat.Item2;
-            } // if
-            else
+                DialogFileData dat = filesData[d];
+                return dat.consumed;
+            } // try
+            catch (Exception e)
             {
                 return false;
-            } // else
+            } // catch
         } // IsDialogConsumed
 
-        public void StartDialog(string p, Dialog d)
+        public void StartDialog(string p)
         {
-            currentD = d;
-            currentDFile = p;
-        }
+            currentDName = p;
+        } // StartDialog
 
         public void DialogEnded()
         {
-            // TODO: Implement, this should notify when a dialog has ended.
+            try
+            {
+                DialogFileData dat = filesData[currentDName];
+                dat.consumed = true;
+                filesData[currentDName] = dat;
+            } // try
+            catch (Exception e)
+            {
+                throw new Exception("Dialog could not be ended.", e);
+            } // catch
         } // Dialog Ended
     } // DialogController
         

@@ -1,0 +1,11 @@
+{
+  "init": "Mayka the Elder",
+  "nodes": [
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 1,
+      "text": "Venga, date prisa, que tienes mucho camino que recorrer.",
+      "options": []
+    }
+  ]
+}

@@ -133,7 +133,7 @@ namespace Narrative_Engine
         
         /// <summary>
         /// 
-        /// Searchs for all dialog diles available in the dialog folder. Returns a 
+        /// Searchs for all dialog files available in the dialog folder. Returns a 
         /// list with all the paths to those files.
         /// 
         /// </summary>

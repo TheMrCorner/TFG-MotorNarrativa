@@ -17,7 +17,7 @@ Con opciones
         "text": "Esto es una opción. 3"
       }
     ]
-  }
+  },
 
   Sin opciones
   {
@@ -25,7 +25,7 @@ Con opciones
     "nextNode": 4,
     "text": "Vaya, más textos de prueba.",
     "options": []
-  }
+  },
 
   Nodo final
   {
@@ -33,4 +33,4 @@ Con opciones
     "nextNode": -2,
     "text": "The second secret you found, you may now be a jedi",
     "options": []
-  }
+  },

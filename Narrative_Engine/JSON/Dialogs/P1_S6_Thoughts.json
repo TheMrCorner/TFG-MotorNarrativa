@@ -1,0 +1,29 @@
+{
+  "init": "MainCharacter",
+  "nodes": [
+    {
+      "character": "MainCharacter",
+      "nextNode": 1,
+      "text": "¡Oh no! ¡Han asesinado al amigo del alcalde!",
+      "options": []
+    },
+    {
+      "character": "MainCharacter",
+      "nextNode": 2,
+      "text": "Debería salir de aquí y poner el cáliz a salvo.",
+      "options": []
+    },
+    {
+      "character": "MainCharacter",
+      "nextNode": 3,
+      "text": "Pero no puedo volver por el camino, me encontrarán.",
+      "options": []
+    },
+    {
+      "character": "MainCharacter",
+      "nextNode": -2,
+      "text": "Ah, pero puedo atajar por el bosque. Sí, esa es una buena ruta de escape.",
+      "options": []
+    }
+  ]
+}

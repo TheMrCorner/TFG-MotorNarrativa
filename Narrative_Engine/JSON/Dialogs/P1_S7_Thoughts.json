@@ -1,0 +1,29 @@
+{
+  "init": "MainCharacter",
+  "nodes": [
+    {
+      "character": "MainCharacter",
+      "nextNode": 1,
+      "text": "No recordaba este bosque tan frondoso.",
+      "options": []
+    },
+    {
+      "character": "MainCharacter",
+      "nextNode": 2,
+      "text": "Me va a costar más de lo que pensaba encontrar un camino que me saque de aquí.",
+      "options": []
+    },
+    {
+      "character": "MainCharacter",
+      "nextNode": 3,
+      "text": "Por allí parece que hay una salida.",
+      "options": []
+    },
+    {
+      "character": "MainCharacter",
+      "nextNode": -2,
+      "text": "O no... No lo tengo claro del todo. En fin, continuaré buscando.",
+      "options": []
+    }
+  ]
+}

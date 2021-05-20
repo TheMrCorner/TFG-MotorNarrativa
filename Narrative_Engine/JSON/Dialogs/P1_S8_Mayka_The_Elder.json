@@ -1,0 +1,199 @@
+{
+  "init": "Mayka the Elder",
+  "nodes": [
+    {
+      "character": "Mayka the Elder",
+      "nextNode": -1,
+      "text": "Vaya, un muchacho que sale del bosque. ¿Eres uno de los legendarios elfos?",
+      "options": [
+        {
+          "nodePtr": 1,
+          "text": "Esto... señora, ¿quiere algo?"
+        },
+        {
+          "nodePtr": 2,
+          "text": "No quiero una copia del Necronomicón, muchas gracias."
+        },
+        {
+          "nodePtr": 3,
+          "text": "¿Puedo ayudarla en algo?"
+        },
+        {
+          "nodePtr": 4,
+          "text": "Me he perdido, ¿sabe dónde estoy?"
+        }
+      ]
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": -1,
+      "text": "Noto que llevas algo encima de mucho poder. ¿Qué es?",
+      "options": [
+        {
+          "nodePtr": 5,
+          "text": "Un cáliz de cristal."
+        },
+        {
+          "nodePtr": 0,
+          "text": "¿Por qué quiere saberlo?"
+        }
+      ]
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 2,
+      "text": "Tranquilo, no quiero venderte nada.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 2,
+      "text": "Sí. Algunas fuerzas se están removiendo en este mundo, me preocupa.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 2,
+      "text": "Sí que estás perdido, hijo, no estamos ni a dos metros de Dara, en el camino que lleva a la capital.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 4,
+      "text": "Hacia que no veía uno de esos en mucho tiempo...",
+      "options": [
+        {
+          "nodePtr": 6,
+          "text": "¿Para qué sirve?"
+        },
+        {
+          "nodePtr": 9,
+          "text": "Nunca había oído hablar de ellos..."
+        }
+      ]
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 7,
+      "text": "Es un objeto de gran poder que puede invocar criaturas muy poderosas para que combatan a tu lado.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 8,
+      "text": "Sin embargo, sólo un hechicero de gran poder puede controlarlo.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": -1,
+      "text": "Y dime, ¿eres tú un hechicero de gran poder?",
+      "options": [
+        {
+          "nodePtr": 20,
+          "text": "Sinceramente, no."
+        },
+        {
+          "nodePtr": 15,
+          "text": "Podría llegar a serlo."
+        }
+      ]
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 10,
+      "text": "Normal, desaparecieron todos hace miles de años.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 11,
+      "text": "No porque alguien los destruyera, si no porque se perdieron.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": -1,
+      "text": "Una pena, porque son realmente bonitos, a parte de útiles.",
+      "options": [
+        {
+          "nodePtr": 7,
+          "text": "Cierto. Pero, ¿para qué sirven?"
+        },
+        {
+          "nodePtr": 12,
+          "text": "Sí, aunque supongo que la gente los buscará para llevárselos."
+        }
+      ]
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 13,
+      "text": "Efectivamente, joven muchacho, el emperador lleva buscando uno muchos años.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 14,
+      "text": "Sin embargo, no ha conseguido hacerse con uno. El precio que paga por uno de estos es bastante alto.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 8,
+      "text": "Pero sólo pueden usarlo grandes hechiceros y magas muy poderosas.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 16,
+      "text": "Bueno, eso es una opción.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 17,
+      "text": "Pero necesitaras estudiar mucho y durante muchos años para conseguir siquiera acceder a su poder.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": -1,
+      "text": "¿Quieres invertir tanto tiempo en eso?",
+      "options": [
+        {
+          "nodePtr": 18,
+          "text": "Sí."
+        },
+        {
+          "nodePtr": 20,
+          "text": "No."
+        }
+      ]
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 19,
+      "text": "Me gusta tu iniciativa. Para ello tendrás que ir a la escuela de magia, en la capital, sigue el camino hasta que llegues a una montaña nevada.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": -2,
+      "text": "Gira a la derecha cuando se crucen los caminos y llegarás a la capital. Buena suerte.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": 21,
+      "text": "Entonces tendrás que llevarle eso al emperador antes de que ocurra algún desastre, él puede usarlo para nuestro bien.",
+      "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": -2,
+      "text": "Sigue el camino hasta la montaña y cuando tengas que elegir qué camino seguir, gira a la derecha. Llegarás a la capital en seguida, mucha suerte.",
+      "options": []
+    }
+  ]
+}
