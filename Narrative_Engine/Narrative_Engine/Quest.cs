@@ -11,7 +11,7 @@ namespace Narrative_Engine
         private int currentScene;
         private Place origin;
         private Place destination;
-        private List<StoryScene> scenes;
+        private List<StoryScene> scenes = new List<StoryScene>();
 
 		public string m_id { get; }
         public List<string> m_scenes { get; }

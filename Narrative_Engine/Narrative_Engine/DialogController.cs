@@ -5,7 +5,7 @@ using System.IO;
 
 namespace Narrative_Engine
 {
-    public class DialogController
+    internal class DialogController
     {
         struct DialogFileData
         {
