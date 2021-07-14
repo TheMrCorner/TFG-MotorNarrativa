@@ -33,6 +33,9 @@
     <Reference Include="nunit.framework">
       <HintPath>..\deps\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\deps\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="SimpleJSON">
       <HintPath>..\deps\SimpleJSON.dll</HintPath>
     </Reference>

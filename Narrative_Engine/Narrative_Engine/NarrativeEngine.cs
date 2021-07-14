@@ -13,9 +13,9 @@ namespace Narrative_Engine
         internal static Dictionary<string, StoryScene> m_storyScenes { get; set; } = new Dictionary<string, StoryScene>();
 
 
-        public static void init()
+        public static void init(string generalPath)
         {
-            FileManager fileManager = new FileManager("JSON", "Story.json", "Chapters.json", "Scenes.json", "Dialogs", "Characters.json", "Items.json", "Place.json");
+            FileManager fileManager = new FileManager(generalPath, "Story.json", "Chapters.json", "Scenes.json", "Dialogs", "Characters.json", "Items.json", "Place.json");
             //fileManager.makeExampleFiles();
             fileManager.readFiles();
             //assembleStory();
