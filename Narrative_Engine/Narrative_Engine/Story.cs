@@ -29,5 +29,15 @@ namespace Narrative_Engine
             if (!m_quests.Contains(quest))
                 m_quests.Add(quest);
         }
+
+        public Dictionary<string, object> toDictionary()
+        {
+            var ret = new Dictionary<string, object>();
+
+            ret.Add("m_storyType", m_storyType);
+            ret.Add("m_chapters", m_chapters);
+
+            return ret;
+        }
     }
 }

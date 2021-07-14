@@ -7,7 +7,7 @@
 		"scene3_C1_P1",
 		"scene4_C1_P1"
     ],
-	"next": "chapter2_P1"
+	  "m_next": "chapter2_P1"
   },
   {
     "m_id": "chapter2_P1",
@@ -15,7 +15,7 @@
 		"scene1_C2_P1",
 		"scene2_C2_P1"
     ],
-	"next": "chapter3_P1"
+	"m_next": "chapter3_P1"
   },
   {
     "m_id": "chapter3_P1",
@@ -23,7 +23,7 @@
 		"scene1_C3_P1",
 		"scene2_C3_P1"
     ],
-	"next": ""
+	"m_next": ""
   },
   {
     "m_id": "chapter1_S1",
@@ -32,7 +32,7 @@
 		"scene2_C1_S1",
 		"scene3_C1_S1"
     ],
-	"next": "chapter2_S1"
+	"m_next": "chapter2_S1"
   },
   {
     "m_id": "chapter2_S1",
@@ -41,7 +41,7 @@
 		"scene2_C2_S1",
 		"scene3_C2_S1"
     ],
-	"next": "chapter3_S1"
+	"m_next": "chapter3_S1"
   },
   {
     "m_id": "chapter3_S1",
@@ -49,7 +49,7 @@
 		"scene1_C3_S1",
 		"scene2_C3_S1"
     ],
-	"next": ""
+	"m_next": ""
   },
   {
     "m_id": "chapter1_S2",
@@ -59,14 +59,14 @@
 		"scene3_C1_S2",
 		"scene4_C1_S2"
     ],
-	"next": "chapter2_S2"
+	"m_next": "chapter2_S2"
   },
   {
     "m_id": "chapter2_S2",
     "m_scenes": [
 		"scene1_C2_S2"
     ],
-	"next": ""
+	"m_next": ""
   },
   {
     "m_id": "chapter1_S3",
@@ -81,6 +81,6 @@
 		"scene8_C1_S3",
 		"scene9_C1_S3"
     ],
-	"next": ""
+	"m_next": ""
   }
 ]

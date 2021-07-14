@@ -18,7 +18,7 @@ namespace Narrative_Engine
             FileManager fileManager = new FileManager("JSON", "Story.json", "Chapters.json", "Scenes.json", "Dialogs", "Characters.json", "Items.json", "Place.json");
             //fileManager.makeExampleFiles();
             fileManager.readFiles();
-            assembleStory();
+            //assembleStory();
         }
 
         static void assembleStory()
