@@ -1,0 +1,17 @@
+{
+  "init": "MainCharacter",
+  "nodes": [
+    {
+      "character": "MainCharacter",
+      "nextNode": 1,
+      "text": "Vale, es probable que esté por alguna parte de este lugar.",
+      "options": []
+    },
+    {
+      "character": "MainCharacter",
+      "nextNode": 2,
+      "text": "Tendré que buscar algún rastro que haya dejado.",
+      "options": []
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "init": "Dener",
+  "nodes": [
+    {
+      "character": "Dener",
+      "nextNode": 1,
+      "text": "Hola, joven. Veo que no soy el único que viene a ver hoy al alcalde.",
+      "options": []
+    },
+    {
+      "character": "Dener",
+      "nextNode": -1,
+      "text": "¿A qué has venido tú?",
+      "options": [
+        {
+          "nodePtr": 2,
+          "text": "Vengo porque me llamó el alcalde."
+        },
+        {
+          "nodePtr": 1,
+          "text": "Vengo a realizar un trabajo."
+        }
+      ]
+    },
+    {
+      "character": "Dener",
+      "nextNode": 0,
+      "text": "Vaya, así que te toca hacerle algún recado.",
+      "options": []
+    },
+    {
+      "character": "Dener",
+      "nextNode": 0,
+      "text": "Bueno, nuestro alcalde siempre ha sido una persona bastante benevolente, no creo que te haga trabajar mucho.",
+      "options": []
+    }
+  ]
+}

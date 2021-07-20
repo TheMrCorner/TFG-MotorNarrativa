@@ -1,0 +1,17 @@
+{
+  "init": "MainCharacter",
+  "nodes": [
+    {
+      "character": "MainCharacter",
+      "nextNode": 1,
+      "text": "Esta cueva da bastante miedo...",
+      "options": []
+    },
+    {
+      "character": "MainCharacter",
+      "nextNode": 2,
+      "text": "Espero que la pobre Julie esté bien.",
+      "options": []
+    }
+  ]
+}
