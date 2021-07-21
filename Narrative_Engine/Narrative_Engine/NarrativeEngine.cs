@@ -40,5 +40,22 @@ namespace Narrative_Engine
             m_stories.RemoveAt(index);
             return story;
         }
+
+        static Quest getChapterByPlace(string place)
+        {
+            //LLamar al PlaceCOntroller
+            
+            return m_chapters["chapter1_P1"];
+        }
+
+        static Quest getChapterById(string chapter_id)
+        {
+            var chapter = m_chapters[chapter_id];
+            if (chapter != null)
+            {
+                return m_chapters[chapter_id];
+            }
+            return null;
+        }
     }
 }
