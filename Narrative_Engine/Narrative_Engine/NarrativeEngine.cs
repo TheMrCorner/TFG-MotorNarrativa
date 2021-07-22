@@ -41,11 +41,11 @@ namespace Narrative_Engine
             return story;
         }
 
-        static Quest getChapterByPlace(string place)
+        static List<Quest> getChaptersByPlace(string place)
         {
             //LLamar al PlaceCOntroller
             
-            return m_chapters["chapter1_P1"];
+            return new List<Quest>();
         }
 
         static Quest getChapterById(string chapter_id)
