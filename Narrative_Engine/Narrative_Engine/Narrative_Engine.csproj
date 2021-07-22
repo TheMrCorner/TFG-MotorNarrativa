@@ -29,5 +29,19 @@
     <None Remove="Places\**" />
     <None Remove="Stories\**" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\deps\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\deps\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleJSON">
+      <HintPath>..\deps\SimpleJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Tests.SimpleJSON">
+      <HintPath>..\deps\Tests.SimpleJSON.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>

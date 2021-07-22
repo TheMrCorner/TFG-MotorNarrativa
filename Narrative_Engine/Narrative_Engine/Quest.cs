@@ -14,12 +14,14 @@ namespace Narrative_Engine
         private List<StoryScene> scenes = new List<StoryScene>();
 
 		public string m_id { get; }
+        public string m_next { get; }
         public List<string> m_scenes { get; }
 
-        public Quest(string m_id, List<string>m_scenes)
+        public Quest(string m_id, List<string>m_scenes, string m_next)
         {
             this.m_id = m_id;
             this.m_scenes = m_scenes;
+            this.m_next = m_next;
         }
 
         public StoryScene GetCurrentScene()
