@@ -129,7 +129,7 @@ namespace Narrative_Engine
 
                 var sceneId = (string)sceneJson["m_id"];
 
-                NarrativeEngine.m_storyScenes.Add(sceneId, new StoryScene(sceneId, (string)sceneJson["m_place"], (string)sceneJson["m_next"], dialogueList));
+                NarrativeEngine.m_storyScenes.Add(sceneId, new StoryScene(sceneId, (string)sceneJson["m_place"], (string)sceneJson["m_next"], (string) sceneJson["m_itemToGive"], (string)sceneJson["m_itemToTake"], dialogueList));
             }
         }
 

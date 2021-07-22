@@ -2,181 +2,241 @@
   {
     "m_id": "scene1_C1_P1",
     "m_place": "Casa_1_Fyrst",
-	"m_next": "scene2_C1_P1",
-	"m_dialogs": []
+    "m_next": "scene2_C1_P1",
+    "m_itemToGive": "",
+    "m_itemToTake": "", 
+    "m_dialogs": []
   },
   {
     "m_id": "scene2_C1_P1",
     "m_place": "Fyrst",
-	"m_next": "scene3_C1_P1",
-	"m_dialogs": []
+    "m_next": "scene3_C1_P1",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene3_C1_P1",
     "m_place": "Ayuntamiento_Fyrst",
-	"m_next": "scene4_C1_P1",
-	"m_dialogs": []
+    "m_next": "scene4_C1_P1",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene4_C1_P1",
     "m_place": "Ruta_1",
-	"m_next": "",
-	"m_dialogs": []
+    "m_next": "",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene1_C2_P1",
     "m_place": "Dara",
-	"m_next": "scene2_C2_P1",
-	"m_dialogs": []
+    "m_next": "scene2_C2_P1",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene2_C2_P1",
     "m_place": "Casa_1_Dara",
-	"m_next": "",
-	"m_dialogs": []
+    "m_next": "",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene1_C3_P1",
     "m_place": "Casa_1_Dara",
-	"m_next": "scene2_C3_P1",
-	"m_dialogs": []
+    "m_next": "scene2_C3_P1",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene2_C3_P1",
     "m_place": "Ruta_2",
-	"m_next": "",
-	"m_dialogs": []
+    "m_next": "",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene1_C1_S1",
     "m_place": "Ayuntamiento_Fyrst",
-	"m_next": "scene2_C1_S1",
-	"m_dialogs": []
+    "m_next": "scene2_C1_S1",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene2_C1_S1",
     "m_place": "Ruta_1",
-	"m_next": "scene3_C1_S1",
-	"m_dialogs": []
+    "m_next": "scene3_C1_S1",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene3_C1_S1",
     "m_place": "Cueva_1",
-	"m_next": "",
-	"m_dialogs": []
+    "m_next": "",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene1_C2_S1",
     "m_place": "Mazmorra_1",
-	"m_next": "scene2_C2_S1",
-	"m_dialogs": []
+    "m_next": "scene2_C2_S1",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene2_C2_S1",
     "m_place": "Sala_M_1",
-	"m_next": "scene3_C2_S1",
-	"m_dialogs": []
+    "m_next": "scene3_C2_S1",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene3_C2_S1",
     "m_place": "Sala_M_3",
-	"m_next": "",
-	"m_dialogs": []
+    "m_next": "",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene1_C3_S1",
     "m_place": "Dara",
-	"m_next": "scene2_C3_S1",
-	"m_dialogs": []
+    "m_next": "scene2_C3_S1",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene2_C3_S1",
     "m_place": "Casa_2_Dara",
-	"m_next": "",
-	"m_dialogs": []
+    "m_next": "",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene1_C1_S2",
     "m_place": "Fyrst",
-	"m_next": "scene2_C1_S2",
-	"m_dialogs": []
+    "m_next": "scene2_C1_S2",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene2_C1_S2",
     "m_place": "Taberna_Fyrst",
-	"m_next": "scene3_C1_S2",
-	"m_dialogs": []
+    "m_next": "scene3_C1_S2",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene3_C1_S2",
     "m_place": "Ruta_1",
-	"m_next": "scene4_C1_S2",
-	"m_dialogs": []
+    "m_next": "scene4_C1_S2",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene4_C1_S2",
     "m_place": "Dara",
-	"m_next": "",
-	"m_dialogs": []
+    "m_next": "",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene1_C2_S2",
     "m_place": "Bosque_1",
-	"m_next": "",
-	"m_dialogs": []
+    "m_next": "",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene1_C1_S3",
     "m_place": "Fyrst",
-	"m_next": "scene2_C1_S3",
-	"m_dialogs": []
+    "m_next": "scene2_C1_S3",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene2_C1_S3",
     "m_place": "Ruta_1",
-	"m_next": "scene3_C1_S3",
-	"m_dialogs": []
+    "m_next": "scene3_C1_S3",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene3_C1_S3",
     "m_place": "Dara",
-	"m_next": "scene4_C1_S3",
-	"m_dialogs": []
+    "m_next": "scene4_C1_S3",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene4_C1_S3",
     "m_place": "Taberna_Dara",
-	"m_next": "scene5_C1_S3",
-	"m_dialogs": []
+    "m_next": "scene5_C1_S3",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene5_C1_S3",
     "m_place": "Cueva_1",
-	"m_next": "scene6_C1_S3",
-	"m_dialogs": []
+    "m_next": "scene6_C1_S3",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene6_C1_S3",
     "m_place": "Mazmorra_1",
-	"m_next": "scene7_C1_S3",
-	"m_dialogs": []
+    "m_next": "scene7_C1_S3",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene7_C1_S3",
     "m_place": "Mazmorra_1",
-	"m_next": "scene8_C1_S3",
-	"m_dialogs": []
+    "m_next": "scene8_C1_S3",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene8_C1_S3",
     "m_place": "Bosque_1",
-	"m_next": "scene9_C1_S3",
-	"m_dialogs": []
+    "m_next": "scene9_C1_S3",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   },
   {
     "m_id": "scene9_C1_S3",
     "m_place": "Fyrst",
-	"m_next": "",
-	"m_dialogs": []
+    "m_next": "",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": []
   }
 ]

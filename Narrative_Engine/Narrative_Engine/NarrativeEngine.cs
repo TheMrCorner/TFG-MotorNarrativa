@@ -12,13 +12,16 @@ namespace Narrative_Engine
         internal static Dictionary<string, Quest> m_chapters { get; set; } = new Dictionary<string, Quest>();
         internal static Dictionary<string, StoryScene> m_storyScenes { get; set; } = new Dictionary<string, StoryScene>();
 
+        private static DialogController dialogController;
+
 
         public static void init(string generalPath)
         {
             FileManager fileManager = new FileManager(generalPath, "Story.json", "Chapters.json", "Scenes.json", "Dialogs", "Characters.json", "Items.json", "Place.json");
             //fileManager.makeExampleFiles();
             fileManager.readFiles();
-            //assembleStory();
+            assembleStory();
+            dialogController = new DialogController(fileManager);
         }
 
         static void assembleStory()
@@ -41,14 +44,14 @@ namespace Narrative_Engine
             return story;
         }
 
-        static List<Quest> getChaptersByPlace(string place)
+        public static List<Quest> getChaptersByPlace(string place)
         {
             //LLamar al PlaceCOntroller
             
             return new List<Quest>();
         }
 
-        static Quest getChapterById(string chapter_id)
+        public static Quest getChapterById(string chapter_id)
         {
             var chapter = m_chapters[chapter_id];
             if (chapter != null)
@@ -56,6 +59,14 @@ namespace Narrative_Engine
                 return m_chapters[chapter_id];
             }
             return null;
+        }
+
+        public static void loadDialogues(StoryScene scene)
+        {
+            foreach(string filePath in scene.m_dialogs)
+            {
+                scene.dialogs.Add(dialogController.GetDialog(filePath));
+            }
         }
     }
 }

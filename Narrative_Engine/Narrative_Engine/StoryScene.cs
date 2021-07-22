@@ -6,24 +6,28 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    class StoryScene
+    public class StoryScene
     {
-        public Character[] characters;
-        public Place place;
-        public Dialog[] dialogs;
-        public StoryScene[] nextScene; // This is set for different story branching and etc.
-        public bool consumed;
+        internal Character[] characters;
+        internal Place place;
+        internal StoryScene[] nextScene; // This is set for different story branching and etc.
+        internal bool consumed;
 
         public string m_id { get; }
         public string m_place { get; }
         public string m_next { get; }
+        public string m_itemToGive { get; }
+        public string m_itemToTake { get; }
         public List<string> m_dialogs { get; }
+        public List<Dialog> dialogs { get; }
 
-        public StoryScene(string m_id, string m_place, string m_next, List<string> m_dialogs)
+        internal StoryScene(string m_id, string m_place, string m_next, string m_itemToGive, string m_itemToTake, List<string> m_dialogs)
         {
             this.m_id = m_id;
             this.m_place = m_place;
             this.m_next = m_next;
+            this.m_itemToGive = m_itemToGive;
+            this.m_itemToTake = m_itemToTake;
             this.m_dialogs = m_dialogs;
         } // Constructor
 
@@ -35,7 +39,7 @@ namespace Narrative_Engine
             consumed = true;
         } // Consume
 
-        public Character GetCharacter(string name)
+        internal Character GetCharacter(string name)
         {
             for(int i = 0; i < characters.Length; i++)
             {
@@ -48,7 +52,7 @@ namespace Narrative_Engine
             return null; // Return null if character not exists
         } // GetCharacter
 
-        public Place GetPlace() => place;
+        internal Place GetPlace() => place;
 
         public bool GetConsumed() => consumed;
 
@@ -59,7 +63,7 @@ namespace Narrative_Engine
         /// </summary>
         /// <param name="c"> (Character) Character of the dialog. </param>
         /// <returns> (Dialog) Dialog if found, (null) when not found</returns>
-        public Dialog GetDialogForCharacter(Character c)
+        internal Dialog GetDialogForCharacter(Character c)
         {
             foreach(Dialog d in dialogs)
             {

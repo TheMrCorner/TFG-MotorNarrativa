@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    class Quest
+    public class Quest
     {
         private int currentScene;
         private Place origin;
         private Place destination;
-        private List<StoryScene> scenes = new List<StoryScene>();
+        public List<StoryScene> scenes { get; } = new List<StoryScene>();
 
 		public string m_id { get; }
         public string m_next { get; }
@@ -29,12 +29,12 @@ namespace Narrative_Engine
             return scenes[currentScene];
         }
 
-        public Place GetOrigin()
+        internal Place GetOrigin()
         {
             return origin;
         }
 
-        public Place GetDestination()
+        internal Place GetDestination()
         {
             return destination;
         }
@@ -48,31 +48,31 @@ namespace Narrative_Engine
             }
             return scene;
         }
-        public void SetCurrentScene(int currentScene)
+        internal void SetCurrentScene(int currentScene)
         {
             if (currentScene < scenes.Count)
             {
                 this.currentScene = currentScene;
             }
         }
-        public void SetOrigin(Place origin)
+        internal void SetOrigin(Place origin)
         {
             this.origin = origin;
         }
 
-        public void SetDestination(Place destination)
+        internal void SetDestination(Place destination)
         {
             this.destination = destination;
         }
 
-        public void AddScene(StoryScene scene)
+        internal void AddScene(StoryScene scene)
         {
             if (!scenes.Contains(scene))
             {
                 scenes.Add(scene);
             }
         }
-        public void RemoveScene(StoryScene scene)
+        internal void RemoveScene(StoryScene scene)
         {
             if (scenes.Contains(scene))
             {

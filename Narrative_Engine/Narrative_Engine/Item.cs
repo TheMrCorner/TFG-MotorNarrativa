@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    public class Item
+    internal class Item
     {
         public Item(string name){
             //this.Type = type;

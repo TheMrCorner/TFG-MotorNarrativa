@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    class PlaceController
+    internal class PlaceController
     {
         static public Dictionary<string, Place> m_places { get; set; }
 

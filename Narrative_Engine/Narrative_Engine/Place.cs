@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    public class Place
+    internal class Place
     {
-        public string m_name { get; }
-        public List<string> m_adjacentPlacesNames { get; }
+        internal string m_name { get; }
+        internal List<string> m_adjacentPlacesNames { get; }
         List<Place> m_adjacentPlaces;
-        public List<string> m_itemsFound;
+        internal List<string> m_itemsFound;
 
-        public Place(string m_name, List<string> m_adjacentPlacesNames)
+        internal Place(string m_name, List<string> m_adjacentPlacesNames)
         {
            this.m_name = m_name;
            this.m_adjacentPlacesNames = m_adjacentPlacesNames;
             m_adjacentPlaces = new List<Place>();
         }
 
-        public void searchAdjacent(Dictionary<string, Place> places)
+        internal void searchAdjacent(Dictionary<string, Place> places)
         {
             foreach (var placeName in m_adjacentPlacesNames)
             {
