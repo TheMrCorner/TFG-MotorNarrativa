@@ -5,7 +5,9 @@
     "m_next": "scene2_C1_P1",
     "m_itemToGive": "",
     "m_itemToTake": "", 
-    "m_dialogs": []
+    "m_dialogs": [
+		"P1_S1_Messenger"
+	]
   },
   {
     "m_id": "scene2_C1_P1",
@@ -21,7 +23,9 @@
     "m_next": "scene4_C1_P1",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"P1_S3_Mayor"
+	]
   },
   {
     "m_id": "scene4_C1_P1",
@@ -37,7 +41,9 @@
     "m_next": "scene2_C2_P1",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"P1_S5_Thoughts"
+	]
   },
   {
     "m_id": "scene2_C2_P1",
@@ -45,23 +51,29 @@
     "m_next": "",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"P1_S6_Thoughts"
+	]
   },
   {
     "m_id": "scene1_C3_P1",
-    "m_place": "Casa_1_Dara",
+    "m_place": "Bosque_1",
     "m_next": "scene2_C3_P1",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"P1_S7_Thoughts"
+	]
   },
   {
     "m_id": "scene2_C3_P1",
-    "m_place": "Ruta_2",
+    "m_place": "Bosque_1",
     "m_next": "",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"P1_S8_Mayka_The_Elder"
+	]
   },
   {
     "m_id": "scene1_C1_S1",
