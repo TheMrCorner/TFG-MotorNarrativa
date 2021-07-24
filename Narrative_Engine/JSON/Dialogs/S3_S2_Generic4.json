@@ -1,0 +1,11 @@
+{
+    "init": "Quim",
+    "nodes": [
+        {
+            "character": "Quim",
+            "nextNode": -2,
+            "text": "No he visto nada, me acabo de despertar de una noche de fiesta y solo quiero seguir durmiendo, lo siento.",
+            "options": []
+        }
+    ]
+}

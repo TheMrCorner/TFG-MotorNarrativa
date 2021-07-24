@@ -1,0 +1,11 @@
+{
+    "init": "Kevin",
+    "nodes": [
+        {
+            "character": "Kevin",
+            "nextNode": -2,
+            "text": "¿Un hombre dices? Vi pasar a uno ayer hacia Dara.",
+            "options": []
+        }
+    ]
+}

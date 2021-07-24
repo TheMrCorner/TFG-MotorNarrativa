@@ -1,0 +1,11 @@
+{
+    "init": "Keipen",
+    "nodes": [
+        {
+            "character": "Keipen",
+            "nextNode": -2,
+            "text": "Creo que el amigo de Jask ha desaparecido, el pobre lleva toda la mañana preocupado.",
+            "options": []
+        }
+    ]
+}

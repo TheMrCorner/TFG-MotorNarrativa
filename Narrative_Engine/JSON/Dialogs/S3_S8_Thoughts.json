@@ -1,0 +1,110 @@
+{
+    "init": "MainCharacter",
+    "nodes": [
+        {
+            "character": "MainCharacter",
+            "nextNode": 1,
+            "text": "Pues al final el hombre no ha salido con vida.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 2,
+            "text": "Tiene varias heridas en el cuello y una muy grande en el estómago.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 3,
+            "text": "Eso que agarra en su mano izquierda es un enorme libro.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": -1,
+            "text": "Una carta. ¿Leo la carta?",
+            "options": [
+                {
+                    "nodePtr": 4,
+                    "text": "No"
+                },
+                {
+                    "nodePtr": 5,
+                    "text": "Sí"
+                }
+            ]
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": -2,
+            "text": "Debería ir a llevarle esto a Kanda e informarle de la muerte de su padre.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 6,
+            "text": "Querido Kanda: ",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 7,
+            "text": "Puede que ahora estés muy enfadado conmigo por haberte abandonado y no te lo reprocho.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 8,
+            "text": "He cometido muchos errores en mi vida, pero ninguno tan grande como este.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 9,
+            "text": "Los soldados de élite del emperador vienen a por mí, no creo que pueda sobrevivir.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 10,
+            "text": "Hace muchos años robé una piedra mágica al emperador. Es de un color rojo intenso, la tengo en casa.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 11,
+            "text": "Si la encuentras, no la toques. Es una piedra muy peligrosa, mantenla en su bote original y llévasela a tu tío Mark.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 12,
+            "text": "Él sabrá qué hacer con ella. Siento mucho haberte involucrado en todo esto, de veras.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 13,
+            "text": "Dile a tu madre que siento todos los errores que he cometido y que no espero que me perdone por esto.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 14,
+            "text": "Con todo el cariño del mundo, ",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 15,
+            "text": "Tu padre.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 4,
+            "text": "...",
+            "options": []
+        }
+    ]
+}

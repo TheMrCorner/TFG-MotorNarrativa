@@ -1,0 +1,152 @@
+{
+    "init": "Julie",
+    "nodes": [
+        {
+            "character": "Julie",
+            "nextNode": 1,
+            "text": "Hola, estoy un poco perdida, se supone que tendría que haber un tesoro aquí pero no lo hay.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": -1,
+            "text": "¿Sabes algo de la espada de Augur?",
+            "options": [
+                {
+                    "nodePtr": 2,
+                    "text": "No, nunca había oído hablar de ella."
+                },
+                {
+                    "nodePtr": 4,
+                    "text": "Claro, pero esa espada lleva perdida milenios."
+                }
+            ]
+        },
+        {
+            "character": "Julie",
+            "nextNode": 3,
+            "text": "Es una espada legendaria que dicen da el poder de acabar con todos los males del mundo.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": 4,
+            "text": "Se supone que estaba en esta cueva, pero llevo buscando varos días y no encuentro nada.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": -1,
+            "text": "¿No la habrás visto por aquí?",
+            "options": [
+                {
+                    "nodePtr": 5,
+                    "text": "No, ni rastro de ninguna espada"
+                },
+                {
+                    "nodePtr": 8,
+                    "text": "No, pensaba que estaba en una cueva legendaria en medio de una isla."
+                }
+            ]
+        },
+        {
+            "character": "Julie",
+            "nextNode": 6,
+            "text": "Vaya, supongo que he venido para nada entonces.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": -1,
+            "text": "¿Sabes cómo salir de aquí? Ando un poco perdida.",
+            "options": [
+                {
+                    "nodePtr": 7,
+                    "text": "Sí, claro, sígueme."
+                },
+                {
+                    "nodePtr": 13,
+                    "text": "Genial, así puedo cumplir lo que me había dicho tu abuelo."
+                }
+            ]
+        },
+        {
+            "character": "Julie",
+            "nextNode": -2,
+            "text": "¡De acuerdo!",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": 9,
+            "text": "¿Ah sí? Entonces los libros de historia del pueblo no están bien escritos.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": -1,
+            "text": "¿Dónde lo has leído tú?",
+            "options": [
+                {
+                    "nodePtr": 10,
+                    "text": "Me lo contó mi padre hace muchos años."
+                },
+                {
+                    "nodePtr": 12,
+                    "text": "Lo leí en un libro que me prestó mi tío."
+                }
+            ]
+        },
+        {
+            "character": "Julie",
+            "nextNode": 11,
+            "text": "Qué genial tuvo que haber sido tu padre.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": 6,
+            "text": "Bueno, supongo que he venido para nada.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": 11,
+            "text": "Oh, me habría gustado leer esa información antes de venir.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": 14,
+            "text": "¿Mi abuelo te había pedido que vinieras? Que raro. Le dije que iba a tardar un tiempo.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": -1,
+            "text": "¿Seguro que no has visto la espada por aquí?",
+            "options": [
+                {
+                    "nodePtr": 15,
+                    "text": "Ehm... No, claro que no."
+                },
+                {
+                    "nodePtr": 11,
+                    "text": "Parecía bastante preocupado y no, no he visto la espada, lo juro."
+                }
+            ]
+        },
+        {
+            "character": "Julie",
+            "nextNode": 16,
+            "text": "No me das mucha confianza... pero bueno, supongo que tiene sentido que se haya preocupado.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": -2,
+            "text": "En fin, deberíamos salir de aquí.",
+            "options": []
+        }
+    ]
+}

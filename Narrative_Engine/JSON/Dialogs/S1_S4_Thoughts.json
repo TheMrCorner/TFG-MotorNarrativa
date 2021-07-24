@@ -9,7 +9,7 @@
     },
     {
       "character": "MainCharacter",
-      "nextNode": 2,
+      "nextNode": -2,
       "text": "Tendré que buscar algún rastro que haya dejado.",
       "options": []
     }

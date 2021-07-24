@@ -1,0 +1,134 @@
+{
+    "init": "Marm",
+    "nodes": [
+        {
+            "character": "Marm",
+            "nextNode": -1,
+            "text": "Hola joven, ¿buscaba algo?",
+            "options": [
+                {
+                    "nodePtr": 2,
+                    "text": "Disculpe, vengo buscando a un hombre, ¿le ha visto?"
+                },
+                {
+                    "nodePtr": 1,
+                    "text": "No, pero muchas gracias por la ayuda"
+                }
+            ]
+        },
+        {
+            "character": "Marm",
+            "nextNode": -2,
+            "text": "Vaya, que tenga un buen día entonces.",
+            "options": []
+        },
+        {
+            "character": "Marm",
+            "nextNode": 3,
+            "text": "Sí, salió de la cueva ayer por la noche. Estaba muy nervioso.",
+            "options": []
+        },
+        {
+            "character": "Marm",
+            "nextNode": -1,
+            "text": "Parecía que huía de algo.",
+            "options": [
+                {
+                    "nodePtr": 4,
+                    "text": "¿Sabe hacia dónde se fue?"
+                },
+                {
+                    "nodePtr": 5,
+                    "text": "¿Pudo ver qué le perseguía?"
+                }
+            ]
+        },
+        {
+            "character": "Marm",
+            "nextNode": -2,
+            "text": "Sí, fue corriendo hacia el bosque del norte de Dara. Espero que esté bien...",
+            "options": []
+        },
+        {
+            "character": "Marm",
+            "nextNode": 6,
+            "text": "No, la verdad. Es cierto que luego pasó un grupo de soldados de negro bastante extraños.",
+            "options": []
+        },
+        {
+            "character": "Marm",
+            "nextNode": 7,
+            "text": "También me preguntaron por él. ",
+            "options": []
+        },
+        {
+            "character": "Marm",
+            "nextNode": -1,
+            "text": "Eran verdaderamente extraños.",
+            "options": [
+                {
+                    "nodePtr": 8,
+                    "text": "¿Llevaban algún emblema?"
+                },
+                {
+                    "nodePtr": 4,
+                    "text": "¿Sabe hacia dónde se fue el señor?"
+                },
+                {
+                    "nodePtr": 5,
+                    "text": "Qué raro que haya soldados aquí."
+                }
+            ]
+        },
+        {
+            "character": "Marm",
+            "nextNode": 9,
+            "text": "No, simplemente iban de negro.",
+            "options": []
+        },
+        {
+            "character": "Marm",
+            "nextNode": 10,
+            "text": "Daban bastante miedo y nunca había visto soldados del emperador así.",
+            "options": []
+        },
+        {
+            "character": "Marm",
+            "nextNode": -1,
+            "text": "Uno de ellos parecía bastante cansado de vivir.",
+            "options": [
+                {
+                    "nodePtr": 4,
+                    "text": "¿Sabe hacia dónde se fue el señor?"
+                },
+                {
+                    "nodePtr": 11,
+                    "text": "Qué raro que haya soldados aquí."
+                }
+            ]
+        },
+        {
+            "character": "Marm",
+            "nextNode": 12,
+            "text": "Pues sí, la verdad.",
+            "options": []
+        },
+        {
+            "character": "Marm",
+            "nextNode": 13,
+            "text": "Que estemos en guerra no significa que haya que enviar soldados a todos los pueblos.",
+            "options": []
+        },
+        {
+            "character": "Marm",
+            "nextNode": -1,
+            "text": "Pero bueno, ¿quería algo más joven?",
+            "options": [
+                {
+                    "nodePtr": 4,
+                    "text": "¿Sabe hacia dónde se fue el señor?"
+                }
+            ]
+        }
+    ]
+}

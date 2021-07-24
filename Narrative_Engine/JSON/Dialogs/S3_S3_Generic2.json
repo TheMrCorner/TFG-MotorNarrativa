@@ -1,0 +1,11 @@
+{
+    "init": "Londar",
+    "nodes": [
+        {
+            "character": "Londar",
+            "nextNode": -2,
+            "text": "He perdido mi reloj de bolsillo, era un regalo de mi abuelo. Creo que me lo dejé en la taberna, pero Jask está intratable.",
+            "options": []
+        }
+    ]
+}

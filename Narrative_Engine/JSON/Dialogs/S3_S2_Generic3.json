@@ -1,0 +1,11 @@
+{
+    "init": "Jose",
+    "nodes": [
+        {
+            "character": "Jose",
+            "nextNode": -2,
+            "text": "Lo siento, acabo de llegar a estas tierras, no he visto nada.",
+            "options": []
+        }
+    ]
+}

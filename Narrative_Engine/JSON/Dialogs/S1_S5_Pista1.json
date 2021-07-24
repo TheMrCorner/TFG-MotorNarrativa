@@ -1,0 +1,11 @@
+{
+    "init": "MainCharacter",
+    "nodes": [
+        {
+            "character": "MainCharacter",
+            "nextNode": -2,
+            "text": "Eh, esta mochila parece que es de ella.",
+            "options": []
+        }
+    ]
+}

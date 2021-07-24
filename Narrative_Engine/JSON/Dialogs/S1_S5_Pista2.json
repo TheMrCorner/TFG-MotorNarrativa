@@ -1,0 +1,11 @@
+{
+    "init": "MainCharacter",
+    "nodes": [
+        {
+            "character": "MainCharacter",
+            "nextNode": -2,
+            "text": "Aquí el polvo está removido.",
+            "options": []
+        }
+    ]
+}

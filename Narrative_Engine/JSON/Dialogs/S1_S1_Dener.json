@@ -17,21 +17,87 @@
           "text": "Vengo porque me llamó el alcalde."
         },
         {
-          "nodePtr": 1,
+          "nodePtr": 3,
           "text": "Vengo a realizar un trabajo."
         }
       ]
     },
     {
       "character": "Dener",
-      "nextNode": 0,
+      "nextNode": 4,
       "text": "Vaya, así que te toca hacerle algún recado.",
       "options": []
     },
     {
       "character": "Dener",
-      "nextNode": 0,
+      "nextNode": 4,
       "text": "Bueno, nuestro alcalde siempre ha sido una persona bastante benevolente, no creo que te haga trabajar mucho.",
+      "options": []
+    },
+    {
+      "character": "Dener",
+      "nextNode": -1,
+      "text": "¿Puedes ayudarme con una cosa a mi también?",
+      "options": [
+        {
+          "nodePtr": 6,
+          "text": "Sí, claro, ¿de qué se trata?"
+        },
+        {
+          "nodePtr": 5,
+          "text": "Lo siento, tengo un poco de prisa."
+        }
+      ]
+    },
+    {
+      "character": "Dener",
+      "nextNode": -2,
+      "text": "Vaya, bueno, mucho ánimo con el trabajo del alcalde pues.",
+      "options": []
+    },
+    {
+      "character": "Dener",
+      "nextNode": 7,
+      "text": "Verás, mi nieta ha desaparecido.",
+      "options": []
+    },
+    {
+      "character": "Dener",
+      "nextNode": 8,
+      "text": "Hace unos días salió en busca del tesoro que se dice hay en la cueva que hay cerca del pueblo.",
+      "options": []
+    },
+    {
+      "character": "Dener",
+      "nextNode": 9,
+      "text": "Creía que era una de las legendarias espadas para convertirse en una heroína.",
+      "options": []
+    },
+    {
+      "character": "Dener",
+      "nextNode": 10,
+      "text": "Pero todavía no ha vuelto y el resto de la familia tampoco la ha visto en Dara, estoy procupado.",
+      "options": []
+    },
+    {
+      "character": "Dener",
+      "nextNode": -1,
+      "text": "¿Podrías ir a buscarla o mirar a ver si le ha pasado algo?",
+      "options": [
+        {
+          "nodePtr": 11,
+          "text": "Por supuesto, no habría ningún problema."
+        },
+        {
+          "nodePtr": 5,
+          "text": "Lo siento, no puedo hacer dos trabajos a la vez."
+        }
+      ]
+    },
+    {
+      "character": "Dener",
+      "nextNode": -2,
+      "text": "Muchísimas gracias, infórmame con lo encuentres por favor.",
       "options": []
     }
   ]

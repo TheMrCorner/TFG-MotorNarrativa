@@ -1,0 +1,11 @@
+{
+    "init": "Dimitri",
+    "nodes": [
+        {
+            "character": "Dimitri",
+            "nextNode": 1,
+            "text": "Creo que he perdido mi reloj de arena...",
+            "options": []
+        }
+    ]
+}

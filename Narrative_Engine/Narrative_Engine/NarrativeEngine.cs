@@ -8,6 +8,11 @@ namespace Narrative_Engine
 {
     public class NarrativeEngine
     {
+        internal static PlaceController m_pc;
+        internal static DialogController m_dc;
+        internal static CharacterController m_cc;
+        internal static ItemController m_ic;
+
         internal static List<Story> m_stories { get; set; } = new List<Story>();
         internal static Dictionary<string, Quest> m_chapters { get; set; } = new Dictionary<string, Quest>();
         internal static Dictionary<string, StoryScene> m_storyScenes { get; set; } = new Dictionary<string, StoryScene>();

@@ -1,0 +1,11 @@
+{
+    "init": "Teiko",
+    "nodes": [
+        {
+            "character": "Teiko",
+            "nextNode": -2,
+            "text": "Hace un buen día para pasear.",
+            "options": []
+        }
+    ]
+}

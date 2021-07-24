@@ -1,0 +1,67 @@
+{
+    "init": "Jask",
+    "nodes": [
+        {
+            "character": "Jask",
+            "nextNode": -1,
+            "text": "Lo siento, está cerrado.",
+            "options": [
+                {
+                    "nodePtr": 1,
+                    "text": "Disculpe, vengo buscando al padre de Kanda. ¿Sabe donde está?"
+                },
+                {
+                    "nodePtr": 5,
+                    "text": "Lo siento, me dijeron que viniera aquí a buscar al padre de Kanda."
+                }
+            ]
+        },
+        {
+            "character": "Jask",
+            "nextNode": 2,
+            "text": "Sí, vino a entregarme unas cosas que le pedí pero se le olvidó crearme una.",
+            "options": []
+        },
+        {
+            "character": "Jask",
+            "nextNode": 3,
+            "text": "Se fue a la cueva a buscar alas de murciélago que necesitaba y no volvió. Estoy bastante preocupado.",
+            "options": []
+        },
+        {
+            "character": "Jask",
+            "nextNode": -1,
+            "text": "¿Podrías ir a mirar a ver si está bien?",
+            "options": [
+                {
+                    "nodePtr": 4,
+                    "text": "Por supuesto."
+                }
+            ]
+        },
+        {
+            "character": "Jask",
+            "nextNode": -2,
+            "text": "Muchisimas gracias, que el Emperador te lo pague.",
+            "options": []
+        },
+        {
+            "character": "Jask",
+            "nextNode": 6,
+            "text": "Y era el lugar adecuado hasta hace unas horas.",
+            "options": []
+        },
+        {
+            "character": "Jask",
+            "nextNode": 7,
+            "text": "Tendría que haberme fabricado un atrapa-hadas pero no tenía alas de murciélago, así que se fue a la cueva a buscarlo.",
+            "options": []
+        },
+        {
+            "character": "Jask",
+            "nextNode": 3,
+            "text": "Parecía bastante nervioso, como si huyera de algo... Igual solo era mi imaginación.",
+            "options": []
+        }
+    ]
+}

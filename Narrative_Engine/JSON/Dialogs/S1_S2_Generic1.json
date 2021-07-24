@@ -1,0 +1,17 @@
+{
+    "init": "Pentoc",
+    "nodes": [
+        {
+            "character": "Pentoc",
+            "nextNode": 1,
+            "text": "¿Una chica por aquí dices?",
+            "options": []
+        },
+        {
+            "character": "Pentoc",
+            "nextNode": -2,
+            "text": "La verdad es que no, pero muchos jóvenes suelen meterse en esa cueva a buscar tesoros.",
+            "options": []
+        }
+    ]
+}

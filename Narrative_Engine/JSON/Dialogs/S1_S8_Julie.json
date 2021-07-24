@@ -1,0 +1,104 @@
+{
+    "init": "Julie",
+    "nodes": [
+        {
+            "character": "Julie",
+            "nextNode": 1,
+            "text": "¡Hola tíos! Ya he vuelto de la búsqueda.",
+            "options": []
+        },
+        {
+            "character": "Hang",
+            "nextNode": 2,
+            "text": "¡Julie! Estabamos muy preocupados.",
+            "options": []
+        },
+        {
+            "character": "Jesp",
+            "nextNode": 3,
+            "text": "Tu tío casi organiza una partida de caza para salir a buscarte.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": 4,
+            "text": "Lo siento, pensaba que podría encontrar la espada y convertirme en una heroína.",
+            "options": []
+        },
+        {
+            "character": "Hang",
+            "nextNode": 5,
+            "text": "Pero para eso no necesitas esa espada.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": 6,
+            "text": "¿No?",
+            "options": []
+        },
+        {
+            "character": "Hang",
+            "nextNode": 7,
+            "text": "Claro, simplemente con que te apuntes a la escuela de héroes es suficiente.",
+            "options": []
+        },
+        {
+            "character": "Jesp",
+            "nextNode": 8,
+            "text": "Exacto, luego ellos te asignan una espada mágica y puedes empezar a trabajar.",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": 9,
+            "text": "¿Y la escuela de héroes de Fyrst servirá?",
+            "options": []
+        },
+        {
+            "character": "Hang",
+            "nextNode": 10,
+            "text": "¡Claro!",
+            "options": []
+        },
+        {
+            "character": "Julie",
+            "nextNode": 11,
+            "text": "Genial, entonces volveré con el abuelo. Muchas gracias por ayudarme a venir a casa.",
+            "options": []
+        },
+        {
+            "character": "Hang",
+            "nextNode": 12,
+            "text": "Gracias por traérnosla de vuelta.",
+            "options": []
+        },
+        {
+            "character": "Jesp",
+            "nextNode": -1,
+            "text": "¿Podemos hacer algo para compensarlo?",
+            "options": [
+                {
+                    "nodePtr": 13,
+                    "text": "No, muchas gracias, pero tengo un poco de prisa."
+                },
+                {
+                    "nodePtr": 14,
+                    "text": "No hace falta, los vecinos están para ayudarse."
+                }
+            ]
+        },
+        {
+            "character": "Hang",
+            "nextNode": -2,
+            "text": "No te entretenemos más entonces, que vaya bien su aventura.",
+            "options": []
+        },
+        {
+            "character": "Hang",
+            "nextNode": -2,
+            "text": "Eso mismo digo yo, si necesitas cualquier cosa aquí estaremos.",
+            "options": []
+        }
+    ]
+}

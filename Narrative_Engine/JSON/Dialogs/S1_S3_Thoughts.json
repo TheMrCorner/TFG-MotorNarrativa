@@ -9,7 +9,7 @@
     },
     {
       "character": "MainCharacter",
-      "nextNode": 2,
+      "nextNode": -2,
       "text": "Espero que la pobre Julie esté bien.",
       "options": []
     }

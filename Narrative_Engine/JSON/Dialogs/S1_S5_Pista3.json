@@ -1,0 +1,11 @@
+{
+    "init": "MainCharacter",
+    "nodes": [
+        {
+            "character": "MainCharacter",
+            "nextNode": -2,
+            "text": "Estos arañazos de aquí... y hay restos de una ropa rota.",
+            "options": []
+        }
+    ]
+}

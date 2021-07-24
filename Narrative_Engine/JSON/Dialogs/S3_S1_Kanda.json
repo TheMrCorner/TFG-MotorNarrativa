@@ -1,0 +1,86 @@
+{
+    "init": "Kanda",
+    "nodes": [
+        {
+            "character": "Kanda",
+            "nextNode": -1,
+            "text": "Perdona, estoy un poco ocupado, no puedo hablar.",
+            "options": [
+                {
+                    "nodePtr": 1,
+                    "text": "¿Qué te ocurre?"
+                },
+                {
+                    "nodePtr": 7,
+                    "text": "Pareces preocupado, ¿ha pasado algo?"
+                }
+            ]
+        },
+        {
+            "character": "Kanda",
+            "nextNode": 3,
+            "text": "Mi padre, ha desaparecido. Dijo que iba a hacer un recado a Dara, pero no ha vuelto.",
+            "options": []
+        },
+        {
+            "character": "Kanda",
+            "nextNode": 4,
+            "text": "Se supone que iba a tardar poco.",
+            "options": []
+        },
+        {
+            "character": "Kanda",
+            "nextNode": -1,
+            "text": "¿Podrías ir a mirar a ver si está bien?",
+            "options": [
+                {
+                    "nodePtr": 5,
+                    "text": "Claro, no te preocupes."
+                },
+                {
+                    "nodePtr": 6,
+                    "text": "Igual simplemente ha tardado un poco más, deberías tranquilizarte."
+                }
+            ]
+        },
+        {
+            "character": "Kanda",
+            "nextNode": -2,
+            "text": "Muchísimas gracias, fue a la taberna de Dara. El tabernero es amigo suyo, se llama Jask.",
+            "options": []
+        },
+        {
+            "character": "Kanda",
+            "nextNode": -2,
+            "text": "Tienes razón, seguro que se ha puesto a hablar con Jask. Esperaré un poco más.",
+            "options": []
+        },
+        {
+            "character": "Kanda",
+            "nextNode": -1,
+            "text": "No, nada. Es que me pongo nervioso con poco. Y mi padre no ha vuelto del trabajo todavía.",
+            "options": [
+                {
+                    "nodePtr": 5,
+                    "text": "¿Cuándo se fue?"
+                },
+                {
+                    "nodePtr": 6,
+                    "text": "¿Adónde se fue?"
+                }
+            ]
+        },
+        {
+            "character": "Kanda",
+            "nextNode": 4,
+            "text": "Ayer por la tarde.",
+            "options": []
+        },
+        {
+            "character": "Kanda",
+            "nextNode": 4,
+            "text": "A Dara, a hacer un recado.",
+            "options": []
+        }
+    ]
+}
