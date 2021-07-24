@@ -5,18 +5,11 @@
       "Ruta_1",
       "Ayuntamiento_Fyrst",
 	  "Taberna_Fyrst",
-	  "Casa_1_Fyrst",
-	  "Casa_2_Fyrst"
+	  "Casa_1_Fyrst"
     ]
   },
   {
     "m_name": "Casa_1_Fyrst",
-    "m_adjacentPlacesNames": [
-		"Fyrst"
-	]
-  },
-  {
-    "m_name": "Casa_2_Fyrst",
     "m_adjacentPlacesNames": [
 		"Fyrst"
 	]
@@ -39,18 +32,11 @@
       "Ruta_1",
       "Ruta_2",
       "Taberna_Dara",
-	  "Casa_1_Dara",
-	  "Casa_2_Dara"
+	  "Casa_1_Dara"
     ]
   },
   {
     "m_name": "Casa_1_Dara",
-    "m_adjacentPlacesNames": [
-		"Dara"
-	]
-  },
-  {
-    "m_name": "Casa_2_Dara",
     "m_adjacentPlacesNames": [
 		"Dara"
 	]
