@@ -15,7 +15,12 @@
     "m_next": "scene3_C1_P1",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"P1_S2_Generic1",
+		"P1_S2_Generic2",
+		"P1_S2_Generic3",
+		"P1_S2_Generic4"
+	]
   },
   {
     "m_id": "scene3_C1_P1",
@@ -24,7 +29,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"P1_S3_Mayor"
+		"P1_S3_Mayor",
+		"P1_S3_Mayor_Generic"
 	]
   },
   {
@@ -72,7 +78,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"P1_S8_Mayka_The_Elder"
+		"P1_S8_Mayka_The_Elder",
+		"P1_S8_Mayka_The_Elder_Generic"
 	]
   },
   {
@@ -109,7 +116,7 @@
   },
   {
     "m_id": "scene2_C2_S1",
-    "m_place": "Sala_M_1",
+    "m_place": "Mazmorra_1",
     "m_next": "scene3_C2_S1",
     "m_itemToGive": "",
     "m_itemToTake": "",
@@ -117,7 +124,7 @@
   },
   {
     "m_id": "scene3_C2_S1",
-    "m_place": "Sala_M_3",
+    "m_place": "Mazmorra_1",
     "m_next": "",
     "m_itemToGive": "",
     "m_itemToTake": "",
