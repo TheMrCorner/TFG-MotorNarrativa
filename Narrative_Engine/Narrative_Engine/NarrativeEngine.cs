@@ -17,7 +17,8 @@ namespace Narrative_Engine
             fileManager.readFiles();
             StoryController.assembleStory();
             dialogController = new DialogController(fileManager);
-            loadDialogues(StoryController.m_storyScenes["scene1_C1_P1"]);
+            // TEST
+            // loadDialogues(StoryController.m_storyScenes["scene1_C1_P1"]);
         }
 
         static Story getStory()
