@@ -28,7 +28,12 @@ namespace Narrative_Engine
 
         public FileManager(string generalPath, string storyFolder, string chapterPath, string scenePath, string dialogFolder, string charactersPath, string itemsPath, string placesPath)
         {
-            m_generalPath = "../../../" + generalPath + "/";
+            #if DEBUG
+                m_generalPath = "../../../" + generalPath + "/";
+            #else
+                m_generalPath = generalPath + "/";
+            #endif
+
             m_storyFolder = m_generalPath + storyFolder;
             m_dialogFolder = m_generalPath + dialogFolder;
             m_charactersPath = m_generalPath + charactersPath;
