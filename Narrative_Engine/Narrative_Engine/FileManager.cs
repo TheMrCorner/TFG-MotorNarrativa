@@ -87,7 +87,7 @@ namespace Narrative_Engine
             jsonstring = File.ReadAllText(m_storyFolder);
             var storiesJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
 
-            NarrativeEngine.m_stories = new List<Story>();
+            StoryController.m_stories = new List<Story>();
 
             foreach (var storyJson in storiesJsonList)
             {
@@ -97,7 +97,7 @@ namespace Narrative_Engine
                 foreach (var chapter in chaptersJson)
                     chapterList.Add((string)chapter);
 
-                NarrativeEngine.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
+                StoryController.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
             }
 
             jsonstring = File.ReadAllText(m_chaptersPath);
@@ -113,7 +113,7 @@ namespace Narrative_Engine
 
                 var questId = (string)questJson["m_id"];
 
-                NarrativeEngine.m_chapters.Add(questId, new Quest(questId, sceneList, (string)questJson["m_next"]));
+                StoryController.m_chapters.Add(questId, new Quest(questId, sceneList, (string)questJson["m_next"]));
             }
 
             jsonstring = File.ReadAllText(m_scenesPath);
@@ -129,8 +129,10 @@ namespace Narrative_Engine
 
                 var sceneId = (string)sceneJson["m_id"];
 
-                NarrativeEngine.m_storyScenes.Add(sceneId, new StoryScene(sceneId, (string)sceneJson["m_place"], (string)sceneJson["m_next"], (string) sceneJson["m_itemToGive"], (string)sceneJson["m_itemToTake"], dialogueList));
+                StoryController.m_storyScenes.Add(sceneId, new StoryScene(sceneId, (string)sceneJson["m_place"], (string)sceneJson["m_next"], (string) sceneJson["m_itemToGive"], (string)sceneJson["m_itemToTake"], dialogueList));
             }
+
+            PlaceController.CompleteQuestsInPlace();
         }
 
         /// <summary>

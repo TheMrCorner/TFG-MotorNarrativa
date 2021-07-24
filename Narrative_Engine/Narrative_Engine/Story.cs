@@ -11,7 +11,7 @@ namespace Narrative_Engine
         MAIN = 0,
         SECONDARY = 1
     }
-    internal class Story
+    public class Story
     {
         internal StoryType m_storyType { get; }
         private List<Quest> m_quests = new List<Quest>();
