@@ -13,9 +13,6 @@ namespace Narrative_Engine
         internal static CharacterController m_cc;
         internal static ItemController m_ic;
 
-        internal static List<Story> m_stories { get; set; } = new List<Story>();
-        internal static Dictionary<string, Quest> m_chapters { get; set; } = new Dictionary<string, Quest>();
-        internal static Dictionary<string, StoryScene> m_storyScenes { get; set; } = new Dictionary<string, StoryScene>();
 
         public static void init(string generalPath)
         {
@@ -23,7 +20,9 @@ namespace Narrative_Engine
             //fileManager.makeExampleFiles();
             fileManager.readFiles();
             StoryController.assembleStory();
-            m_dc = new DialogController(fileManager);
+            dialogController = new DialogController(fileManager);
+            // TEST
+            // loadDialogues(StoryController.m_storyScenes["scene1_C1_P1"]);
         }
 
         static Story getStory()
@@ -49,7 +48,7 @@ namespace Narrative_Engine
         {
             foreach(string filePath in scene.m_dialogs)
             {
-                scene.dialogs.Add(m_dc.GetDialog(filePath));
+                scene.dialogs.Add(dialogController.GetDialog(filePath + ".json"));
             }
         }
 
