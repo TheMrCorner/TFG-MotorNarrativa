@@ -46,17 +46,32 @@ namespace Narrative_Engine
 
         public static List<Quest> getChaptersByPlace(string place)
         {
-            //LLamar al PlaceCOntroller
+            //LLamar al PlaceController
             
             return new List<Quest>();
         }
 
         public static Quest getChapterById(string chapter_id)
         {
+            //cragar capítulo
             var chapter = m_chapters[chapter_id];
-            if (chapter != null)
+            //buscar siguiente
+            if(chapter.m_next != "")
             {
-                return m_chapters[chapter_id];
+                var next_chapter = m_chapters[chapter.m_next];
+                //si existe cargar diálogos
+                 List<string> scenes = next_chapter.m_scenes;
+
+                if(scenes.lenght > 0)
+                { 
+                    foreach(string storyScene in scenes)
+                    {
+                        var scene = m_storyScenes[storyScene];
+                        loadDialogues(scene);
+                        next_chapter.AddScene(scene);
+                    }
+                }
+                return next_chapter;
             }
             return null;
         }
