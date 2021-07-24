@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    class CharacterController
+    internal class CharacterController
     {
         private List<Character> characters;
 

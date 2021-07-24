@@ -5,18 +5,11 @@
       "Ruta_1",
       "Ayuntamiento_Fyrst",
 	  "Taberna_Fyrst",
-	  "Casa_1_Fyrst",
-	  "Casa_2_Fyrst"
+	  "Casa_1_Fyrst"
     ]
   },
   {
     "m_name": "Casa_1_Fyrst",
-    "m_adjacentPlacesNames": [
-		"Fyrst"
-	]
-  },
-  {
-    "m_name": "Casa_2_Fyrst",
     "m_adjacentPlacesNames": [
 		"Fyrst"
 	]
@@ -38,10 +31,8 @@
     "m_adjacentPlacesNames": [
       "Ruta_1",
       "Ruta_2",
-      "Ayuntamiento_Dara",
       "Taberna_Dara",
-	  "Casa_1_Dara",
-	  "Casa_2_Dara"
+	  "Casa_1_Dara"
     ]
   },
   {
@@ -51,22 +42,9 @@
 	]
   },
   {
-    "m_name": "Casa_2_Dara",
+    "m_name": "Taberna_Dara",
     "m_adjacentPlacesNames": [
 		"Dara"
-	]
-  },
-  {
-    "m_name": "Tienda_Dara",
-    "m_adjacentPlacesNames": [
-		"Dara"
-	]
-  },
-  {
-    "m_name": "Ayuntamiento_Dara",
-    "m_adjacentPlacesNames": [
-		"Dara",
-		"Mazmorra_1"
 	]
   },
   {
@@ -101,26 +79,7 @@
     "m_name": "Mazmorra_1",
     "m_adjacentPlacesNames": [
 		"Cueva_1",
-		"Ayuntamiento_Dara",
-		"Sala_M_1"
-	]
-  },
-  {
-    "m_name": "Sala_M_1",
-    "m_adjacentPlacesNames": [
-		"Sala_M_2"
-	]
-  },
-  {
-    "m_name": "Sala_M_2",
-    "m_adjacentPlacesNames": [
-		"Sala_M_3"
-	]
-  },
-  {
-    "m_name": "Sala_M_3",
-    "m_adjacentPlacesNames": [
-		"Sala_M_2"
+		"Dara"
 	]
   }
 ]

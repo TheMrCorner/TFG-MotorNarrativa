@@ -11,23 +11,33 @@ namespace Narrative_Engine
         MAIN = 0,
         SECONDARY = 1
     }
-    class Story
+    public class Story
     {
-        public StoryType m_storyType { get; }
+        internal StoryType m_storyType { get; }
         private List<Quest> m_quests = new List<Quest>();
 
-        public List<string> m_chapters { get; }
+        internal List<string> m_chapters { get; }
 
-        public Story(StoryType m_storyType, List<string> m_chapters)
+        internal Story(StoryType m_storyType, List<string> m_chapters)
         {
             this.m_storyType = m_storyType;
             this.m_chapters = m_chapters;
-        } 
+        }
 
-        public void addQuest(Quest quest)
+        internal void addQuest(Quest quest)
         {
             if (!m_quests.Contains(quest))
                 m_quests.Add(quest);
+        }
+
+        internal Dictionary<string, object> toDictionary()
+        {
+            var ret = new Dictionary<string, object>();
+
+            ret.Add("m_storyType", m_storyType);
+            ret.Add("m_chapters", m_chapters);
+
+            return ret;
         }
     }
 }

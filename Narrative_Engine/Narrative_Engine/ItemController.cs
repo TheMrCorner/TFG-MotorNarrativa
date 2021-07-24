@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    class ItemController{
+    internal class ItemController
+    {
         private List<Item> items;
 
-        public ItemController(List<Item> itemList){
+        internal ItemController(List<Item> itemList){
             this.items = itemList;
         }
 
-        public void addItem (Item item){
+        internal void addItem (Item item){
             items.Add(item);
         }
 
-        public void removeIyem(Item item){
+        internal void removeItem(Item item){
             items.Remove(item);
         }
     }

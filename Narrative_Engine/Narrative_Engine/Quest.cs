@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    class Quest
+    public class Quest
     {
         private int currentScene;
         private Place origin;
         private Place destination;
-        private List<StoryScene> scenes = new List<StoryScene>();
+        public List<StoryScene> scenes { get; } = new List<StoryScene>();
 
 		public string m_id { get; }
+        public string m_next { get; }
         public List<string> m_scenes { get; }
 
-        public Quest(string m_id, List<string>m_scenes)
+        public Quest(string m_id, List<string>m_scenes, string m_next)
         {
             this.m_id = m_id;
             this.m_scenes = m_scenes;
+            this.m_next = m_next;
         }
 
         public StoryScene GetCurrentScene()
@@ -27,12 +29,12 @@ namespace Narrative_Engine
             return scenes[currentScene];
         }
 
-        public Place GetOrigin()
+        internal Place GetOrigin()
         {
             return origin;
         }
 
-        public Place GetDestination()
+        internal Place GetDestination()
         {
             return destination;
         }
@@ -46,31 +48,31 @@ namespace Narrative_Engine
             }
             return scene;
         }
-        public void SetCurrentScene(int currentScene)
+        internal void SetCurrentScene(int currentScene)
         {
             if (currentScene < scenes.Count)
             {
                 this.currentScene = currentScene;
             }
         }
-        public void SetOrigin(Place origin)
+        internal void SetOrigin(Place origin)
         {
             this.origin = origin;
         }
 
-        public void SetDestination(Place destination)
+        internal void SetDestination(Place destination)
         {
             this.destination = destination;
         }
 
-        public void AddScene(StoryScene scene)
+        internal void AddScene(StoryScene scene)
         {
             if (!scenes.Contains(scene))
             {
                 scenes.Add(scene);
             }
         }
-        public void RemoveScene(StoryScene scene)
+        internal void RemoveScene(StoryScene scene)
         {
             if (scenes.Contains(scene))
             {

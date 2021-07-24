@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-using System.Text.Json;
-using System.Text.Json.Serialization;
+using SimpleJSON;
 
 namespace Narrative_Engine
 {
@@ -29,7 +28,12 @@ namespace Narrative_Engine
 
         public FileManager(string generalPath, string storyFolder, string chapterPath, string scenePath, string dialogFolder, string charactersPath, string itemsPath, string placesPath)
         {
-            m_generalPath = "../../../" + generalPath + "/";
+            #if DEBUG
+                m_generalPath = "../../../" + generalPath + "/";
+            #else
+                m_generalPath = generalPath + "/";
+            #endif
+
             m_storyFolder = m_generalPath + storyFolder;
             m_dialogFolder = m_generalPath + dialogFolder;
             m_charactersPath = m_generalPath + charactersPath;
@@ -42,7 +46,7 @@ namespace Narrative_Engine
         static void initConfiguration(string configurationPath)
         {
             var jsonstring = File.ReadAllText(configurationPath);
-            s_instance = JsonSerializer.Deserialize<FileManager>(jsonstring);
+            //s_instance = JsonSerializer.Deserialize<FileManager>(jsonstring);
         }
 
         public static FileManager getInstance()
@@ -53,13 +57,31 @@ namespace Narrative_Engine
         public void readFiles()
         {
             var jsonstring = File.ReadAllText(m_charactersPath);
-            m_characters = JsonSerializer.Deserialize<List<string>>(jsonstring);
+            var characters = JSONDecoder.Decode(jsonstring).ArrayValue;
+            m_characters = new List<string>();
+            foreach (var character in characters)
+                m_characters.Add((string)character);
 
             jsonstring = File.ReadAllText(m_itemsPath);
-            m_items = JsonSerializer.Deserialize<List<string>>(jsonstring);
+            var items = JSONDecoder.Decode(jsonstring).ArrayValue;
+            m_items = new List<string>();
+            foreach (var item in items)
+                m_items.Add((string)item);
 
             jsonstring = File.ReadAllText(m_placesPath);
-            var placesList = JsonSerializer.Deserialize<List<Place>>(jsonstring);
+            var placesJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
+
+            var placesList = new List<Place>();
+
+            foreach (var placeJson in placesJsonList)
+            {
+                var adjacentJson = placeJson["m_adjacentPlacesNames"].ArrayValue;
+                var adjacentPlaces = new List<string>();
+                foreach (var adjacent in adjacentJson)
+                    adjacentPlaces.Add((string)adjacent);
+
+                placesList.Add(new Place((string)placeJson["m_name"], adjacentPlaces));
+            }
 
             PlaceController.m_places = new Dictionary<string, Place>();
             foreach (var place in placesList)
@@ -68,29 +90,54 @@ namespace Narrative_Engine
             PlaceController.completePlaces();
 
             jsonstring = File.ReadAllText(m_storyFolder);
-            NarrativeEngine.m_stories = JsonSerializer.Deserialize<List<Story>>(jsonstring);
+            var storiesJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
+
+            StoryController.m_stories = new List<Story>();
+
+            foreach (var storyJson in storiesJsonList)
+            {
+                var chaptersJson = storyJson["m_chapters"].ArrayValue;
+
+                var chapterList = new List<string>();
+                foreach (var chapter in chaptersJson)
+                    chapterList.Add((string)chapter);
+
+                StoryController.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
+            }
 
             jsonstring = File.ReadAllText(m_chaptersPath);
-            var chaptersList = JsonSerializer.Deserialize<List<Quest>>(jsonstring);
+            var questJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
 
-            foreach (var quest in chaptersList)
-                NarrativeEngine.m_chapters.Add(quest.m_id, quest);
+            foreach (var questJson in questJsonList)
+            {
+                var scenesJson = questJson["m_scenes"].ArrayValue;
+
+                var sceneList = new List<string>();
+                foreach (var scene in scenesJson)
+                    sceneList.Add((string)scene);
+
+                var questId = (string)questJson["m_id"];
+
+                StoryController.m_chapters.Add(questId, new Quest(questId, sceneList, (string)questJson["m_next"]));
+            }
 
             jsonstring = File.ReadAllText(m_scenesPath);
-            var scenesList = JsonSerializer.Deserialize<List<StoryScene>>(jsonstring);
+            var sceneJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
 
-            foreach (var scene in scenesList)
-                NarrativeEngine.m_storyScenes.Add(scene.m_id, scene);
+            foreach(var sceneJson in sceneJsonList)
+            {
+                var dialoguesJson = sceneJson["m_dialogs"].ArrayValue;
 
+                var dialogueList = new List<string>();
+                foreach (var dialogue in dialoguesJson)
+                    dialogueList.Add((string)dialogue);
 
-            //int i = 0;
+                var sceneId = (string)sceneJson["m_id"];
 
-            //while (File.Exists(m_dialogFolder + i.ToString()))
-            //{
-            //    jsonstring = File.ReadAllText(m_dialogFolder + i.ToString());
-            //    m_dialogues = JsonSerializer.Deserialize<List<Dialog>>(jsonstring);
-            //    ++i;
-            //}
+                StoryController.m_storyScenes.Add(sceneId, new StoryScene(sceneId, (string)sceneJson["m_place"], (string)sceneJson["m_next"], (string) sceneJson["m_itemToGive"], (string)sceneJson["m_itemToTake"], dialogueList));
+            }
+
+            PlaceController.CompleteQuestsInPlace();
         }
 
         /// <summary>
@@ -108,7 +155,25 @@ namespace Narrative_Engine
             {
                 // Open and read file 
                 string jsonString = File.ReadAllText(filePath);
-                return JsonSerializer.Deserialize<Dialog>(jsonString);
+
+                var dialogJson = JSONDecoder.Decode(jsonString);
+
+                var nodesJsonList = dialogJson["nodes"].ArrayValue;
+                var nodes = new List<Node>();
+
+                foreach(var nodeJson in nodesJsonList)
+                {
+                    var optionsJsonList = nodeJson["options"].ArrayValue;
+                    var options = new List<Option>();
+
+                    foreach (var optionJson in optionsJsonList)
+                        options.Add(new Option((int)optionJson["nodePtr"], (string)optionJson["text"]));
+
+                    nodes.Add(new Node((string)nodeJson["character"], (int)nodeJson["nextNode"], (string)nodeJson["text"], options));
+                }
+
+
+                return new Dialog((string)dialogJson["init"], nodes);
             } // try
             catch(FileLoadException e1)
             {
@@ -140,10 +205,10 @@ namespace Narrative_Engine
 
         public void makeExampleFiles()
         {
-            var options = new JsonSerializerOptions
-            {
-                WriteIndented = true,
-            };
+            //var options = new JsonSerializerOptions
+            //{
+            //    WriteIndented = true,
+            //};
 
             List<Story> example_stories = new List<Story>();
 
@@ -151,6 +216,11 @@ namespace Narrative_Engine
             example_quest.Add("C1");
             example_quest.Add("C2");
             example_stories.Add(new Story(StoryType.SECONDARY, example_quest));
+
+            var example_stories_dict = new List<Dictionary<string, object>>();
+
+            foreach (var story in example_stories)
+                example_stories_dict.Add(story.toDictionary());
 
             // TODO: Crear constructor con todos los valores de historia que irán en el JSON
 
@@ -180,13 +250,13 @@ namespace Narrative_Engine
             example_places.Add("Tower of Salvation", new Place("Tower of Salvation", towerPlaces));
 
 
-            var jsonString = JsonSerializer.Serialize(example_characters, options);
+            var jsonString = JSONEncoder.Encode(example_characters);
             File.WriteAllText("Example_characters.json", jsonString);
 
-            jsonString = JsonSerializer.Serialize(example_stories, options);
+            jsonString = JSONEncoder.Encode(example_stories_dict);
             File.WriteAllText("Example_stories.json", jsonString);
 
-            jsonString = JsonSerializer.Serialize(example_places, options);
+            jsonString = JSONEncoder.Encode(example_places);
             File.WriteAllText("Example_places.json", jsonString);
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Narrative_Engine
 {
-    class Character
+    internal class Character
     {
         public enum CharacterType
         {
