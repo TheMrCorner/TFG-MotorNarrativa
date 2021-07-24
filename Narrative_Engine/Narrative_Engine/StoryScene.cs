@@ -29,6 +29,7 @@ namespace Narrative_Engine
             this.m_itemToGive = m_itemToGive;
             this.m_itemToTake = m_itemToTake;
             this.m_dialogs = m_dialogs;
+            this.dialogs = new List<Dialog>();
         } // Constructor
 
         /// <summary>

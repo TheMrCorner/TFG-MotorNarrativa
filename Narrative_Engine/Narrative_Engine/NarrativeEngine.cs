@@ -10,7 +10,6 @@ namespace Narrative_Engine
     {
         private static DialogController dialogController;
 
-
         public static void init(string generalPath)
         {
             FileManager fileManager = new FileManager(generalPath, "Story.json", "Chapters.json", "Scenes.json", "Dialogs", "Characters.json", "Items.json", "Place.json");
@@ -18,6 +17,7 @@ namespace Narrative_Engine
             fileManager.readFiles();
             StoryController.assembleStory();
             dialogController = new DialogController(fileManager);
+            loadDialogues(StoryController.m_storyScenes["scene1_C1_P1"]);
         }
 
         static Story getStory()
@@ -43,7 +43,7 @@ namespace Narrative_Engine
         {
             foreach(string filePath in scene.m_dialogs)
             {
-                scene.dialogs.Add(dialogController.GetDialog(filePath));
+                scene.dialogs.Add(dialogController.GetDialog(filePath + ".json"));
             }
         }
 
