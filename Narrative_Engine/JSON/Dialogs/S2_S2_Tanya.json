@@ -1,0 +1,83 @@
+{
+    "init": "Tanya",
+    "nodes": [
+        {
+            "character": "Tanya",
+            "nextNode": 1,
+            "text": "Hmm",
+            "options": []
+        },
+        {
+            "character": "Tanya",
+            "nextNode": -1,
+            "text": "¿Busca zapatos nuevos?",
+            "options": [
+                {
+                    "nodePtr": 3,
+                    "text": "No, vengo a hablarle de un trabajo."
+                },
+                {
+                    "nodePtr": 2,
+                    "text": "Perdone, me he equivocado."
+                }
+            ]
+        },
+        {
+            "character": "Tanya",
+            "nextNode": -2,
+            "text": "Hmmm.",
+            "options": []
+        },
+        {
+            "character": "Tanya",
+            "nextNode": 4,
+            "text": "Si necesita que le arregle las botas, tarde escasos minutos.",
+            "options": []
+        },
+        {
+            "character": "Tanya",
+            "nextNode": -1,
+            "text": "¿De qué trata el trabajo?",
+            "options": [
+                {
+                    "nodePtr": 5,
+                    "text": "Busco gente para buscar un objeto en el bosque del norte."
+                },
+                {
+                    "nodePtr": 7,
+                    "text": "No necesito que me arregle las botas, es una aventura."
+                }
+            ]
+        },
+        {
+            "character": "Tanya",
+            "nextNode": 6,
+            "text": "¿Y por qué iba yo a aceptar un trabajo así?",
+            "options": []
+        },
+        {
+            "character": "Tanya",
+            "nextNode": -2,
+            "text": "Se ha equivocado de persona, busque a otro.",
+            "options": []
+        },
+        {
+            "character": "Tanya",
+            "nextNode": 8,
+            "text": "Una aventura... igual si necesita que le arregle las botas a usted o alguno de sus compañeros puede salir rentable.",
+            "options": []
+        },
+        {
+            "character": "Tanya",
+            "nextNode": 9,
+            "text": "Además, siempre se puede concoer gente interesante de viaje.",
+            "options": []
+        },
+        {
+            "character": "Tanya",
+            "nextNode": -2,
+            "text": "Iré con usted, pero no se espere que sea de gran ayuda.",
+            "options": []
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "init": "Aksana",
+    "nodes": [
+        {
+            "character": "Aksana",
+            "nextNode": 1,
+            "text": "Buenos días.",
+            "options": []
+        },
+        {
+            "character": "Aksana",
+            "nextNode": -1,
+            "text": "¿Busca trabajo?",
+            "options": [
+                {
+                    "nodePtr": 2,
+                    "text": "No, muchas gracias, tengo prisa."
+                },
+                {
+                    "nodePtr": 3,
+                    "text": "Depende, ¿de qué trabajo se trata?"
+                }
+            ]
+        },
+        {
+            "character": "Aksana",
+            "nextNode": -2,
+            "text": "En ese caso, que le vaya bien.",
+            "options": []
+        },
+        {
+            "character": "Aksana",
+            "nextNode": 4,
+            "text": "Necesito que encuentres para mí un objeto excepcional.",
+            "options": []
+        },
+        {
+            "character": "Aksana",
+            "nextNode": 5,
+            "text": "Está en el bosque al norte de Dara.",
+            "options": []
+        },
+        {
+            "character": "Aksana",
+            "nextNode": -1,
+            "text": "¿Le interesa?",
+            "options": [
+                {
+                    "nodePtr": 2,
+                    "text": "Ahora que lo pienso... no."
+                },
+                {
+                    "nodePtr": 6,
+                    "text": "Puede... si me explica un poco más el objeto que hay que encontrar."
+                }
+            ]
+        },
+        {
+            "character": "Aksana",
+            "nextNode": 7,
+            "text": "Se trata de la diadema de la emperatriz Victoria II.",
+            "options": []
+        },
+        {
+            "character": "Aksana",
+            "nextNode": 8,
+            "text": "Se perdió hace tiempo y se cree que está en el bosque de Dara, donde solía pasar a veranear.",
+            "options": []
+        },
+        {
+            "character": "Aksana",
+            "nextNode": 9,
+            "text": "Pero no podrá ir a solas. Necesitará un grupo de compañeros.",
+            "options": []
+        },
+        {
+            "character": "Aksana",
+            "nextNode": 10,
+            "text": "El bosque es peligroso.",
+            "options": []
+        },
+        {
+            "character": "Aksana",
+            "nextNode": -1,
+            "text": "¿Qué me dice? ¿Acepta?",
+            "options": [
+                {
+                    "nodePtr": 2,
+                    "text": "Lo siento, pero tengo que atender antes al alcalde."
+                },
+                {
+                    "nodePtr": 11,
+                    "text": "Por supuesto."
+                }
+            ]
+        },
+        {
+            "character": "Aksana",
+            "nextNode": -2,
+            "text": "¡Estupendo! Vaya a la taberna, allí encontrará a gente que pueda ayudar.",
+            "options": []
+        }
+    ]
+}

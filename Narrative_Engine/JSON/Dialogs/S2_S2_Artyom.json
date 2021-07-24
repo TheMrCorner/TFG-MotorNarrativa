@@ -1,0 +1,98 @@
+{
+    "init": "Artyom",
+    "nodes": [
+        {
+            "character": "Artyom",
+            "nextNode": 1,
+            "text": "Más vale que merezca la pena...",
+            "options": []
+        },
+        {
+            "character": "Artyom",
+            "nextNode": -1,
+            "text": "¿Qué quieres?",
+            "options": [
+                {
+                    "nodePtr": 2,
+                    "text": "Nada, disculpe."
+                },
+                {
+                    "nodePtr": 3,
+                    "text": "Busco gente para buscar un objeto en el bosque del norte."
+                }
+            ]
+        },
+        {
+            "character": "Artyom",
+            "nextNode": -2,
+            "text": "Bah, pueblerinos descerebrados...",
+            "options": []
+        },
+        {
+            "character": "Artyom",
+            "nextNode": 4,
+            "text": "Un objeto en el bosque... no suena muy convincente.",
+            "options": []
+        },
+        {
+            "character": "Artyom",
+            "nextNode": -1,
+            "text": "¿Hay dinero de por medio?",
+            "options": [
+                {
+                    "nodePtr": 7,
+                    "text": "Por supuesto."
+                },
+                {
+                    "nodePtr": 5,
+                    "text": "Pues la verdad es que no mucho..."
+                }
+            ]
+        },
+        {
+            "character": "Artyom",
+            "nextNode": 6,
+            "text": "¿Estás de broma?",
+            "options": []
+        },
+        {
+            "character": "Artyom",
+            "nextNode": 2,
+            "text": "¿Trabajar gratis?",
+            "options": []
+        },
+        {
+            "character": "Artyom",
+            "nextNode": 8,
+            "text": "Entonces puede que me interese. Nos repartiremos la recompensa equitativamente.",
+            "options": []
+        },
+        {
+            "character": "Artyom",
+            "nextNode": -1,
+            "text": "¿Alguna queja?",
+            "options": [
+                {
+                    "nodePtr": 7,
+                    "text": "Para nada."
+                },
+                {
+                    "nodePtr": 5,
+                    "text": "Sí, no puede ser equitativo, yo mando aquí."
+                }
+            ]
+        },
+        {
+            "character": "Artyom",
+            "nextNode": -2,
+            "text": "Perfecto entonces, encantado de formar equipo contigo.",
+            "options": []
+        },
+        {
+            "character": "Artyom",
+            "nextNode": 2,
+            "text": "Entonces te puedes largar con viento fresco.",
+            "options": []
+        }
+    ]
+}

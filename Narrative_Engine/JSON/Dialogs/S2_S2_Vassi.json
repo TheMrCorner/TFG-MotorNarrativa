@@ -1,0 +1,89 @@
+{
+    "init": "Vassi",
+    "nodes": [
+        {
+            "character": "Vassi",
+            "nextNode": 1,
+            "text": "¡Buenos días tenga usted, jo jo jo!",
+            "options": []
+        },
+        {
+            "character": "Vassi",
+            "nextNode": 2,
+            "text": "Si necesita un herrero ha dado usted con el mejor de la región, aunque me pilla de descanso.",
+            "options": []
+        },
+        {
+            "character": "Vassi",
+            "nextNode": -1,
+            "text": "¿Qué necesita?",
+            "options": [
+                {
+                    "nodePtr": 3,
+                    "text": "Vengo a hablarle de un trabajo."
+                },
+                {
+                    "nodePtr": 2,
+                    "text": "Perdone, me he equivocado."
+                }
+            ]
+        },
+        {
+            "character": "Vassi",
+            "nextNode": -2,
+            "text": "Jo jo jo, no se preocupe, venga a verme si necesita algun trabajo de herrería.",
+            "options": []
+        },
+        {
+            "character": "Vassi",
+            "nextNode": 4,
+            "text": "Así que un trabajo, ¿eh? Jo jo jo.",
+            "options": []
+        },
+        {
+            "character": "Vassi",
+            "nextNode": -1,
+            "text": "¿Qué neesita que pase por la forja?",
+            "options": [
+                {
+                    "nodePtr": 5,
+                    "text": "Nda realmente, busco gente para encontrar un objeto en el bosque del norte."
+                },
+                {
+                    "nodePtr": 7,
+                    "text": "Nada, es para irnos a una aventura."
+                }
+            ]
+        },
+        {
+            "character": "Vassi",
+            "nextNode": 6,
+            "text": "Jo jo jo, una aventura en el bosque, ¿eh?",
+            "options": []
+        },
+        {
+            "character": "Vassi",
+            "nextNode": -2,
+            "text": "Creo que me apuntaré, llevo años queriendo salir de aquí a por un poco de acción.",
+            "options": []
+        },
+        {
+            "character": "Vassi",
+            "nextNode": 8,
+            "text": "Nada de trabajo de hierro, pero una aventura en el bosque... Jo jo jo.",
+            "options": []
+        },
+        {
+            "character": "Vassi",
+            "nextNode": 9,
+            "text": "Lo cierto es que llevo años queriendo salir de este pueblo un rato, jo jo jo.",
+            "options": []
+        },
+        {
+            "character": "Vassi",
+            "nextNode": -2,
+            "text": "Creo que aceptaré, me iré con usted a la aventura, jo jo jo.",
+            "options": []
+        }
+    ]
+}

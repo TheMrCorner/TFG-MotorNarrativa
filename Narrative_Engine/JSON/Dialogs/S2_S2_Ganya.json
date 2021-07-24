@@ -1,0 +1,83 @@
+{
+    "init": "Ganya",
+    "nodes": [
+        {
+            "character": "Ganya",
+            "nextNode": 1,
+            "text": "¡Hola!",
+            "options": []
+        },
+        {
+            "character": "Ganya",
+            "nextNode": -1,
+            "text": "¿Qué gustaría de oír usted hoy?",
+            "options": [
+                {
+                    "nodePtr": 3,
+                    "text": "Nada, vengo a hablarle de un trabajo."
+                },
+                {
+                    "nodePtr": 2,
+                    "text": "Perdone, me he equivocado."
+                }
+            ]
+        },
+        {
+            "character": "Ganya",
+            "nextNode": -2,
+            "text": "Vaya, bueno, si necesita escuchar alguna canción, estaré aquí para deleitarle.",
+            "options": []
+        },
+        {
+            "character": "Ganya",
+            "nextNode": 4,
+            "text": "Interesante, llevo tiempo buscando un mecenas.",
+            "options": []
+        },
+        {
+            "character": "Ganya",
+            "nextNode": -1,
+            "text": "¿De qué se trata el trabajo?",
+            "options": [
+                {
+                    "nodePtr": 5,
+                    "text": "Busco gente para buscar un objeto en el bosque del norte."
+                },
+                {
+                    "nodePtr": 7,
+                    "text": "No es un mecenazgo, es una aventura."
+                }
+            ]
+        },
+        {
+            "character": "Ganya",
+            "nextNode": 6,
+            "text": "Oh, una aventura en el bosque, ¿eh?",
+            "options": []
+        },
+        {
+            "character": "Ganya",
+            "nextNode": -2,
+            "text": "Creo que me apuntaré, las canciones no se escriben quedándote en la taberna.",
+            "options": []
+        },
+        {
+            "character": "Ganya",
+            "nextNode": 8,
+            "text": "Oh, así que no eres un mecenas, pero me ofreces una aventura.",
+            "options": []
+        },
+        {
+            "character": "Ganya",
+            "nextNode": 9,
+            "text": "No es un mal trato, aventura y posibilidades de escribir canciones por ayudarte.",
+            "options": []
+        },
+        {
+            "character": "Ganya",
+            "nextNode": -2,
+            "text": "Creo que aceptaré, aunque ya ves que no soy difícil de convencer.",
+            "options": []
+        }
+    ]
+}

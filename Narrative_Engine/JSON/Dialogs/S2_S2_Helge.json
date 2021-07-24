@@ -1,0 +1,38 @@
+{
+    "init": "Helge",
+    "nodes": [
+        {
+            "character": "Helge",
+            "nextNode": 1,
+            "text": "Buenas.",
+            "options": []
+        },
+        {
+            "character": "Helge",
+            "nextNode": -1,
+            "text": "¿Necesita ayuda con algo?",
+            "options": [
+                {
+                    "nodePtr": 3,
+                    "text": "No señor alguacil, vengo a hablarle de un trabajo."
+                },
+                {
+                    "nodePtr": 2,
+                    "text": "Nada, siculpe las molestias."
+                }
+            ]
+        },
+        {
+            "character": "Helge",
+            "nextNode": -2,
+            "text": "Bueno, si necesita cualquier cosa, estoy siempre a su servicio.",
+            "options": []
+        },
+        {
+            "character": "Helge",
+            "nextNode": -2,
+            "text": "No voy a poder, tengo que vigilar el pueblo, lo siento.",
+            "options": []
+        }
+    ]
+}

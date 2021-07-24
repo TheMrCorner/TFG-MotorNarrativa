@@ -1,0 +1,92 @@
+{
+    "init": "Irina",
+    "nodes": [
+        {
+            "character": "Irina",
+            "nextNode": 1,
+            "text": "Disculpa la cara llena de churretes, llevo trabajando todo el día en el campo.",
+            "options": []
+        },
+        {
+            "character": "Irina",
+            "nextNode": -1,
+            "text": "¿Quieres sentarte?",
+            "options": [
+                {
+                    "nodePtr": 3,
+                    "text": "No, venía a hablarte de un trabajo."
+                },
+                {
+                    "nodePtr": 2,
+                    "text": "Disculpa, no quería molestarte."
+                }
+            ]
+        },
+        {
+            "character": "Irina",
+            "nextNode": -2,
+            "text": "Nada, no te preocupes, nos vemos por aquí.",
+            "options": []
+        },
+        {
+            "character": "Irina",
+            "nextNode": -1,
+            "text": "Uy, ¿y de qué trabajo se trata?",
+            "options": [
+                {
+                    "nodePtr": 4,
+                    "text": "Debemos ir a buscar un objeto al bosque de Dara."
+                },
+                {
+                    "nodePtr": 5,
+                    "text": "Vamos a una aventura al bosque de Dara."
+                }
+            ]
+        },
+        {
+            "character": "Irina",
+            "nextNode": -2,
+            "text": "No creo que pueda, suena a que hace falta mucho tiempo, disculpa.",
+            "options": []
+        },
+        {
+            "character": "Irina",
+            "nextNode": 6,
+            "text": "Suena interesante...",
+            "options": []
+        },
+        {
+            "character": "Irina",
+            "nextNode": 7,
+            "text": "Aunque no creo que pueda, necesito cuidar mis campos.",
+            "options": []
+        },
+        {
+            "character": "Irina",
+            "nextNode": -1,
+            "text": "¿Llevará mucho tiempo?",
+            "options": [
+                {
+                    "nodePtr": 9,
+                    "text": "No, creo que podríamos estar aquí mañana."
+                },
+                {
+                    "nodePtr": 8,
+                    "text": "Igual nos retrasamos un poco."
+                }
+            ]
+        },
+        {
+            "character": "Irina",
+            "nextNode": -2,
+            "text": "Entonces no creo que pueda, tengo que cuidar de mis campos.",
+            "options": []
+        },
+        {
+            "character": "Irina",
+            "nextNode": -2,
+            "text": "Bueno, si la recompensa es buena puedo unirme.",
+            "options": []
+        }
+    ]
+}

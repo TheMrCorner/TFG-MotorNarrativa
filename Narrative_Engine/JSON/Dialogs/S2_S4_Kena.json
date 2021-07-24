@@ -1,0 +1,98 @@
+{
+    "init": "Kena",
+    "nodes": [
+        {
+            "character": "Kena",
+            "nextNode": 1,
+            "text": "Hmmmm hola, buenas tardes.",
+            "options": []
+        },
+        {
+            "character": "Kena",
+            "nextNode": -1,
+            "text": "¿Necesita algo? Estoy apunto de terminar un relato.",
+            "options": [
+                {
+                    "nodePtr": 3,
+                    "text": "Nada, vengo a hablarle de un trabajo."
+                },
+                {
+                    "nodePtr": 2,
+                    "text": "Perdone, me he equivocado."
+                }
+            ]
+        },
+        {
+            "character": "Kena",
+            "nextNode": -2,
+            "text": "Nada nada, no se preocupe. ¿Por dónde iba? Ah sí, y entonces...",
+            "options": []
+        },
+        {
+            "character": "Kena",
+            "nextNode": 4,
+            "text": "Un trabajo. A una escritora.",
+            "options": []
+        },
+        {
+            "character": "Kena",
+            "nextNode": -1,
+            "text": "¿Qué poema quiere que escriba y para quién? ¿O quizá un relato de amor?",
+            "options": [
+                {
+                    "nodePtr": 5,
+                    "text": "Nada de eso, busco gente para encontrar un objeto en el bosque."
+                },
+                {
+                    "nodePtr": 7,
+                    "text": "No, es para ir a una aventura."
+                }
+            ]
+        },
+        {
+            "character": "Kena",
+            "nextNode": 6,
+            "text": "Hmmmm puede ser interesante. Igual saco material para una novela.",
+            "options": []
+        },
+        {
+            "character": "Kena",
+            "nextNode": -2,
+            "text": "Me apunto, pero antes déjeme terminar mi relato. ¿Por dónde me he quedado? Pfff he perdido el hilo...",
+            "options": []
+        },
+        {
+            "character": "Kena",
+            "nextNode": 8,
+            "text": "Una aventura. Ya, claro.",
+            "options": []
+        },
+        {
+            "character": "Kena",
+            "nextNode": -1,
+            "text": "¿Y me permite preguntarle dónde y de qué trata dicha aventura?",
+            "options": [
+                {
+                    "nodePtr": 9,
+                    "text": "Claro, hay que encontrar una diadema perdida en el bosque."
+                },
+                {
+                    "nodePtr": 10,
+                    "text": "Es buscar un objeto en el bosque."
+                }
+            ]
+        },
+        {
+            "character": "Kena",
+            "nextNode": -2,
+            "text": "Haber empezado por ahí, claro que me apunto, la de historias que se pueden sacar de ahí...",
+            "options": []
+        },
+        {
+            "character": "Kena",
+            "nextNode": -2,
+            "text": "No pienso hacer de muchacha de los recados. No me interesa, muchas gracias.",
+            "options": []
+        }
+    ]
+}

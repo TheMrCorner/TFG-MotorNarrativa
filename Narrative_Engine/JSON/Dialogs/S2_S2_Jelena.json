@@ -1,0 +1,98 @@
+{
+    "init": "Jelena",
+    "nodes": [
+        {
+            "character": "Jelena",
+            "nextNode": 1,
+            "text": "Alguien que habla en este pueblo.",
+            "options": []
+        },
+        {
+            "character": "Jelena",
+            "nextNode": -1,
+            "text": "¿Qué buscas, necesitas que te cace algo?",
+            "options": [
+                {
+                    "nodePtr": 3,
+                    "text": "Nada, vengo a hablarle de un trabajo."
+                },
+                {
+                    "nodePtr": 2,
+                    "text": "No, nada, disculpe."
+                }
+            ]
+        },
+        {
+            "character": "Jelena",
+            "nextNode": -2,
+            "text": "Vaya y yo que solo quería hablar con alguien...",
+            "options": []
+        },
+        {
+            "character": "Jelena",
+            "nextNode": 4,
+            "text": "Bueno, mi trabajo es cazar.",
+            "options": []
+        },
+        {
+            "character": "Jelena",
+            "nextNode": -1,
+            "text": "¿De qué se trata?",
+            "options": [
+                {
+                    "nodePtr": 5,
+                    "text": "Necesito ir a buscar un objeto al bosque de Dara."
+                },
+                {
+                    "nodePtr": 6,
+                    "text": "¿Cazar objetos también sabe?"
+                }
+            ]
+        },
+        {
+            "character": "Jelena",
+            "nextNode": 8,
+            "text": "Parece aburrido...",
+            "options": []
+        },
+        {
+            "character": "Jelena",
+            "nextNode": 7,
+            "text": "Por supuesto. Cazo todo aquello que se me ponga por delante.",
+            "options": []
+        },
+        {
+            "character": "Jelena",
+            "nextNode": 8,
+            "text": "Aunque la tarifa puede ser distinta, un poco más cara, ya sabes.",
+            "options": []
+        },
+        {
+            "character": "Jelena",
+            "nextNode": -1,
+            "text": "Pero si hay dinero...",
+            "options": [
+                {
+                    "nodePtr": 10,
+                    "text": "Claro que hay dinero."
+                },
+                {
+                    "nodePtr": 9,
+                    "text": "No mucho, la verdad."
+                }
+            ]
+        },
+        {
+            "character": "Jelena",
+            "nextNode": -2,
+            "text": "Entonces creo que paso, que tenga un buen día.",
+            "options": []
+        },
+        {
+            "character": "Jelena",
+            "nextNode": -2,
+            "text": "Bueno, ganar un dinero extra siempre ayuda, cuente conmigo.",
+            "options": []
+        }
+    ]
+}

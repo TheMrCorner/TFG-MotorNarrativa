@@ -1,0 +1,41 @@
+{
+    "init": "MainCharacter",
+    "nodes": [
+        {
+            "character": "MainCharacter",
+            "nextNode": 1,
+            "text": "Así que esta es la legendaria diadema perdida.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 2,
+            "text": "Parece menos de lo que cuentan.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 3,
+            "text": "Aunque ese enorme zafiro engarzado que cuelga de la parte delantera parece mágico.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 4,
+            "text": "Espera, yo he leído acerca de este zafiro.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 5,
+            "text": "Se supone que fue un regalo de los elfos.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": -2,
+            "text": "Debería llevarlo a la universidad, puede contener magia infinita o una muy poderosa.",
+            "options": []
+        }
+    ]
+}
