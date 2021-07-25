@@ -178,7 +178,7 @@
   },
   {
     "m_id": "scene2_C1_S2",
-    "m_place": "Taberna_Fyrst",
+    "m_place": "Taberna_Dara",
     "m_next": "scene3_C1_S2",
     "m_itemToGive": "",
     "m_itemToTake": "",
