@@ -148,29 +148,29 @@ namespace Narrative_Engine
         /// <returns> (Dialog) New dialog created from the JSON text. </returns>
         public Dialog ReadDialogFile(string filePath)
         {
-            try
+            // Open and read file 
+            string jsonString = File.ReadAllText(filePath);
+
+            var dialogJson = JSONDecoder.Decode(jsonString);
+
+            var nodesJsonList = dialogJson["nodes"].ArrayValue;
+            var nodes = new List<Node>();
+
+            foreach(var nodeJson in nodesJsonList)
             {
-                // Open and read file 
-                string jsonString = File.ReadAllText(filePath);
+                var optionsJsonList = nodeJson["options"].ArrayValue;
+                var options = new List<Option>();
 
-                var dialogJson = JSONDecoder.Decode(jsonString);
+                foreach (var optionJson in optionsJsonList)
+                    options.Add(new Option((int)optionJson["nodePtr"], (string)optionJson["text"]));
 
-                var nodesJsonList = dialogJson["nodes"].ArrayValue;
-                var nodes = new List<Node>();
-
-                foreach(var nodeJson in nodesJsonList)
-                {
-                    var optionsJsonList = nodeJson["options"].ArrayValue;
-                    var options = new List<Option>();
-
-                    foreach (var optionJson in optionsJsonList)
-                        options.Add(new Option((int)optionJson["nodePtr"], (string)optionJson["text"]));
-
-                    nodes.Add(new Node((string)nodeJson["character"], (int)nodeJson["nextNode"], (string)nodeJson["text"], options));
-                }
+                nodes.Add(new Node((string)nodeJson["character"], (int)nodeJson["nextNode"], (string)nodeJson["text"], options));
+            }
 
 
-                return new Dialog((string)dialogJson["init"], nodes);
+            return new Dialog((string)dialogJson["init"], nodes);
+            /*try
+            {
             } // try
             catch(FileLoadException e1)
             {
@@ -185,7 +185,7 @@ namespace Narrative_Engine
                 Console.Error.WriteLine("File not found: " + filePath);
 
                 throw new FileNotFoundException("File not found: " + filePath, e2);
-            } // catch
+            } // catch*/
         } // readDialogFile
         
         /// <summary>
