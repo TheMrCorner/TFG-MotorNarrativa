@@ -36,37 +36,31 @@
     },
     {
       "character": "Mayor",
-      "nextNode": 6,
+      "nextNode": 5,
       "text": "Bueno, te haré un resumen rápido. ",
       "options": []
     },
     {
       "character": "Mayor",
       "nextNode": 6,
-      "text": "No suenas con mucha convicción...",
-      "options": []
-    },
-    {
-      "character": "Mayor",
-      "nextNode": 7,
       "text": "Verás, necesito que lleves un cáliz muy valioso a un amigo que vive en Dara, al norte. ",
       "options": []
     },
     {
       "character": "Mayor",
-      "nextNode": 8,
+      "nextNode": 7,
       "text": "Es muy importante que llegue sano y salvo, sin ningún tipo de rasguño.  ",
       "options": []
     },
     {
       "character": "Mayor",
-      "nextNode": 9,
+      "nextNode": 8,
       "text": "De esto dependen muchas cosas, así que ten mucho cuidado. ",
       "options": []
     },
     {
       "character": "Mayor",
-      "nextNode": 10,
+      "nextNode": 9,
       "text": "Por cierto, si puedes evitar preguntas incómodas y hablar del caliz con quien sea, mucho mejor.",
       "options": []
     },
@@ -76,26 +70,26 @@
       "text": "Tienes alguna duda?",
       "options": [
         {
-          "nodePtr": 14,
+          "nodePtr": 12,
           "text": "No"
         },
         {
-          "nodePtr": 11,
+          "nodePtr": 10,
           "text": "¿Para qué habías dicho que servía el cáliz?"
         }
       ]
     },
     {
       "character": "Mayor",
-      "nextNode": 10,
+      "nextNode": -1,
       "text": "No lo he dicho... es verdad. Pero tampoco es algo que necesites conocer, por ahora.",
       "options": [
         {
-          "nodePtr": 14,
+          "nodePtr": 12,
           "text": "Vale."
         },
         {
-          "nodePtr": 13,
+          "nodePtr": 11,
           "text": "Pero si es tan importante..."
         }
       ]
@@ -106,11 +100,11 @@
       "text": "Por eso mismo, hay prisa. Ya te lo explicaré cuando vuelvas.",
       "options": [
         {
-          "nodePtr": 14,
+          "nodePtr": 12,
           "text": "Vale."
         },
         {
-          "nodePtr": 14,
+          "nodePtr": 12,
           "text": "Bueno... vale."
         }
       ]
