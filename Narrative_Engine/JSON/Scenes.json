@@ -88,7 +88,9 @@
     "m_next": "scene2_C1_S1",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S1_S1_Dener"
+	]
   },
   {
     "m_id": "scene2_C1_S1",
@@ -96,7 +98,9 @@
     "m_next": "scene3_C1_S1",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S1_S2_Generic1"
+	]
   },
   {
     "m_id": "scene3_C1_S1",
@@ -104,7 +108,9 @@
     "m_next": "",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S1_S3_Thoughts"
+	]
   },
   {
     "m_id": "scene1_C2_S1",
@@ -112,7 +118,9 @@
     "m_next": "scene2_C2_S1",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S1_S4_Thoughts"
+	]
   },
   {
     "m_id": "scene2_C2_S1",
@@ -120,7 +128,11 @@
     "m_next": "scene3_C2_S1",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S1_S5_Pista1",
+		"S1_S5_Pista2",
+		"S1_S5_Pista3"
+	]
   },
   {
     "m_id": "scene3_C2_S1",
@@ -128,7 +140,9 @@
     "m_next": "",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S1_S6_Julie"
+	]
   },
   {
     "m_id": "scene1_C3_S1",
@@ -136,15 +150,21 @@
     "m_next": "scene2_C3_S1",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S1_S7_Generic1",
+		"S1_S7_Generic2",
+		"S1_S7_Generic3"
+	]
   },
   {
     "m_id": "scene2_C3_S1",
-    "m_place": "Casa_2_Dara",
+    "m_place": "Casa_1_Dara",
     "m_next": "",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S1_S8_Julie"
+	]
   },
   {
     "m_id": "scene1_C1_S2",
@@ -152,7 +172,9 @@
     "m_next": "scene2_C1_S2",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S2_S1_Aksana"
+	]
   },
   {
     "m_id": "scene2_C1_S2",
@@ -160,7 +182,15 @@
     "m_next": "scene3_C1_S2",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S2_S2_Artyom",
+		"S2_S2_Ganya",
+		"S2_S2_Helge",
+		"S2_S2_Irina",
+		"S2_S2_Jelena",
+		"S2_S2_Tanya",
+		"S2_S2_Vassi"
+	]
   },
   {
     "m_id": "scene3_C1_S2",
@@ -176,7 +206,9 @@
     "m_next": "",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S2_S4_Kena"
+	]
   },
   {
     "m_id": "scene1_C2_S2",
@@ -184,7 +216,9 @@
     "m_next": "",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S2_S5_Thoughts"
+	]
   },
   {
     "m_id": "scene1_C1_S3",
@@ -192,7 +226,9 @@
     "m_next": "scene2_C1_S3",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S3_S1_Kanda"
+	]
   },
   {
     "m_id": "scene2_C1_S3",
@@ -200,7 +236,12 @@
     "m_next": "scene3_C1_S3",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S3_S2_Generic1",
+		"S3_S2_Generic2",
+		"S3_S2_Generic3",
+		"S3_S2_Generic4"
+	]
   },
   {
     "m_id": "scene3_C1_S3",
@@ -208,7 +249,11 @@
     "m_next": "scene4_C1_S3",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S3_S3_Generic1",
+		"S3_S3_Generic2",
+		"S3_S3_Generic3"
+	]
   },
   {
     "m_id": "scene4_C1_S3",
@@ -216,7 +261,9 @@
     "m_next": "scene5_C1_S3",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S3_S4_Jask"
+	]
   },
   {
     "m_id": "scene5_C1_S3",
@@ -240,7 +287,9 @@
     "m_next": "scene8_C1_S3",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S3_S7_Marm"
+	]
   },
   {
     "m_id": "scene8_C1_S3",
@@ -248,7 +297,9 @@
     "m_next": "scene9_C1_S3",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S3_S8_Thoughts"
+	]
   },
   {
     "m_id": "scene9_C1_S3",
@@ -256,6 +307,8 @@
     "m_next": "",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"S3_S9_Kanda"
+	]
   }
 ]
