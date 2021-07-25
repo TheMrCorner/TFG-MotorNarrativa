@@ -20,7 +20,7 @@ namespace Narrative_Engine
             //fileManager.makeExampleFiles();
             fileManager.readFiles();
             StoryController.assembleStory();
-            dialogController = new DialogController(fileManager);
+            m_dc = new DialogController(fileManager);
             // TEST
             // loadDialogues(StoryController.m_storyScenes["scene1_C1_P1"]);
         }
@@ -44,11 +44,16 @@ namespace Narrative_Engine
             return StoryController.getChapterById(chapter_id);
         }
 
+        public static Quest getNextChapterById(string chapter_id)
+        {
+            return StoryController.getNextChapterById(chapter_id);
+        }
+
         public static void loadDialogues(StoryScene scene)
         {
             foreach(string filePath in scene.m_dialogs)
             {
-                scene.dialogs.Add(dialogController.GetDialog(filePath + ".json"));
+                scene.dialogs.Add(m_dc.GetDialog(filePath + ".json"));
             }
         }
 

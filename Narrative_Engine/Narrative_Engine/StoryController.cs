@@ -27,6 +27,32 @@ namespace Narrative_Engine
             if (m_chapters.ContainsKey(chapter_id))
             {
                 var chapter = m_chapters[chapter_id];
+                //si existe cargar diálogos
+                List<string> scenes = chapter.m_scenes;
+
+                if (scenes.Count > 0)
+                {
+                    foreach (string storyScene in scenes)
+                    {
+                        if (m_storyScenes.ContainsKey(storyScene))
+                        {
+                            var scene = m_storyScenes[storyScene];
+                            //NarrativeEngine.loadDialogues(scene);
+                            chapter.AddScene(scene);
+                        }
+                    }
+                }
+                return chapter;
+            }
+            return null;
+        }
+
+        internal static Quest getNextChapterById(string chapter_id)
+        {
+            //cragar capítulo
+            if (m_chapters.ContainsKey(chapter_id))
+            {
+                var chapter = m_chapters[chapter_id];
                 //buscar siguiente
                 if (chapter.m_next != "")
                 {
@@ -43,7 +69,7 @@ namespace Narrative_Engine
                                 if (m_storyScenes.ContainsKey(storyScene))
                                 {
                                     var scene = m_storyScenes[storyScene];
-                                    NarrativeEngine.loadDialogues(scene);
+                                    //NarrativeEngine.loadDialogues(scene);
                                     next_chapter.AddScene(scene);
                                 }
                             }
