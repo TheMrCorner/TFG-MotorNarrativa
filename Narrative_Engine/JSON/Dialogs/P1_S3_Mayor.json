@@ -67,7 +67,7 @@
     {
       "character": "Mayor",
       "nextNode": -1,
-      "text": "Tienes alguna duda?",
+      "text": "¿Tienes alguna duda?",
       "options": [
         {
           "nodePtr": 12,
