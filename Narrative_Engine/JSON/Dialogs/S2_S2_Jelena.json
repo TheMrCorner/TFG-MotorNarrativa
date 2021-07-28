@@ -24,7 +24,7 @@
         },
         {
             "character": "Jelena",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Vaya y yo que solo quería hablar con alguien...",
             "options": []
         },
@@ -84,7 +84,7 @@
         },
         {
             "character": "Jelena",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Entonces creo que paso, que tenga un buen día.",
             "options": []
         },

@@ -24,7 +24,7 @@
         },
         {
             "character": "Tanya",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Hmmm.",
             "options": []
         },
@@ -57,7 +57,7 @@
         },
         {
             "character": "Tanya",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Se ha equivocado de persona, busque a otro.",
             "options": []
         },
@@ -70,7 +70,7 @@
         {
             "character": "Tanya",
             "nextNode": 9,
-            "text": "Además, siempre se puede concoer gente interesante de viaje.",
+            "text": "Además, siempre se puede conocer gente interesante de viaje.",
             "options": []
         },
         {

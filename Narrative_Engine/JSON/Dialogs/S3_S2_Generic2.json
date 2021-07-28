@@ -3,7 +3,7 @@
     "nodes": [
         {
             "character": "Kevin",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "¿Un hombre dices? Vi pasar a uno ayer hacia Dara.",
             "options": []
         }

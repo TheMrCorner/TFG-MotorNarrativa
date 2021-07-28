@@ -24,7 +24,7 @@
         },
         {
             "character": "Irina",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Nada, no te preocupes, nos vemos por aquí.",
             "options": []
         },
@@ -78,7 +78,7 @@
         },
         {
             "character": "Irina",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Entonces no creo que pueda, tengo que cuidar de mis campos.",
             "options": []
         },

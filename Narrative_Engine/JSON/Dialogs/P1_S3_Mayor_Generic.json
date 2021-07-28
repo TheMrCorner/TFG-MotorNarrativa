@@ -3,7 +3,7 @@
   "nodes": [
     {
       "character": "Mayor",
-      "nextNode": -2,
+      "nextNode": -3,
       "text": "Venga, sal hacia Dara que tengo a mi amigo esperando.",
       "options": []
     }

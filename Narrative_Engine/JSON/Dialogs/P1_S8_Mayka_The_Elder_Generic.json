@@ -3,7 +3,7 @@
   "nodes": [
     {
       "character": "Mayka the Elder",
-      "nextNode": 1,
+      "nextNode": -3,
       "text": "Venga, date prisa, que tienes mucho camino que recorrer.",
       "options": []
     }

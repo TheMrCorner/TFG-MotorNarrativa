@@ -51,7 +51,7 @@
         },
         {
             "character": "Kanda",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Tienes razón, seguro que se ha puesto a hablar con Jask. Esperaré un poco más.",
             "options": []
         },
@@ -61,24 +61,39 @@
             "text": "No, nada. Es que me pongo nervioso con poco. Y mi padre no ha vuelto del trabajo todavía.",
             "options": [
                 {
-                    "nodePtr": 5,
+                    "nodePtr": 8,
                     "text": "¿Cuándo se fue?"
                 },
                 {
-                    "nodePtr": 6,
+                    "nodePtr": 1000,
                     "text": "¿Adónde se fue?"
                 }
             ]
         },
         {
             "character": "Kanda",
-            "nextNode": 4,
+            "nextNode": 9,
             "text": "Ayer por la tarde.",
             "options": []
         },
         {
             "character": "Kanda",
-            "nextNode": 4,
+            "nextNode": -1,
+            "text": "¿Podrías ir a buscarlo, por favor?",
+            "options": [
+                {
+                    "nodePtr": 5,
+                    "text": "Claro, no te preocupes."
+                },
+                {
+                    "nodePtr": 6,
+                    "text": "Deberías tranquilizarte, igual se quedó a dormir allí porque terminó tarde."
+                }
+            ]
+        },
+        {
+            "character": "Kanda",
+            "nextNode": 9,
             "text": "A Dara, a hacer un recado.",
             "options": []
         }

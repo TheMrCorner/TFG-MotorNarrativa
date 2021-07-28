@@ -3,7 +3,7 @@
     "nodes": [
         {
             "character": "Jucata",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "No he visto a nadie por aquí, lo siento.",
             "options": []
         }

@@ -3,7 +3,7 @@
     "nodes": [
         {
             "character": "Jose",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Lo siento, acabo de llegar a estas tierras, no he visto nada.",
             "options": []
         }

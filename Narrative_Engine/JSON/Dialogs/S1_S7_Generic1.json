@@ -3,7 +3,7 @@
     "nodes": [
         {
             "character": "Teiko",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Hace un buen día para pasear.",
             "options": []
         }
