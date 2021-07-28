@@ -46,7 +46,9 @@ namespace Narrative_Engine
 
         static public List<Quest> GetQuestsInPlace(string place)
         {
-            return m_questsInPlace[place];
+            if (m_questsInPlace.TryGetValue(place, out var questList))
+                return questList;
+            else return new List<Quest>();
         }
 
     }
