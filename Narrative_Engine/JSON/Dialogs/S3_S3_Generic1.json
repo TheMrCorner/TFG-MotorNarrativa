@@ -3,7 +3,7 @@
     "nodes": [
         {
             "character": "Nuno",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Jask parecía preocupado esta mañana, no ha querido darme de desayunar.",
             "options": []
         }

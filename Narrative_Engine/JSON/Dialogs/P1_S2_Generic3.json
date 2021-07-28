@@ -3,7 +3,7 @@
   "nodes": [
     {
       "character": "Teiko",
-      "nextNode": -2,
+      "nextNode": -3,
       "text": "La taberna está hoy hasta arriba, corren rumores de que Aksana ha organizado algo con toda esa gente.",
       "options": []
     }

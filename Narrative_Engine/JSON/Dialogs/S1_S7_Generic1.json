@@ -1,11 +1,11 @@
 {
   "init": "Adrik",
   "nodes": [
-    {
-      "character": "Adrik",
-      "nextNode": -2,
-      "text": "Hace un buen día para pasear.",
-      "options": []
-    }
+      {
+          "character": "Adrik",
+          "nextNode": -3,
+          "text": "Hace un buen día para pasear.",
+          "options": []
+      }
   ]
 }

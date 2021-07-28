@@ -3,7 +3,7 @@
     "nodes": [
         {
             "character": "Keipen",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "Creo que el amigo de Jask ha desaparecido, el pobre lleva toda la mañana preocupado.",
             "options": []
         }

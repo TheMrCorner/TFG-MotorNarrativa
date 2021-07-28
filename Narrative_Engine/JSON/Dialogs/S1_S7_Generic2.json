@@ -3,7 +3,7 @@
     "nodes": [
         {
             "character": "Mark",
-            "nextNode": -2,
+            "nextNode": -3,
             "text": "¡Hombre Julie! Tus tíos te estaban buscando.",
             "options": []
         }
