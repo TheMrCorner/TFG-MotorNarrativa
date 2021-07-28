@@ -1,11 +1,11 @@
 {
-    "init": "Dimitri",
-    "nodes": [
-        {
-            "character": "Dimitri",
-            "nextNode": -3,
-            "text": "Creo que he perdido mi reloj de arena...",
-            "options": []
-        }
-    ]
+  "init": "Dant",
+  "nodes": [
+      {
+          "character": "Dant",
+          "nextNode": -3,
+          "text": "Creo que he perdido mi reloj de arena...",
+          "options": []
+      }
+  ]
 }
