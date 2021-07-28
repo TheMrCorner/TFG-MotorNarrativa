@@ -11,35 +11,13 @@
   },
   {
     "m_id": "scene2_C1_P1",
-    "m_place": "Fyrst",
-    "m_next": "scene3_C1_P1",
-    "m_itemToGive": "",
-    "m_itemToTake": "",
-    "m_dialogs": [
-		"P1_S2_Generic1",
-		"P1_S2_Generic2",
-		"P1_S2_Generic3",
-		"P1_S2_Generic4"
-	]
-  },
-  {
-    "m_id": "scene3_C1_P1",
     "m_place": "Ayuntamiento_Fyrst",
-    "m_next": "scene4_C1_P1",
-    "m_itemToGive": "",
-    "m_itemToTake": "",
-    "m_dialogs": [
-		"P1_S3_Mayor",
-		"P1_S3_Mayor_Generic"
-	]
-  },
-  {
-    "m_id": "scene4_C1_P1",
-    "m_place": "Ruta_1",
     "m_next": "",
     "m_itemToGive": "",
     "m_itemToTake": "",
-    "m_dialogs": []
+    "m_dialogs": [
+		"P1_S3_Mayor"
+	]
   },
   {
     "m_id": "scene1_C2_P1",
@@ -78,8 +56,7 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"P1_S8_Mayka_The_Elder",
-		"P1_S8_Mayka_The_Elder_Generic"
+		"P1_S8_Mayka_The_Elder"
 	]
   },
   {
@@ -94,16 +71,6 @@
   },
   {
     "m_id": "scene2_C1_S1",
-    "m_place": "Ruta_1",
-    "m_next": "scene3_C1_S1",
-    "m_itemToGive": "",
-    "m_itemToTake": "",
-    "m_dialogs": [
-		"S1_S2_Generic1"
-	]
-  },
-  {
-    "m_id": "scene3_C1_S1",
     "m_place": "Cueva_1",
     "m_next": "",
     "m_itemToGive": "",
@@ -146,18 +113,6 @@
   },
   {
     "m_id": "scene1_C3_S1",
-    "m_place": "Dara",
-    "m_next": "scene2_C3_S1",
-    "m_itemToGive": "",
-    "m_itemToTake": "",
-    "m_dialogs": [
-		"S1_S7_Generic1",
-		"S1_S7_Generic2",
-		"S1_S7_Generic3"
-	]
-  },
-  {
-    "m_id": "scene2_C3_S1",
     "m_place": "Casa_1_Dara",
     "m_next": "",
     "m_itemToGive": "",
@@ -194,14 +149,6 @@
   },
   {
     "m_id": "scene3_C1_S2",
-    "m_place": "Ruta_1",
-    "m_next": "scene4_C1_S2",
-    "m_itemToGive": "",
-    "m_itemToTake": "",
-    "m_dialogs": []
-  },
-  {
-    "m_id": "scene4_C1_S2",
     "m_place": "Dara",
     "m_next": "",
     "m_itemToGive": "",
@@ -232,33 +179,8 @@
   },
   {
     "m_id": "scene2_C1_S3",
-    "m_place": "Ruta_1",
-    "m_next": "scene3_C1_S3",
-    "m_itemToGive": "",
-    "m_itemToTake": "",
-    "m_dialogs": [
-		"S3_S2_Generic1",
-		"S3_S2_Generic2",
-		"S3_S2_Generic3",
-		"S3_S2_Generic4"
-	]
-  },
-  {
-    "m_id": "scene3_C1_S3",
-    "m_place": "Dara",
-    "m_next": "scene4_C1_S3",
-    "m_itemToGive": "",
-    "m_itemToTake": "",
-    "m_dialogs": [
-		"S3_S3_Generic1",
-		"S3_S3_Generic2",
-		"S3_S3_Generic3"
-	]
-  },
-  {
-    "m_id": "scene4_C1_S3",
     "m_place": "Taberna_Dara",
-    "m_next": "scene5_C1_S3",
+    "m_next": "scene3_C1_S3",
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
@@ -266,25 +188,9 @@
 	]
   },
   {
-    "m_id": "scene5_C1_S3",
-    "m_place": "Cueva_1",
-    "m_next": "scene6_C1_S3",
-    "m_itemToGive": "",
-    "m_itemToTake": "",
-    "m_dialogs": []
-  },
-  {
-    "m_id": "scene6_C1_S3",
+    "m_id": "scene3_C1_S3",
     "m_place": "Mazmorra_1",
-    "m_next": "scene7_C1_S3",
-    "m_itemToGive": "",
-    "m_itemToTake": "",
-    "m_dialogs": []
-  },
-  {
-    "m_id": "scene7_C1_S3",
-    "m_place": "Mazmorra_1",
-    "m_next": "scene8_C1_S3",
+    "m_next": "scene4_C1_S3",
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
@@ -292,9 +198,9 @@
 	]
   },
   {
-    "m_id": "scene8_C1_S3",
+    "m_id": "scene5_C1_S3",
     "m_place": "Bosque_1",
-    "m_next": "scene9_C1_S3",
+    "m_next": "scene6_C1_S3",
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
@@ -302,7 +208,7 @@
 	]
   },
   {
-    "m_id": "scene9_C1_S3",
+    "m_id": "scene6_C1_S3",
     "m_place": "Fyrst",
     "m_next": "",
     "m_itemToGive": "",
