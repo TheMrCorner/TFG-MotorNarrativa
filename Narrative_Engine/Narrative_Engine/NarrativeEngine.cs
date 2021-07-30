@@ -22,7 +22,7 @@ namespace Narrative_Engine
             StoryController.assembleStory();
             m_dc = new DialogController(fileManager);
             // TEST
-            loadGenericDialogs("Fyrst");
+            // loadGenericDialogs("Fyrst");
         }
 
         static Story getStory()
