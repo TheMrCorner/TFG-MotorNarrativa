@@ -29,8 +29,8 @@ namespace Narrative_Engine
         public FileManager(string generalPath, string storyFolder, string chapterPath, string scenePath, string dialogFolder, string charactersPath, string itemsPath, string placesPath)
         {
             // TEST
-            // m_generalPath = "../../../" + generalPath + "/";
-            m_generalPath = generalPath + "/";
+            m_generalPath = "../../../" + generalPath + "/";
+            // m_generalPath = generalPath + "/";
             m_storyFolder = m_generalPath + storyFolder;
             m_dialogFolder = m_generalPath + dialogFolder;
             m_charactersPath = m_generalPath + charactersPath;
@@ -77,7 +77,11 @@ namespace Narrative_Engine
                 foreach (var adjacent in adjacentJson)
                     adjacentPlaces.Add((string)adjacent);
 
-                placesList.Add(new Place((string)placeJson["m_name"], adjacentPlaces));
+                List<string> genericDialogs = new List<string>();
+                foreach(var genericDialog in placeJson["m_genericDialogs"].ArrayValue)
+                    genericDialogs.Add((string)genericDialog);
+
+                placesList.Add(new Place((string)placeJson["m_name"], adjacentPlaces, genericDialogs));
             }
 
             PlaceController.m_places = new Dictionary<string, Place>();
@@ -242,9 +246,9 @@ namespace Narrative_Engine
             sylvaPlaces.Add("Sylvarant");
             sylvaPlaces.Add("Tethealla");
 
-            example_places.Add("Tethealla", new Place("Tethealla", tethePlaces));
-            example_places.Add("Sylvarant", new Place("Sylvarant", sylvaPlaces));
-            example_places.Add("Tower of Salvation", new Place("Tower of Salvation", towerPlaces));
+            example_places.Add("Tethealla", new Place("Tethealla", tethePlaces, new List<string>()));
+            example_places.Add("Sylvarant", new Place("Sylvarant", sylvaPlaces, new List<string>()));
+            example_places.Add("Tower of Salvation", new Place("Tower of Salvation", towerPlaces, new List<string>()));
 
 
             var jsonString = JSONEncoder.Encode(example_characters);

@@ -48,7 +48,16 @@ namespace Narrative_Engine
         {
             if (m_questsInPlace.TryGetValue(place, out var questList))
                 return questList;
-            else return new List<Quest>();
+            
+            return new List<Quest>();
+        }
+
+        static public List<string> GetGenericDialogsInPlace(string place)
+        {
+            if (m_places.TryGetValue(place, out var placeObject))
+                return placeObject.genericDialogs;
+            
+            return new List<string>();
         }
 
     }

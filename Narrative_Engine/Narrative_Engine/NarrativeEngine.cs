@@ -22,7 +22,7 @@ namespace Narrative_Engine
             StoryController.assembleStory();
             m_dc = new DialogController(fileManager);
             // TEST
-            // loadDialogues(StoryController.m_storyScenes["scene1_C1_P1"]);
+            loadGenericDialogs("Fyrst");
         }
 
         static Story getStory()
@@ -55,6 +55,15 @@ namespace Narrative_Engine
             {
                 scene.dialogs.Add(m_dc.GetDialog(filePath + ".json"));
             }
+        }
+
+        public static List<Dialog> loadGenericDialogs(string place)
+        {
+            List<Dialog> dialogs = new List<Dialog>();
+            List<string> dialogIds = PlaceController.GetGenericDialogsInPlace(place);
+            foreach (string dialog in dialogIds)
+                dialogs.Add(m_dc.GetDialog(dialog + ".json"));
+            return dialogs;
         }
 
         public static List<Story> GetStories() => StoryController.m_stories;

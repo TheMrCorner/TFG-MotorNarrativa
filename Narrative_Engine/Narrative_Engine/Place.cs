@@ -12,12 +12,16 @@ namespace Narrative_Engine
         internal List<string> m_adjacentPlacesNames { get; }
         List<Place> m_adjacentPlaces;
         internal List<string> m_itemsFound;
+        internal List<Dialog> m_genericDialogs;
+        internal List<string> genericDialogs;
 
-        internal Place(string m_name, List<string> m_adjacentPlacesNames)
+        internal Place(string m_name, List<string> m_adjacentPlacesNames, 
+            List<string> genericDialogs)
         {
            this.m_name = m_name;
            this.m_adjacentPlacesNames = m_adjacentPlacesNames;
-            m_adjacentPlaces = new List<Place>();
+           this.genericDialogs = genericDialogs;
+           m_adjacentPlaces = new List<Place>();
         }
 
         internal void searchAdjacent(Dictionary<string, Place> places)
