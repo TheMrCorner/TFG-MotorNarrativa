@@ -138,6 +138,16 @@
         "m_adjacentPlacesNames":
         [
             "Mazmorra_1",
+            "Mazmorra_3"
+        ],
+        "m_genericDialogs":
+        []
+    },
+	 {
+        "m_name": "Mazmorra_3",
+        "m_adjacentPlacesNames":
+        [
+            "Mazmorra_2",
             "Cueva_1"
         ],
         "m_genericDialogs":

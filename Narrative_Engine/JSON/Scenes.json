@@ -81,7 +81,7 @@
   },
   {
     "m_id": "scene1_C2_S1",
-    "m_place": "Mazmorra_1",
+    "m_place": "Mazmorra_3",
     "m_next": "scene2_C2_S1",
     "m_itemToGive": "",
     "m_itemToTake": "",
@@ -91,7 +91,7 @@
   },
   {
     "m_id": "scene2_C2_S1",
-    "m_place": "Mazmorra_1",
+    "m_place": "Mazmorra_2",
     "m_next": "scene3_C2_S1",
     "m_itemToGive": "",
     "m_itemToTake": "",
