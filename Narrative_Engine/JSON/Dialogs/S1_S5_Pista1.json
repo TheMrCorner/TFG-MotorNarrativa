@@ -1,5 +1,5 @@
 {
-    "init": "MainCharacter",
+    "init": "Mochila",
     "nodes": [
         {
             "character": "MainCharacter",

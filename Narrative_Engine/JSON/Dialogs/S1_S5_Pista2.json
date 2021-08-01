@@ -1,5 +1,5 @@
 {
-    "init": "MainCharacter",
+    "init": "Polvo",
     "nodes": [
         {
             "character": "MainCharacter",

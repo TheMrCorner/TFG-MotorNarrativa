@@ -52,7 +52,8 @@
             "Ruta_1",
             "Ruta_2",
             "Taberna_Dara",
-            "Casa_1_Dara"
+            "Casa_1_Dara",
+			"Mazmorra_1"
         ],
         "m_genericDialogs":
         [
@@ -117,17 +118,27 @@
         "m_adjacentPlacesNames":
         [
             "Ruta_1",
-            "Mazmorra_1"
+            "Mazmorra_2"
         ],
         "m_genericDialogs":
         []
     },
-    {
+	{
         "m_name": "Mazmorra_1",
         "m_adjacentPlacesNames":
         [
-            "Cueva_1",
+            "Mazmorra_2",
             "Dara"
+        ],
+        "m_genericDialogs":
+        []
+    }
+    {
+        "m_name": "Mazmorra_2",
+        "m_adjacentPlacesNames":
+        [
+            "Mazmorra_1",
+            "Cueva_1"
         ],
         "m_genericDialogs":
         []

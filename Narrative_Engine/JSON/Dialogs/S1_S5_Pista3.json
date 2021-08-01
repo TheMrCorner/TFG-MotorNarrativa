@@ -1,5 +1,5 @@
 {
-    "init": "MainCharacter",
+    "init": "Ropa",
     "nodes": [
         {
             "character": "MainCharacter",
