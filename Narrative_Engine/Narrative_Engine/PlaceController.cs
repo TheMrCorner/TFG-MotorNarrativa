@@ -15,22 +15,19 @@ namespace Narrative_Engine
         {
             foreach (var story in NarrativeEngine.GetStories())
             {
-                foreach(var chapter in story.m_chapters)
+                if(NarrativeEngine.GetQuests().ContainsKey(story.m_chapters[0]) &&
+                    NarrativeEngine.GetQuests()[story.m_chapters[0]].m_scenes.Count > 0)
                 {
-                    if(NarrativeEngine.GetQuests().ContainsKey(chapter) &&
-                        NarrativeEngine.GetQuests()[chapter].m_scenes.Count > 0)
+                    string scene_id = NarrativeEngine.GetQuests()[story.m_chapters[0]].m_scenes[0];
+                    if (NarrativeEngine.GetStoryScenes().ContainsKey(scene_id))
                     {
-                        string scene_id = NarrativeEngine.GetQuests()[chapter].m_scenes[0];
-                        if (NarrativeEngine.GetStoryScenes().ContainsKey(scene_id))
+                        StoryScene scene = NarrativeEngine.GetStoryScenes()[scene_id];
+                        if (!m_questsInPlace.ContainsKey(scene.m_place))
                         {
-                            StoryScene scene = NarrativeEngine.GetStoryScenes()[scene_id];
-                            if (!m_questsInPlace.ContainsKey(scene.m_place))
-                            {
-                                m_questsInPlace.Add(scene.m_place, new List<Quest>());
-                            }
-                            m_questsInPlace[scene.m_place].Add(NarrativeEngine.GetQuests()[chapter]);
-                            
+                            m_questsInPlace.Add(scene.m_place, new List<Quest>());
                         }
+                        m_questsInPlace[scene.m_place].Add(NarrativeEngine.GetQuests()[story.m_chapters[0]]);
+                            
                     }
                 }
             }
