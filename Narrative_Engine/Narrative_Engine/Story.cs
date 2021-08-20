@@ -18,9 +18,16 @@ namespace Narrative_Engine
 
         internal List<string> m_chapters { get; }
 
+        internal bool consumed { get; } = false;
+
         internal Story(StoryType m_storyType, List<string> m_chapters)
         {
             this.m_storyType = m_storyType;
+            this.m_chapters = m_chapters;
+        }
+
+        internal Story(List<string> m_chapters)
+        {
             this.m_chapters = m_chapters;
         }
 

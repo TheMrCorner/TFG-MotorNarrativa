@@ -103,7 +103,8 @@ namespace Narrative_Engine
                 foreach (var chapter in chaptersJson)
                     chapterList.Add((string)chapter);
 
-                StoryController.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
+                // StoryController.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
+                StoryController.m_stories.Add(new Story(chapterList));
             }
 
             jsonstring = File.ReadAllText(m_chaptersPath);

@@ -10,6 +10,7 @@ namespace Narrative_Engine
     {
         static public Dictionary<string, Place> m_places { get; set; }
         static public Dictionary<string, List<Quest>> m_questsInPlace { get; set; } = new Dictionary<string, List<Quest>>();
+        static public Dictionary<string, List<Story>> m_storiesStartingInPlace { get; set; } = new Dictionary<string, List<Story>>();
 
         static public void CompleteQuestsInPlace()
         {
@@ -27,7 +28,11 @@ namespace Narrative_Engine
                             m_questsInPlace.Add(scene.m_place, new List<Quest>());
                         }
                         m_questsInPlace[scene.m_place].Add(NarrativeEngine.GetQuests()[story.m_chapters[0]]);
-                            
+                        if (!m_storiesStartingInPlace.ContainsKey(scene.m_place))
+                        {
+                            m_storiesStartingInPlace.Add(scene.m_place, new List<Story>());
+                        }
+                        m_storiesStartingInPlace[scene.m_place].Add(story);
                     }
                 }
             }
@@ -43,9 +48,28 @@ namespace Narrative_Engine
 
         static public List<Quest> GetQuestsInPlace(string place)
         {
-            if (m_questsInPlace.TryGetValue(place, out var questList))
-                return questList;
-            
+            /*if (m_questsInPlace.TryGetValue(place, out var questList))
+                return questList;*/
+
+            // stories no consumidas -> random (0, stories.count)
+
+            if (m_storiesStartingInPlace.TryGetValue(place, out var storyList))
+            {
+                var availableStories = storyList.FindAll((x) => !x.consumed);
+                if(availableStories.Count > 0)
+                {
+                    Random random = new Random();
+                    int randomCounter = random.Next(1, Math.Min(availableStories.Count, 3));
+                    List<Quest> quests = new List<Quest>();
+                    for(int i = 0; i < randomCounter; i++)
+                    {
+                        // Story s = ClaseDeIdentificacionDeHistorias.GetHigherPriorityStory();
+                        // quests.Add(s.m_quests[0]);
+                    }
+                    return quests;
+                }
+            }
+
             return new List<Quest>();
         }
 
