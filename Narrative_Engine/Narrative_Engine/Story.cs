@@ -17,8 +17,9 @@ namespace Narrative_Engine
         private List<Quest> m_quests = new List<Quest>();
 
         internal List<string> m_chapters { get; }
+        internal List<string> m_characters { get; }
 
-        internal bool consumed { get; } = false;
+        internal bool consumed { get; set; } = false;
 
         internal Story(StoryType m_storyType, List<string> m_chapters)
         {
@@ -26,9 +27,10 @@ namespace Narrative_Engine
             this.m_chapters = m_chapters;
         }
 
-        internal Story(List<string> m_chapters)
+        internal Story(List<string> m_chapters, List<string> m_characters)
         {
             this.m_chapters = m_chapters;
+            this.m_characters = m_characters;
         }
 
         internal void addQuest(Quest quest)

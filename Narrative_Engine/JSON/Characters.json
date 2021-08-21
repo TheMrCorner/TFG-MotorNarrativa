@@ -1,42 +1,150 @@
 [
-  "MainCharacter",
-  "Messenger",
-  "Mayor",
-  "Mayka the Elder",
-  "Dener",
-  "Julie",
-  "Hang",
-  "Jesp",
-  "Aksana",
-  "Artyom",
-  "Irina",
-  "Jelena",
-  "Tanya",
-  "Vassi",
-  "Ganya",
-  "Helge",
-  "Kena",
-  "Kanda",
-  "Jask",
-  "Marm",
-  "Dant",
-  "Heren",
-  "Jucata",
-  "Kevin",
-  "Londar",
-  "Keipen",
-  "Gerten",
-  "Nuno",
-  "Pentoc",
-  "Quim",
-  "Mark",
-  "Teiko",
-  "Huan",
-  "Jose",
-  "Dimitri",
-  "Adrik",
-  "Cyzarine",
-  "Mochila",
-  "Polvo",
-  "Ropa"
+    {
+      "m_name": "MainCharacter",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Messenger",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Mayor",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Mayka the Elder",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Dener",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Julie",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Hang",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Jesp",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Aksana",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Artyom",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Irina",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Jelena",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Tanya",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Vassi",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Ganya",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Helge",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Kena",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Kanda",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Jask",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Marm",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Dant",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Heren",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Jucata",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Kevin",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Londar",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Keipen",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Gerten",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Nuno",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Pentoc",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Quim",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Mark",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Teiko",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Huan",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Jose",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Dimitri",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Adrik",
+      "m_relevance": 1
+    },
+    {
+      "m_name": "Cyzarine",
+      "m_relevance": 1
+    }
 ]

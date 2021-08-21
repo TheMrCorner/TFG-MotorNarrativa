@@ -1,13 +1,23 @@
 [
   {
-    "m_id": "scene1_C1_P1",
+    "m_id": "scene0_C1_P1",
     "m_place": "Casa_1_Fyrst",
+    "m_next": "scene1_C1_P1",
+    "m_itemToGive": "",
+    "m_itemToTake": "",
+    "m_dialogs": [
+      "P1_S0_Thoughts"
+    ]
+  },
+  {
+    "m_id": "scene1_C1_P1",
+    "m_place": "Fyrst",
     "m_next": "scene2_C1_P1",
     "m_itemToGive": "",
-    "m_itemToTake": "", 
+    "m_itemToTake": "",
     "m_dialogs": [
-		"P1_S1_Messenger"
-	]
+      "P1_S1_Messenger"
+    ]
   },
   {
     "m_id": "scene2_C1_P1",
@@ -16,8 +26,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"P1_S3_Mayor"
-	]
+      "P1_S3_Mayor"
+    ]
   },
   {
     "m_id": "scene1_C2_P1",
@@ -26,8 +36,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"P1_S5_Thoughts"
-	]
+      "P1_S5_Thoughts"
+    ]
   },
   {
     "m_id": "scene2_C2_P1",
@@ -36,18 +46,18 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"P1_S6_Thoughts"
-	]
+      "P1_S6_Thoughts"
+    ]
   },
   {
     "m_id": "scene1_C3_P1",
-    "m_place": "Bosque_1",
+    "m_place": "Ruta_2",
     "m_next": "scene2_C3_P1",
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"P1_S7_Thoughts"
-	]
+      "P1_S7_Thoughts"
+    ]
   },
   {
     "m_id": "scene2_C3_P1",
@@ -56,8 +66,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"P1_S8_Mayka_The_Elder"
-	]
+      "P1_S8_Mayka_The_Elder"
+    ]
   },
   {
     "m_id": "scene1_C1_S1",
@@ -66,8 +76,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S1_S1_Dener"
-	]
+      "S1_S1_Dener"
+    ]
   },
   {
     "m_id": "scene2_C1_S1",
@@ -76,8 +86,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S1_S3_Thoughts"
-	]
+      "S1_S3_Thoughts"
+    ]
   },
   {
     "m_id": "scene1_C2_S1",
@@ -86,8 +96,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S1_S4_Thoughts"
-	]
+      "S1_S4_Thoughts"
+    ]
   },
   {
     "m_id": "scene2_C2_S1",
@@ -96,10 +106,10 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S1_S5_Pista1",
-		"S1_S5_Pista2",
-		"S1_S5_Pista3"
-	]
+      "S1_S5_Pista1",
+      "S1_S5_Pista2",
+      "S1_S5_Pista3"
+    ]
   },
   {
     "m_id": "scene3_C2_S1",
@@ -108,8 +118,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S1_S6_Julie"
-	]
+      "S1_S6_Julie"
+    ]
   },
   {
     "m_id": "scene1_C3_S1",
@@ -118,8 +128,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S1_S8_Julie"
-	]
+      "S1_S8_Julie"
+    ]
   },
   {
     "m_id": "scene1_C1_S2",
@@ -128,8 +138,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S2_S1_Aksana"
-	]
+      "S2_S1_Aksana"
+    ]
   },
   {
     "m_id": "scene2_C1_S2",
@@ -138,14 +148,14 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S2_S2_Artyom",
-		"S2_S2_Ganya",
-		"S2_S2_Helge",
-		"S2_S2_Irina",
-		"S2_S2_Jelena",
-		"S2_S2_Tanya",
-		"S2_S2_Vassi"
-	]
+      "S2_S2_Artyom",
+      "S2_S2_Ganya",
+      "S2_S2_Helge",
+      "S2_S2_Irina",
+      "S2_S2_Jelena",
+      "S2_S2_Tanya",
+      "S2_S2_Vassi"
+    ]
   },
   {
     "m_id": "scene3_C1_S2",
@@ -154,8 +164,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S2_S4_Kena"
-	]
+      "S2_S4_Kena"
+    ]
   },
   {
     "m_id": "scene1_C2_S2",
@@ -164,8 +174,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S2_S5_Thoughts"
-	]
+      "S2_S5_Thoughts"
+    ]
   },
   {
     "m_id": "scene1_C1_S3",
@@ -174,8 +184,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S3_S1_Kanda"
-	]
+      "S3_S1_Kanda"
+    ]
   },
   {
     "m_id": "scene2_C1_S3",
@@ -184,8 +194,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S3_S4_Jask"
-	]
+      "S3_S4_Jask"
+    ]
   },
   {
     "m_id": "scene3_C1_S3",
@@ -194,8 +204,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S3_S7_Marm"
-	]
+      "S3_S7_Marm"
+    ]
   },
   {
     "m_id": "scene5_C1_S3",
@@ -204,8 +214,8 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S3_S8_Thoughts"
-	]
+      "S3_S8_Thoughts"
+    ]
   },
   {
     "m_id": "scene6_C1_S3",
@@ -214,7 +224,7 @@
     "m_itemToGive": "",
     "m_itemToTake": "",
     "m_dialogs": [
-		"S3_S9_Kanda"
-	]
+      "S3_S9_Kanda"
+    ]
   }
 ]

@@ -1,5 +1,5 @@
 {
-    "init": "MainCharacter",
+    "init": "Diadema",
     "nodes": [
         {
             "character": "MainCharacter",

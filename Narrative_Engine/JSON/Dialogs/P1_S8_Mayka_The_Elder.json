@@ -12,7 +12,7 @@
         },
         {
           "nodePtr": 2,
-          "text": "No quiero una copia del Necronomicón, muchas gracias."
+          "text": "No quiero ningún libro, muchas gracias."
         },
         {
           "nodePtr": 3,
@@ -34,33 +34,33 @@
           "text": "Un cáliz de cristal."
         },
         {
-          "nodePtr": 0,
+          "nodePtr": 22,
           "text": "¿Por qué quiere saberlo?"
         }
       ]
     },
     {
       "character": "Mayka the Elder",
-      "nextNode": 2,
+      "nextNode": 1,
       "text": "Tranquilo, no quiero venderte nada.",
       "options": []
     },
     {
       "character": "Mayka the Elder",
-      "nextNode": 2,
+      "nextNode": 1,
       "text": "Sí. Algunas fuerzas se están removiendo en este mundo, me preocupa.",
       "options": []
     },
     {
       "character": "Mayka the Elder",
-      "nextNode": 2,
+      "nextNode": 1,
       "text": "Sí que estás perdido, hijo, no estamos ni a dos metros de Dara, en el camino que lleva a la capital.",
       "options": []
     },
     {
       "character": "Mayka the Elder",
       "nextNode": 4,
-      "text": "Hacia que no veía uno de esos en mucho tiempo...",
+      "text": "Hacía que no veía uno de esos mucho tiempo...",
       "options": [
         {
           "nodePtr": 6,
@@ -122,7 +122,7 @@
         },
         {
           "nodePtr": 12,
-          "text": "Sí, aunque supongo que la gente los buscará para llevárselos."
+          "text": "Sí, aunque alguien estará buscándolos."
         }
       ]
     },
@@ -194,6 +194,17 @@
       "nextNode": -2,
       "text": "Sigue el camino hasta la montaña y cuando tengas que elegir qué camino seguir, gira a la derecha. Llegarás a la capital en seguida, mucha suerte.",
       "options": []
+    },
+    {
+      "character": "Mayka the Elder",
+      "nextNode": -1,
+      "text": "Bueno, despide mucha energía y me llama la atención. ¿Qué es?",
+      "options": [
+        {
+          "nodePtr": 5,
+          "text": "Un cáliz de cristal."
+        }
+      ]
     }
   ]
 }

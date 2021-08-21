@@ -31,7 +31,7 @@
         {
             "character": "Julie",
             "nextNode": 4,
-            "text": "Se supone que estaba en esta cueva, pero llevo buscando varos días y no encuentro nada.",
+            "text": "Se supone que estaba en esta cueva, pero llevo buscando varios días y no encuentro nada.",
             "options": []
         },
         {
@@ -45,7 +45,7 @@
                 },
                 {
                     "nodePtr": 8,
-                    "text": "No, pensaba que estaba en una cueva legendaria en medio de una isla."
+                    "text": "No, la historia descía que estaba en una isla."
                 }
             ]
         },
@@ -66,7 +66,7 @@
                 },
                 {
                     "nodePtr": 13,
-                    "text": "Genial, así puedo cumplir lo que me había dicho tu abuelo."
+                    "text": "Genial, tu abuelo se alegrará."
                 }
             ]
         },
@@ -132,7 +132,7 @@
                 },
                 {
                     "nodePtr": 11,
-                    "text": "Parecía bastante preocupado y no, no he visto la espada, lo juro."
+                    "text": "Estaba preocupado y no he visto la espada."
                 }
             ]
         },

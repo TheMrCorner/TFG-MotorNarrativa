@@ -18,7 +18,7 @@
                 },
                 {
                     "nodePtr": 3,
-                    "text": "Busco gente para buscar un objeto en el bosque del norte."
+                    "text": "Necesito gente apra una misión en el bosque."
                 }
             ]
         },
@@ -73,11 +73,11 @@
             "text": "¿Alguna queja?",
             "options": [
                 {
-                    "nodePtr": 7,
+                    "nodePtr": 9,
                     "text": "Para nada."
                 },
                 {
-                    "nodePtr": 5,
+                    "nodePtr": 10,
                     "text": "Sí, no puede ser equitativo, yo mando aquí."
                 }
             ]

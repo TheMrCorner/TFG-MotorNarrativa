@@ -4,44 +4,49 @@
     {
       "character": "Messenger",
       "nextNode": -1,
-      "text": "Buenos días, despierte de una vez. ",
+      "text": "Buenas, tengo un trabajo que ofrecer.",
       "options": [
         {
-          "nodePtr": 1,
-          "text": "Déjeme dormir, necesito descansar."
-        },
-        {
           "nodePtr": 2,
-          "text": "Podría haber llamado a la puerta."
+          "text": "¿De qué se trata?"
         },
         {
-          "nodePtr": 3,
-          "text": "¿Qué pasa?"
+          "nodePtr": 1,
+          "text": "No me interesa, gracias."
         }
       ]
     },
     {
       "character": "Messenger",
-      "nextNode": 4,
-      "text": "No es momento para dormir, el alcalde le requiere.",
+      "nextNode": -3,
+      "text": "Vale, si me necesta para algo seguiré por aquí.",
       "options": []
     },
     {
       "character": "Messenger",
-      "nextNode": 4,
-      "text": "Estaba abierta así que he pasado. Dese prisa el alcalde le requiere.",
+      "nextNode": 3,
+      "text": "El alcalde está buscando a alguien para que le ayude con la entrega de un objeto.",
       "options": []
     },
     {
       "character": "Messenger",
-      "nextNode": 4,
-      "text": "El alcalde requiere de su presencia en el ayuntamiento inmediatamente.",
-      "options": []
+      "nextNode": -1,
+      "text": "Si le interesa debe dirigirse allí inmediatamente.",
+      "options": [
+        {
+          "nodePtr": 4,
+          "text": "De acuerdo."
+        },
+        {
+          "nodePtr": 1,
+          "text": "Creo que seguiré buscando."
+        }
+      ]
     },
     {
-      "character": "MainCharacter",
+      "character": "Messenger",
       "nextNode": -2,
-      "text": "Qué querrá ese viejo ahora... Vale, iré, pero déjeme vestirme en paz.",
+      "text": "Entonces diríjase al ayuntamiento lo antes posible.",
       "options": []
     }
   ]

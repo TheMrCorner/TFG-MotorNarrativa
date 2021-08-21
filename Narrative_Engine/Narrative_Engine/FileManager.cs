@@ -21,8 +21,6 @@ namespace Narrative_Engine
         string m_chaptersPath;
         string m_scenesPath;
 
-        List<Dialog> m_dialogues;
-        List<string> m_characters;
         List<string> m_items;
 
 
@@ -54,10 +52,11 @@ namespace Narrative_Engine
         public void readFiles()
         {
             var jsonstring = File.ReadAllText(m_charactersPath);
-            var characters = JSONDecoder.Decode(jsonstring).ArrayValue;
-            m_characters = new List<string>();
-            foreach (var character in characters)
-                m_characters.Add((string)character);
+            var charactersJson = JSONDecoder.Decode(jsonstring).ArrayValue;
+            var charactersList = new Dictionary<string, Character>();
+            foreach (var character in charactersJson)
+                charactersList.Add((string)character["m_name"], new Character((string)character["m_name"], (uint)character["m_relevance"]));
+            CharacterController.characters = charactersList;
 
             jsonstring = File.ReadAllText(m_itemsPath);
             var items = JSONDecoder.Decode(jsonstring).ArrayValue;
@@ -103,8 +102,13 @@ namespace Narrative_Engine
                 foreach (var chapter in chaptersJson)
                     chapterList.Add((string)chapter);
 
+                var storyCharactersJson = storyJson["m_characters"].ArrayValue;
+                var storyCharactersList = new List<string>();
+                foreach (var c in storyCharactersJson)
+                    storyCharactersList.Add((string)c);
+
                 // StoryController.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
-                StoryController.m_stories.Add(new Story(chapterList));
+                StoryController.m_stories.Add(new Story(chapterList, storyCharactersList));
             }
 
             jsonstring = File.ReadAllText(m_chaptersPath);

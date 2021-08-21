@@ -11,20 +11,20 @@
                     "text": "¿Qué te ocurre?"
                 },
                 {
-                    "nodePtr": 7,
+                    "nodePtr": 6,
                     "text": "Pareces preocupado, ¿ha pasado algo?"
                 }
             ]
         },
         {
             "character": "Kanda",
-            "nextNode": 3,
+            "nextNode": 2,
             "text": "Mi padre, ha desaparecido. Dijo que iba a hacer un recado a Dara, pero no ha vuelto.",
             "options": []
         },
         {
             "character": "Kanda",
-            "nextNode": 4,
+            "nextNode": 3,
             "text": "Se supone que iba a tardar poco.",
             "options": []
         },
@@ -34,12 +34,12 @@
             "text": "¿Podrías ir a mirar a ver si está bien?",
             "options": [
                 {
-                    "nodePtr": 5,
+                    "nodePtr": 4,
                     "text": "Claro, no te preocupes."
                 },
                 {
-                    "nodePtr": 6,
-                    "text": "Igual simplemente ha tardado un poco más, deberías tranquilizarte."
+                    "nodePtr": 5,
+                    "text": "Igual solo ha tardado un poco más."
                 }
             ]
         },
@@ -61,18 +61,18 @@
             "text": "No, nada. Es que me pongo nervioso con poco. Y mi padre no ha vuelto del trabajo todavía.",
             "options": [
                 {
-                    "nodePtr": 8,
+                    "nodePtr": 7,
                     "text": "¿Cuándo se fue?"
                 },
                 {
-                    "nodePtr": 1000,
+                    "nodePtr": 9,
                     "text": "¿Adónde se fue?"
                 }
             ]
         },
         {
             "character": "Kanda",
-            "nextNode": 9,
+            "nextNode": 8,
             "text": "Ayer por la tarde.",
             "options": []
         },
@@ -82,18 +82,18 @@
             "text": "¿Podrías ir a buscarlo, por favor?",
             "options": [
                 {
-                    "nodePtr": 5,
+                    "nodePtr": 4,
                     "text": "Claro, no te preocupes."
                 },
                 {
-                    "nodePtr": 6,
-                    "text": "Deberías tranquilizarte, igual se quedó a dormir allí porque terminó tarde."
+                    "nodePtr": 5,
+                    "text": "Igual terminó tarde y volverá hoy."
                 }
             ]
         },
         {
             "character": "Kanda",
-            "nextNode": 9,
+            "nextNode": 8,
             "text": "A Dara, a hacer un recado.",
             "options": []
         }

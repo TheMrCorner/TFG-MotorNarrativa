@@ -31,7 +31,7 @@
         {
             "character": "Tanya",
             "nextNode": 4,
-            "text": "Si necesita que le arregle las botas, tarde escasos minutos.",
+            "text": "Si necesita que le arregle las botas, tardo escasos minutos.",
             "options": []
         },
         {
@@ -41,11 +41,11 @@
             "options": [
                 {
                     "nodePtr": 5,
-                    "text": "Busco gente para buscar un objeto en el bosque del norte."
+                    "text": "Tengo que buscar un objeto en el bosque."
                 },
                 {
                     "nodePtr": 7,
-                    "text": "No necesito que me arregle las botas, es una aventura."
+                    "text": "No necesito nada de eso, es una aventura."
                 }
             ]
         },

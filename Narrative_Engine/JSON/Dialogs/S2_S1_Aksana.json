@@ -37,7 +37,7 @@
         {
             "character": "Aksana",
             "nextNode": 5,
-            "text": "Está en el bosque al norte de Dara.",
+            "text": "Está en el bosque de Dara.",
             "options": []
         },
         {
@@ -51,7 +51,7 @@
                 },
                 {
                     "nodePtr": 6,
-                    "text": "Puede... si me explica un poco más el objeto que hay que encontrar."
+                    "text": "Puede... pero necesito saber qué busco."
                 }
             ]
         },
@@ -86,7 +86,7 @@
             "options": [
                 {
                     "nodePtr": 2,
-                    "text": "Lo siento, pero tengo que atender antes al alcalde."
+                    "text": "Lo siento, tengo otro compromiso."
                 },
                 {
                     "nodePtr": 11,

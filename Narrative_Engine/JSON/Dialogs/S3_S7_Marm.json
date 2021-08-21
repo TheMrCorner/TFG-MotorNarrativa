@@ -8,11 +8,11 @@
             "options": [
                 {
                     "nodePtr": 2,
-                    "text": "Disculpe, vengo buscando a un hombre, ¿le ha visto?"
+                    "text": "Busco a un hombre. ¿Ha visto algo?"
                 },
                 {
                     "nodePtr": 1,
-                    "text": "No, pero muchas gracias por la ayuda"
+                    "text": "No, pero muchas gracias por la ayuda."
                 }
             ]
         },
@@ -46,7 +46,7 @@
         {
             "character": "Marm",
             "nextNode": -2,
-            "text": "Sí, fue corriendo hacia el bosque del norte de Dara. Espero que esté bien...",
+            "text": "Sí, fue corriendo hacia el bosque de Dara. Espero que esté bien...",
             "options": []
         },
         {

@@ -16,6 +16,7 @@ namespace Narrative_Engine
         }
 
         private string characterName;
+        private uint relevance;
         private Place place;
         private CharacterType type;
         private Dictionary<Item.ItemType, List<Item>> inventory;
@@ -32,6 +33,12 @@ namespace Narrative_Engine
             {
                 inventory.Add(itemType, new List<Item>());
             }
+        }
+
+        public Character(string characterName, uint relevance)
+        {
+            this.characterName = characterName;
+            this.relevance = relevance;
         }
 
         public string GetCharacterName() => characterName;

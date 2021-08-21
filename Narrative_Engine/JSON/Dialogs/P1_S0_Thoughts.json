@@ -1,0 +1,23 @@
+{
+    "init": "MainCharacter",
+    "nodes": [
+        {
+            "character": "MainCharacter",
+            "nextNode": 1,
+            "text": "Me estoy quedando sin dinero.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": 2,
+            "text": "Debería ir a buscar trabajo.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": -2,
+            "text": "Igual alguien del pueblo me ofrece algo.",
+            "options": []
+        }
+    ]
+}

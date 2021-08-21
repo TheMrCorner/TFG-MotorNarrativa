@@ -41,7 +41,7 @@
             "options": [
                 {
                     "nodePtr": 5,
-                    "text": "Nada de eso, busco gente para encontrar un objeto en el bosque."
+                    "text": "No, tengo que encontrar algo en el bosque."
                 },
                 {
                     "nodePtr": 7,
@@ -74,7 +74,7 @@
             "options": [
                 {
                     "nodePtr": 9,
-                    "text": "Claro, hay que encontrar una diadema perdida en el bosque."
+                    "text": "Encontrar una diadema perdida en el bosque."
                 },
                 {
                     "nodePtr": 10,

@@ -8,11 +8,11 @@
             "options": [
                 {
                     "nodePtr": 1,
-                    "text": "Disculpe, vengo buscando al padre de Kanda. ¿Sabe donde está?"
+                    "text": "Busco al padre de Kanda. ¿Sabe dónde está?"
                 },
                 {
                     "nodePtr": 5,
-                    "text": "Lo siento, me dijeron que viniera aquí a buscar al padre de Kanda."
+                    "text": "Lo siento, vengo buscando al padre de Kanda."
                 }
             ]
         },

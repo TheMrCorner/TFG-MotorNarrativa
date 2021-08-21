@@ -22,6 +22,8 @@ namespace Narrative_Engine
             StoryController.assembleStory();
             m_dc = new DialogController(fileManager);
             // TEST
+            // StoryController.m_stories[0].consumed = true;
+            // CharacterController.characters["Mayor"].GetCharacterName();
             // loadGenericDialogs("Fyrst");
         }
 

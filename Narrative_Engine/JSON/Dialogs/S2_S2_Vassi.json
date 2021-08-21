@@ -43,11 +43,11 @@
         {
             "character": "Vassi",
             "nextNode": -1,
-            "text": "¿Qué neesita que pase por la forja?",
+            "text": "¿Qué necesita que pase por la forja?",
             "options": [
                 {
                     "nodePtr": 5,
-                    "text": "Nda realmente, busco gente para encontrar un objeto en el bosque del norte."
+                    "text": "Nada, tengo que encontrar una cosa en el bosque."
                 },
                 {
                     "nodePtr": 7,
