@@ -21,6 +21,11 @@ namespace Narrative_Engine
 
         internal bool consumed { get; set; } = false;
 
+        internal int m_charactersImportance = 0;
+        internal SortedSet<Character> m_charactersInvolved = new SortedSet<Character>();
+        internal int m_totalScenes = 0;
+        internal SortedSet<string> m_PlacesInvolved = new SortedSet<string>();
+
         internal Story(StoryType m_storyType, List<string> m_chapters)
         {
             this.m_storyType = m_storyType;
