@@ -89,28 +89,6 @@ namespace Narrative_Engine
 
             PlaceController.completePlaces();
 
-            jsonstring = File.ReadAllText(m_storyFolder);
-            var storiesJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
-
-            StoryController.m_stories = new List<Story>();
-
-            foreach (var storyJson in storiesJsonList)
-            {
-                var chaptersJson = storyJson["m_chapters"].ArrayValue;
-
-                var chapterList = new List<string>();
-                foreach (var chapter in chaptersJson)
-                    chapterList.Add((string)chapter);
-
-                var storyCharactersJson = storyJson["m_characters"].ArrayValue;
-                var storyCharactersList = new List<string>();
-                foreach (var c in storyCharactersJson)
-                    storyCharactersList.Add((string)c);
-
-                // StoryController.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
-                StoryController.m_stories.Add(new Story(chapterList, storyCharactersList));
-            }
-
             jsonstring = File.ReadAllText(m_chaptersPath);
             var questJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
 
@@ -142,6 +120,38 @@ namespace Narrative_Engine
 
                 StoryController.m_storyScenes.Add(sceneId, new StoryScene(sceneId, (string)sceneJson["m_place"], (string)sceneJson["m_next"], (string) sceneJson["m_itemToGive"], (string)sceneJson["m_itemToTake"], dialogueList));
             }
+
+            jsonstring = File.ReadAllText(m_storyFolder);
+            var storiesJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
+
+            foreach (var storyJson in storiesJsonList)
+            {
+                var chaptersJson = storyJson["m_chapters"].ArrayValue;
+
+
+                SortedSet<string> placesInvolved = new SortedSet<string>();
+                int totalScenes = 0;
+
+                var chapterList = new List<string>();
+                foreach (var chapter in chaptersJson) { 
+                    chapterList.Add((string)chapter);
+                    totalScenes += StoryController.m_chapters[(string)chapter].m_scenes.Count;
+
+                    foreach (var scene in StoryController.m_chapters[(string)chapter].m_scenes)
+                        placesInvolved.Add(StoryController.m_storyScenes[scene].m_place);
+                }
+
+                var storyCharactersJson = storyJson["m_characters"].ArrayValue;
+                var storyCharactersList = new List<string>();
+                foreach (var c in storyCharactersJson)
+                    storyCharactersList.Add((string)c);
+
+                // StoryController.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
+                StoryController.m_stories.Add(new Story(chapterList, storyCharactersList, placesInvolved, totalScenes));
+            }
+
+            //Console.WriteLine("Most Important story:" + StoryController.m_stories.First().m_importance.ToString());
+            //Console.WriteLine("Least Important story:" + StoryController.m_stories.Last().m_importance.ToString());
 
             PlaceController.CompleteQuestsInPlace();
         }

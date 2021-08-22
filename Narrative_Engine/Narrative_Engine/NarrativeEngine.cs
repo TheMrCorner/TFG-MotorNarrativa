@@ -31,8 +31,8 @@ namespace Narrative_Engine
         {
             var rand = new Random();
             int index = rand.Next(0, StoryController.m_stories.Count());
-            var story = StoryController.m_stories[index];
-            StoryController.m_stories.RemoveAt(index);
+            var story = StoryController.m_stories.ElementAt(index);
+            StoryController.m_stories.Remove(story);
             return story;
         }
 
@@ -68,7 +68,7 @@ namespace Narrative_Engine
             return dialogs;
         }
 
-        public static List<Story> GetStories() => StoryController.m_stories;
+        public static List<Story> GetStories() => StoryController.m_stories.ToList();
 
         public static Dictionary<string, Quest> GetQuests() => StoryController.m_chapters;
 
