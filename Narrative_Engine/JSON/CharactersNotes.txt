@@ -28,6 +28,7 @@ Secondary Story 2:
 
 Secondary Story 3: 
     Kanda (Niño)
+    Kanuc (Padre)
     Jask (Tabernero Dara)
     Marm (Anciana que está a la salida)
 
