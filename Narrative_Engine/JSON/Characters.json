@@ -5,11 +5,11 @@
     },
     {
       "m_name": "Messenger",
-      "m_relevance": 6
+      "m_relevance": 20
     },
     {
       "m_name": "Mayor",
-      "m_relevance": 35
+      "m_relevance": 49
     },
     {
       "m_name": "Mayka the Elder",
@@ -33,19 +33,19 @@
     },
     {
       "m_name": "Aksana",
-      "m_relevance": 20
-    },
-    {
-      "m_name": "Artyom",
-      "m_relevance": 25
-    },
-    {
-      "m_name": "Irina",
       "m_relevance": 15
     },
     {
+      "m_name": "Artyom",
+      "m_relevance": 10
+    },
+    {
+      "m_name": "Irina",
+      "m_relevance": 5
+    },
+    {
       "m_name": "Jelena",
-      "m_relevance": 17
+      "m_relevance": 18
     },
     {
       "m_name": "Tanya",
@@ -57,7 +57,7 @@
     },
     {
       "m_name": "Ganya",
-      "m_relevance": 12
+      "m_relevance": 10
     },
     {
       "m_name": "Helge",
@@ -65,7 +65,7 @@
     },
     {
       "m_name": "Kena",
-      "m_relevance": 28
+      "m_relevance": 20
     },
     {
       "m_name": "Kanda",
