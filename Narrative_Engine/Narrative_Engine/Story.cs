@@ -30,7 +30,7 @@ namespace Narrative_Engine
 
         internal bool consumed { get; set; } = false;
 
-        internal int m_charactersImportance = 0;
+        internal uint m_charactersImportance = 0;
         internal int m_totalScenes = 0;
         internal SortedSet<string> m_placesInvolved = new SortedSet<string>();
 
@@ -42,12 +42,13 @@ namespace Narrative_Engine
             this.m_chapters = m_chapters;
         }
 
-        internal Story(List<string> m_chapters, List<string> m_characters, SortedSet<string> m_placesInvolved, int m_totalScenes)
+        internal Story(List<string> m_chapters, List<string> m_characters, SortedSet<string> m_placesInvolved, int m_totalScenes, uint m_charactersImportance)
         {
             this.m_chapters = m_chapters;
             this.m_characters = m_characters;
             this.m_placesInvolved = m_placesInvolved;
             this.m_totalScenes = m_totalScenes;
+            this.m_charactersImportance = m_charactersImportance;
 
             calculateImportance();
         }
@@ -72,9 +73,15 @@ namespace Narrative_Engine
         {
             //TODO: get Character Importance
 
-            m_importance = (m_characters.Count * s_characterImportanceWeight
+            /*m_importance = (m_characters.Count * s_characterImportanceWeight
                 + m_totalScenes * s_storyLenghtWeight + m_placesInvolved.Count * s_placesVisitedWeight) 
-                / (s_characterImportanceWeight + s_storyLenghtWeight + s_placesVisitedWeight);
+                / (s_characterImportanceWeight + s_storyLenghtWeight + s_placesVisitedWeight);*/
+
+            float characterImportance = m_charactersImportance * 100f / CharacterController.totalImportance;
+            float sceneCount = m_totalScenes * 100f / StoryController.m_storyScenes.Count;
+            float placesCount = m_placesInvolved.Count * 100f / PlaceController.m_places.Count;
+
+            m_importance = (characterImportance + sceneCount + placesCount) / 3;
         }
 
 

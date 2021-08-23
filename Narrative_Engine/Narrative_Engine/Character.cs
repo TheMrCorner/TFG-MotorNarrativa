@@ -16,7 +16,7 @@ namespace Narrative_Engine
         }
 
         private string characterName;
-        private uint relevance;
+        internal uint relevance { get; }
         private Place place;
         private CharacterType type;
         private Dictionary<Item.ItemType, List<Item>> inventory;

@@ -54,9 +54,14 @@ namespace Narrative_Engine
             var jsonstring = File.ReadAllText(m_charactersPath);
             var charactersJson = JSONDecoder.Decode(jsonstring).ArrayValue;
             var charactersList = new Dictionary<string, Character>();
+            uint totalImportance = 0;
             foreach (var character in charactersJson)
+            {
                 charactersList.Add((string)character["m_name"], new Character((string)character["m_name"], (uint)character["m_relevance"]));
+                totalImportance += (uint)character["m_relevance"];
+            }
             CharacterController.characters = charactersList;
+            CharacterController.totalImportance = totalImportance;
 
             jsonstring = File.ReadAllText(m_itemsPath);
             var items = JSONDecoder.Decode(jsonstring).ArrayValue;
@@ -143,11 +148,15 @@ namespace Narrative_Engine
 
                 var storyCharactersJson = storyJson["m_characters"].ArrayValue;
                 var storyCharactersList = new List<string>();
+                uint storyCharacterImportance = 0;
                 foreach (var c in storyCharactersJson)
+                {
                     storyCharactersList.Add((string)c);
+                    storyCharacterImportance += CharacterController.characters[(string)c].relevance;
+                }
 
                 // StoryController.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
-                StoryController.m_stories.Add(new Story(chapterList, storyCharactersList, placesInvolved, totalScenes));
+                StoryController.m_stories.Add(new Story(chapterList, storyCharactersList, placesInvolved, totalScenes, storyCharacterImportance));
             }
 
             //Console.WriteLine("Most Important story:" + StoryController.m_stories.First().m_importance.ToString());

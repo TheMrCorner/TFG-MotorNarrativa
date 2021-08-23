@@ -1,83 +1,87 @@
 [
     {
       "m_name": "MainCharacter",
-      "m_relevance": 1
+      "m_relevance": 0
     },
     {
       "m_name": "Messenger",
-      "m_relevance": 1
+      "m_relevance": 20
     },
     {
       "m_name": "Mayor",
-      "m_relevance": 1
+      "m_relevance": 49
     },
     {
       "m_name": "Mayka the Elder",
-      "m_relevance": 1
+      "m_relevance": 50
     },
     {
       "m_name": "Dener",
-      "m_relevance": 1
+      "m_relevance": 7
     },
     {
       "m_name": "Julie",
-      "m_relevance": 1
+      "m_relevance": 15
     },
     {
       "m_name": "Hang",
-      "m_relevance": 1
+      "m_relevance": 10
     },
     {
       "m_name": "Jesp",
-      "m_relevance": 1
+      "m_relevance": 10
     },
     {
       "m_name": "Aksana",
-      "m_relevance": 1
+      "m_relevance": 15
     },
     {
       "m_name": "Artyom",
-      "m_relevance": 1
+      "m_relevance": 10
     },
     {
       "m_name": "Irina",
-      "m_relevance": 1
+      "m_relevance": 5
     },
     {
       "m_name": "Jelena",
-      "m_relevance": 1
+      "m_relevance": 18
     },
     {
       "m_name": "Tanya",
-      "m_relevance": 1
+      "m_relevance": 25
     },
     {
       "m_name": "Vassi",
-      "m_relevance": 1
+      "m_relevance": 30
     },
     {
       "m_name": "Ganya",
-      "m_relevance": 1
+      "m_relevance": 10
     },
     {
       "m_name": "Helge",
-      "m_relevance": 1
+      "m_relevance": 34
     },
     {
       "m_name": "Kena",
-      "m_relevance": 1
+      "m_relevance": 20
     },
     {
       "m_name": "Kanda",
-      "m_relevance": 1
+      "m_relevance": 5
     },
     {
       "m_name": "Jask",
-      "m_relevance": 1
+      "m_relevance": 32
     },
     {
       "m_name": "Marm",
-      "m_relevance": 1
+      "m_relevance": 20
+    },
+    {
+      "m_name": "Kanuc",
+      "m_relevance": 45
     },
     {
       "m_name": "Dant",
