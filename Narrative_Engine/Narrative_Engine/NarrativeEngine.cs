@@ -25,20 +25,43 @@ namespace Narrative_Engine
             // StoryController.m_stories[0].consumed = true;
             // CharacterController.characters["Mayor"].GetCharacterName();
             // loadGenericDialogs("Fyrst");
+            // getChaptersByPlace("Ayuntamiento_Fyrst");
         }
 
-        static Story getStory()
+        public static List<Story> GetStoriesByPlace(string place)
         {
-            var rand = new Random();
-            int index = rand.Next(0, StoryController.m_stories.Count());
-            var story = StoryController.m_stories.ElementAt(index);
-            StoryController.m_stories.Remove(story);
-            return story;
+            List<Story> stories = new List<Story>();
+            var storiesInPlace = PlaceController.GetStoriesInPlace(place);
+            if(storiesInPlace.Count > 0)
+            {
+                var sortedStories = StoryController.m_stories.Intersect(storiesInPlace);
+                Random random = new Random();
+                int nStories = random.Next(1, Math.Min(storiesInPlace.Count, 3));
+                for(int i = 0; i < nStories; i++)
+                {
+                    stories.Add(sortedStories.ElementAt(i));
+                    sortedStories.ElementAt(i).consumed = true;
+                }
+            }
+            return stories;
         }
 
         public static List<Quest> getChaptersByPlace(string place)
         {
-            return PlaceController.GetQuestsInPlace(place);
+            List<Quest> quests = new List<Quest>();
+            var stories = GetStoriesByPlace(place);
+            foreach(var s in stories)
+            {
+                quests.Add(StoryController.m_chapters[s.m_chapters[0]]);
+            }
+            return quests;
+        }
+
+        public static Quest GetMainQuest()
+        {
+            var mainStory = StoryController.m_stories.First();
+            mainStory.consumed = true;
+            return StoryController.m_chapters[mainStory.m_chapters[0]];
         }
 
         public static Quest getChapterById(string chapter_id)
