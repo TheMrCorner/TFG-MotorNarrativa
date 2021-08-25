@@ -9,5 +9,6 @@ namespace Narrative_Engine
     internal class CharacterController
     {
         static internal Dictionary<string, Character> characters { get; set; } = new Dictionary<string, Character>();
+        static internal uint totalImportance { get; set; } = 0;
     }
 }

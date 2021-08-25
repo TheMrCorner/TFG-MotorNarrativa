@@ -16,6 +16,8 @@ namespace Narrative_Engine
         {
             foreach (var story in NarrativeEngine.GetStories())
             {
+                story.m_storyType = StoryType.SECONDARY;
+
                 if(NarrativeEngine.GetQuests().ContainsKey(story.m_chapters[0]) &&
                     NarrativeEngine.GetQuests()[story.m_chapters[0]].m_scenes.Count > 0)
                 {
@@ -36,6 +38,8 @@ namespace Narrative_Engine
                     }
                 }
             }
+
+            StoryController.m_stories.First().m_storyType = StoryType.MAIN;
         }
 
         static public void completePlaces()
@@ -45,13 +49,21 @@ namespace Narrative_Engine
                 place.Value.searchAdjacent(m_places);
             }
         }
-
+        static public List<Story> GetStoriesInPlace(string place)
+        {
+            if(m_storiesStartingInPlace.TryGetValue(place, out var storyList))
+            {
+                var unconsumedStories = storyList.FindAll((x) => !x.consumed);
+                return unconsumedStories;
+            }
+            return new List<Story>();
+        }
         static public List<Quest> GetQuestsInPlace(string place)
         {
             /*if (m_questsInPlace.TryGetValue(place, out var questList))
                 return questList;*/
 
-            // stories no consumidas -> random (0, stories.count)
+            // stories no consumidas -> random (1, stories.count)
 
             if (m_storiesStartingInPlace.TryGetValue(place, out var storyList))
             {
@@ -61,10 +73,12 @@ namespace Narrative_Engine
                     Random random = new Random();
                     int randomCounter = random.Next(1, Math.Min(availableStories.Count, 3));
                     List<Quest> quests = new List<Quest>();
-                    for(int i = 0; i < randomCounter; i++)
+                    var sortedStories = StoryController.m_stories.Intersect(availableStories);
+                    for (int i = 0; i < randomCounter; i++)
                     {
-                        // Story s = ClaseDeIdentificacionDeHistorias.GetHigherPriorityStory();
-                        // quests.Add(s.m_quests[0]);
+                        var questId = sortedStories.FirstOrDefault().m_chapters[0];
+                        Quest quest = StoryController.m_chapters[questId];
+                        quests.Add(quest);
                     }
                     return quests;
                 }

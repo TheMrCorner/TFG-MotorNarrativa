@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Narrative_Engine
 {
     internal class StoryController
     {
-        internal static List<Story> m_stories { get; set; } = new List<Story>();
+        internal static SortedSet<Story> m_stories { get; set; } = new SortedSet<Story>(new StoryComparer());
         internal static Dictionary<string, Quest> m_chapters { get; set; } = new Dictionary<string, Quest>();
         internal static Dictionary<string, StoryScene> m_storyScenes { get; set; } = new Dictionary<string, StoryScene>();
-
         internal static void assembleStory()
         {
             foreach (var story in m_stories)
