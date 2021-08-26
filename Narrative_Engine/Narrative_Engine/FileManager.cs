@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.IO;
 
 using SimpleJSON;
+using QuikGraph;
+using QuikGraph.Algorithms;
+using QuikGraph.Algorithms.ShortestPath;
 
 namespace Narrative_Engine
 {
@@ -27,8 +30,8 @@ namespace Narrative_Engine
         public FileManager(string generalPath, string storyFolder, string chapterPath, string scenePath, string dialogFolder, string charactersPath, string itemsPath, string placesPath)
         {
             // TEST
-            // m_generalPath = "../../../" + generalPath + "/";
-            m_generalPath = generalPath + "/";
+            m_generalPath = "../../../" + generalPath + "/";
+            // m_generalPath = generalPath + "/";
             m_storyFolder = m_generalPath + storyFolder;
             m_dialogFolder = m_generalPath + dialogFolder;
             m_charactersPath = m_generalPath + charactersPath;
@@ -73,13 +76,16 @@ namespace Narrative_Engine
             var placesJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
 
             var placesList = new List<Place>();
-
+            List<Edge<string>> edges = new List<Edge<string>>();
             foreach (var placeJson in placesJsonList)
             {
                 var adjacentJson = placeJson["m_adjacentPlacesNames"].ArrayValue;
                 var adjacentPlaces = new List<string>();
                 foreach (var adjacent in adjacentJson)
+                {
                     adjacentPlaces.Add((string)adjacent);
+                    edges.Add(new Edge<string>((string)placeJson["m_name"], (string)adjacent));
+                }
 
                 List<string> genericDialogs = new List<string>();
                 foreach(var genericDialog in placeJson["m_genericDialogs"].ArrayValue)
@@ -87,7 +93,41 @@ namespace Narrative_Engine
 
                 placesList.Add(new Place((string)placeJson["m_name"], adjacentPlaces, genericDialogs));
             }
+            PlaceController.graph = edges.ToAdjacencyGraph<string, Edge<string>>();
+            /* Dijktra con pesos 1 equivale a BFS
+             * Habría que hacer cada recorrido de cada par de escenas
+             * Se podrían dar muchas repeticiones de casos, por lo que
+             * conviene usar programación dinámica: FloydWarshall
+             * TryFunc<string, IEnumerable<Edge<string>>> tryGetPath = PlaceController.graph.ShortestPathsDijkstra((x) => 1, "Fyrst");
+            string target = "Dara";
+            if(tryGetPath(target, out IEnumerable<Edge<string>> path))
+            {
+                foreach(var edge in path)
+                {
+                    
+                    Console.WriteLine(edge);
+                }
+            }*/
 
+            // Encuentra todos los caminos de coste menor entre cada par de vértices
+            PlaceController.pathsFloyd = new FloydWarshallAllShortestPathAlgorithm<string, Edge<string>>(PlaceController.graph, (x) => 1);
+            PlaceController.pathsFloyd.Compute();
+            /* Pintar los caminos
+             * foreach (string source in PlaceController.graph.Vertices)
+            {
+                foreach (string target in PlaceController.graph.Vertices)
+                {
+                    Console.WriteLine("from " + source + " to " + target);
+                    Console.WriteLine("");
+                    if (paths.TryGetPath(source, target, out IEnumerable<Edge<string>> path))
+                    {
+                        foreach (var edge in path)
+                        {
+                            Console.WriteLine(edge);
+                        }
+                    }
+                }
+            }*/
             PlaceController.m_places = new Dictionary<string, Place>();
             foreach (var place in placesList)
                 PlaceController.m_places.Add(place.m_name, place);
@@ -134,16 +174,23 @@ namespace Narrative_Engine
                 var chaptersJson = storyJson["m_chapters"].ArrayValue;
 
 
-                SortedSet<string> placesInvolved = new SortedSet<string>();
+                HashSet<string> placesInvolved = new HashSet<string>();
                 int totalScenes = 0;
 
                 var chapterList = new List<string>();
+                string source = null;
                 foreach (var chapter in chaptersJson) { 
                     chapterList.Add((string)chapter);
                     totalScenes += StoryController.m_chapters[(string)chapter].m_scenes.Count;
-
                     foreach (var scene in StoryController.m_chapters[(string)chapter].m_scenes)
-                        placesInvolved.Add(StoryController.m_storyScenes[scene].m_place);
+                    {
+                        if (source != null)
+                        {
+                            var places = PlaceController.PathBetweenPlaces(source, StoryController.m_storyScenes[scene].m_place);
+                            placesInvolved.UnionWith(places);
+                        }
+                        source = StoryController.m_storyScenes[scene].m_place;
+                    }
                 }
 
                 var storyCharactersJson = storyJson["m_characters"].ArrayValue;
@@ -158,9 +205,12 @@ namespace Narrative_Engine
                 // StoryController.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
                 StoryController.m_stories.Add(new Story(chapterList, storyCharactersList, placesInvolved, totalScenes, storyCharacterImportance));
             }
-
-            //Console.WriteLine("Most Important story:" + StoryController.m_stories.First().m_importance.ToString());
-            //Console.WriteLine("Least Important story:" + StoryController.m_stories.Last().m_importance.ToString());
+            for(int i = 0; i < StoryController.m_stories.Count; i++)
+            {
+                Console.WriteLine(StoryController.m_stories.ElementAt(i).m_chapters[0] + " " + StoryController.m_stories.ElementAt(i).m_importance.ToString());
+            }
+            //Console.WriteLine("Most Important story: " + StoryController.m_stories.First().m_chapters[0] + " " + StoryController.m_stories.First().m_importance.ToString());
+            //Console.WriteLine("Least Important story: " + StoryController.m_stories.Last().m_chapters[0] + " " + StoryController.m_stories.Last().m_importance.ToString());
 
             PlaceController.CompleteQuestsInPlace();
         }

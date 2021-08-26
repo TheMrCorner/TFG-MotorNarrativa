@@ -32,7 +32,7 @@ namespace Narrative_Engine
 
         internal uint m_charactersImportance = 0;
         internal int m_totalScenes = 0;
-        internal SortedSet<string> m_placesInvolved = new SortedSet<string>();
+        internal HashSet<string> m_placesInvolved = new HashSet<string>();
 
         internal float m_importance;
 
@@ -42,7 +42,7 @@ namespace Narrative_Engine
             this.m_chapters = m_chapters;
         }
 
-        internal Story(List<string> m_chapters, List<string> m_characters, SortedSet<string> m_placesInvolved, int m_totalScenes, uint m_charactersImportance)
+        internal Story(List<string> m_chapters, List<string> m_characters, HashSet<string> m_placesInvolved, int m_totalScenes, uint m_charactersImportance)
         {
             this.m_chapters = m_chapters;
             this.m_characters = m_characters;

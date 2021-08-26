@@ -30,6 +30,9 @@
     <None Remove="Stories\**" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="QuikGraph" Version="2.3.0" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Include="nunit.framework">
       <HintPath>..\deps\nunit.framework.dll</HintPath>
     </Reference>

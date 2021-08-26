@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuikGraph;
+using QuikGraph.Algorithms.ShortestPath;
 
 namespace Narrative_Engine
 {
@@ -11,7 +13,8 @@ namespace Narrative_Engine
         static public Dictionary<string, Place> m_places { get; set; }
         static public Dictionary<string, List<Quest>> m_questsInPlace { get; set; } = new Dictionary<string, List<Quest>>();
         static public Dictionary<string, List<Story>> m_storiesStartingInPlace { get; set; } = new Dictionary<string, List<Story>>();
-
+        static public AdjacencyGraph<string, Edge<string>> graph;
+        static public FloydWarshallAllShortestPathAlgorithm<string, Edge<string>> pathsFloyd;
         static public void CompleteQuestsInPlace()
         {
             foreach (var story in NarrativeEngine.GetStories())
@@ -40,6 +43,20 @@ namespace Narrative_Engine
             }
 
             StoryController.m_stories.First().m_storyType = StoryType.MAIN;
+        }
+
+        static public HashSet<string> PathBetweenPlaces(string source, string target)
+        {
+            HashSet<string> places = new HashSet<string>();
+            if(pathsFloyd.TryGetPath(source, target, out IEnumerable<Edge<string>> path))
+            {
+                foreach(var edge in path)
+                {
+                    places.Add(edge.Source);
+                    places.Add(edge.Target);
+                }
+            }
+            return places;
         }
 
         static public void completePlaces()
