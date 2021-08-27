@@ -1,0 +1,23 @@
+{
+    "init": "MainCharacter",
+    "nodes": [
+      {
+        "character": "MainCharacter",
+        "nextNode": 1,
+        "text": "Vaya, aquí hay alas de murciélago tiradas.",
+        "options": []
+      },
+      {
+        "character": "MainCharacter",
+        "nextNode": 2,
+        "text": "También hay una mochila. ¿Será la del padre?",
+        "options": []
+      },
+      {
+        "character": "MainCharacter",
+        "nextNode": -2,
+        "text": "Hay más cerca de esas ruinas, debería investigar.",
+        "options": []
+      }
+    ]
+  }

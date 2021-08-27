@@ -1,0 +1,23 @@
+{
+    "init": "MainCharacter",
+    "nodes": [
+      {
+        "character": "MainCharacter",
+        "nextNode": 1,
+        "text": "Más alas, parece que pasó por aquí.",
+        "options": []
+      },
+      {
+        "character": "MainCharacter",
+        "nextNode": 2,
+        "text": "¿Estará al final de estas ruinas?",
+        "options": []
+      },
+      {
+        "character": "MainCharacter",
+        "nextNode": -2,
+        "text": "Debería ir a ver.",
+        "options": []
+      }
+    ]
+  }
