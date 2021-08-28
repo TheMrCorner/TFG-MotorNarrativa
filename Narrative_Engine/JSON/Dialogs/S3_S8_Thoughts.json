@@ -1,5 +1,5 @@
 {
-    "init": "MainCharacter",
+    "init": "Kanuc",
     "nodes": [
         {
             "character": "MainCharacter",
