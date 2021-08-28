@@ -179,7 +179,7 @@
     },
     {
       "character": "Mayka the Elder",
-      "nextNode": -2,
+      "nextNode": 23,
       "text": "Gira a la derecha cuando se crucen los caminos y llegarás a la capital. Buena suerte.",
       "options": []
     },
@@ -191,7 +191,7 @@
     },
     {
       "character": "Mayka the Elder",
-      "nextNode": -2,
+      "nextNode": 23,
       "text": "Sigue el camino hasta la montaña y cuando tengas que elegir qué camino seguir, gira a la derecha. Llegarás a la capital en seguida, mucha suerte.",
       "options": []
     },
@@ -205,6 +205,12 @@
           "text": "Un cáliz de cristal."
         }
       ]
+    },
+    {
+        "character": "MainCharacter",
+        "nextNode": -2,
+        "text": "***Has completado la historia del Alcalde y su cáliz***",
+        "options": []
     }
   ]
 }

@@ -43,7 +43,7 @@
         },
         {
             "character": "Kanda",
-            "nextNode": -2,
+            "nextNode": 18,
             "text": "Muchas gracias, amigo. Le diré a mi mamá que me ayudaste mucho.",
             "options": []
         },
@@ -147,6 +147,12 @@
             "character": "Kanda",
             "nextNode": 3,
             "text": "Jo, pues entonces iré a buscar a mi madre.",
+            "options": []
+        },
+        {
+            "character": "Kanda",
+            "nextNode": -2,
+            "text": "***Has completado la historia de Kanda y su padre***",
             "options": []
         }
     ]

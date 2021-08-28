@@ -33,8 +33,14 @@
         },
         {
             "character": "MainCharacter",
-            "nextNode": -2,
+            "nextNode": 6,
             "text": "Debería llevarlo a la universidad, puede contener magia infinita o una muy poderosa.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": -2,
+            "text": "***Has completado la historia de Aksana***",
             "options": []
         }
     ]

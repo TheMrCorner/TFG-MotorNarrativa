@@ -90,14 +90,20 @@
         },
         {
             "character": "Hang",
-            "nextNode": -2,
+            "nextNode": 15,
             "text": "No te entretenemos más entonces, que vaya bien su aventura.",
             "options": []
         },
         {
             "character": "Hang",
-            "nextNode": -2,
+            "nextNode": 15,
             "text": "Eso mismo digo yo, si necesitas cualquier cosa aquí estaremos.",
+            "options": []
+        },
+        {
+            "character": "MainCharacter",
+            "nextNode": -2,
+            "text": "***Has completado la historia de Julie***",
             "options": []
         }
     ]
