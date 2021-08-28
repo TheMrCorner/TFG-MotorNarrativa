@@ -5,7 +5,6 @@
         [
             "Ruta_1",
             "Ayuntamiento_Fyrst",
-            "Taberna_Fyrst",
             "Casa_1_Fyrst"
         ],
         "m_genericDialogs":
@@ -18,15 +17,6 @@
     },
     {
         "m_name": "Casa_1_Fyrst",
-        "m_adjacentPlacesNames":
-        [
-            "Fyrst"
-        ],
-        "m_genericDialogs":
-        []
-    },
-    {
-        "m_name": "Taberna_Fyrst",
         "m_adjacentPlacesNames":
         [
             "Fyrst"
@@ -118,7 +108,7 @@
         "m_adjacentPlacesNames":
         [
             "Ruta_1",
-            "Mazmorra_2"
+            "Mazmorra_3"
         ],
         "m_genericDialogs":
         []

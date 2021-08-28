@@ -193,6 +193,18 @@ namespace Narrative_Engine
                     }
                 }
 
+
+                Console.WriteLine("-------------------------------------------------------------");
+                Console.WriteLine("----------------------Story: " + chapterList[0] + "---------------------------");
+                Console.WriteLine("-------------------------------------------------------------");
+                foreach (var place in placesInvolved)
+                {
+                    Console.WriteLine(place);
+                }
+                Console.WriteLine("-------------------------------------------------------------");
+                Console.WriteLine("-------------------------------------------------------------");
+                Console.WriteLine("-------------------------------------------------------------");
+
                 var storyCharactersJson = storyJson["m_characters"].ArrayValue;
                 var storyCharactersList = new List<string>();
                 uint storyCharacterImportance = 0;
