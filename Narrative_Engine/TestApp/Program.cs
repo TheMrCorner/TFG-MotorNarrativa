@@ -7,7 +7,7 @@ namespace TestApp
     {
         static void Main(string[] args)
         {
-            NarrativeEngine.init("JSON");
+            NarrativeEngine.Init("JSON");
             return;
         }
     }

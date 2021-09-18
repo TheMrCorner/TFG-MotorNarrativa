@@ -14,8 +14,6 @@ namespace Narrative_Engine
 {
     class FileManager
     {
-        static FileManager s_instance;
-        string m_generalPath;
         string m_storyFolder;
         string m_dialogFolder;
         string m_charactersPath;
@@ -24,38 +22,27 @@ namespace Narrative_Engine
         string m_chaptersPath;
         string m_scenesPath;
 
-        List<string> m_items;
+        List<string> items;
 
 
         public FileManager(string generalPath, string storyFolder, string chapterPath, string scenePath, string dialogFolder, string charactersPath, string itemsPath, string placesPath)
         {
             // TEST
-            m_generalPath = "../../../" + generalPath + "/";
+            string generalPath1 = "../../../" + generalPath + "/";
             // m_generalPath = generalPath + "/";
-            m_storyFolder = m_generalPath + storyFolder;
-            m_dialogFolder = m_generalPath + dialogFolder;
-            m_charactersPath = m_generalPath + charactersPath;
-            m_itemsPath = m_generalPath + itemsPath;
-            m_placesPath = m_generalPath + placesPath;
-            m_chaptersPath = m_generalPath + chapterPath;
-            m_scenesPath = m_generalPath + scenePath;
+            m_storyFolder = generalPath1 + storyFolder;
+            m_dialogFolder = generalPath1 + dialogFolder;
+            m_charactersPath = generalPath1 + charactersPath;
+            m_itemsPath = generalPath1 + itemsPath;
+            m_placesPath = generalPath1 + placesPath;
+            m_chaptersPath = generalPath1 + chapterPath;
+            m_scenesPath = generalPath1 + scenePath;
         }
 
-        static void initConfiguration(string configurationPath)
+        public void ReadFiles()
         {
-            var jsonstring = File.ReadAllText(configurationPath);
-            //s_instance = JsonSerializer.Deserialize<FileManager>(jsonstring);
-        }
-
-        public static FileManager getInstance()
-        {
-            return s_instance;
-        }
-
-        public void readFiles()
-        {
-            var jsonstring = File.ReadAllText(m_charactersPath);
-            var charactersJson = JSONDecoder.Decode(jsonstring).ArrayValue;
+            var jsonString = File.ReadAllText(m_charactersPath);
+            var charactersJson = JSONDecoder.Decode(jsonString).ArrayValue;
             var charactersList = new Dictionary<string, Character>();
             uint totalImportance = 0;
             foreach (var character in charactersJson)
@@ -63,20 +50,20 @@ namespace Narrative_Engine
                 charactersList.Add((string)character["m_name"], new Character((string)character["m_name"], (uint)character["m_relevance"]));
                 totalImportance += (uint)character["m_relevance"];
             }
-            CharacterController.characters = charactersList;
-            CharacterController.totalImportance = totalImportance;
+            CharacterManager.characters = charactersList;
+            CharacterManager.totalImportance = totalImportance;
 
-            jsonstring = File.ReadAllText(m_itemsPath);
-            var items = JSONDecoder.Decode(jsonstring).ArrayValue;
-            m_items = new List<string>();
-            foreach (var item in items)
-                m_items.Add((string)item);
+            jsonString = File.ReadAllText(m_itemsPath);
+            var itemList = JSONDecoder.Decode(jsonString).ArrayValue;
+            items = new List<string>();
+            foreach (var item in itemList)
+                items.Add((string)item);
 
-            jsonstring = File.ReadAllText(m_placesPath);
-            var placesJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
+            jsonString = File.ReadAllText(m_placesPath);
+            var placesJsonList = JSONDecoder.Decode(jsonString).ArrayValue;
 
             var placesList = new List<Place>();
-            List<Edge<string>> edges = new List<Edge<string>>();
+            var edges = new List<Edge<string>>();
             foreach (var placeJson in placesJsonList)
             {
                 var adjacentJson = placeJson["m_adjacentPlacesNames"].ArrayValue;
@@ -87,55 +74,31 @@ namespace Narrative_Engine
                     edges.Add(new Edge<string>((string)placeJson["m_name"], (string)adjacent));
                 }
 
-                List<string> genericDialogs = new List<string>();
+                var genericDialogs = new List<string>();
                 foreach(var genericDialog in placeJson["m_genericDialogs"].ArrayValue)
                     genericDialogs.Add((string)genericDialog);
 
                 placesList.Add(new Place((string)placeJson["m_name"], adjacentPlaces, genericDialogs));
             }
-            PlaceController.graph = edges.ToAdjacencyGraph<string, Edge<string>>();
+            PlaceManager.graph = edges.ToAdjacencyGraph<string, Edge<string>>();
             /* Dijktra con pesos 1 equivale a BFS
              * Habría que hacer cada recorrido de cada par de escenas
              * Se podrían dar muchas repeticiones de casos, por lo que
              * conviene usar programación dinámica: FloydWarshall
-             * TryFunc<string, IEnumerable<Edge<string>>> tryGetPath = PlaceController.graph.ShortestPathsDijkstra((x) => 1, "Fyrst");
-            string target = "Dara";
-            if(tryGetPath(target, out IEnumerable<Edge<string>> path))
-            {
-                foreach(var edge in path)
-                {
-                    
-                    Console.WriteLine(edge);
-                }
             }*/
 
             // Encuentra todos los caminos de coste menor entre cada par de vértices
-            PlaceController.pathsFloyd = new FloydWarshallAllShortestPathAlgorithm<string, Edge<string>>(PlaceController.graph, (x) => 1);
-            PlaceController.pathsFloyd.Compute();
-            /* Pintar los caminos
-             * foreach (string source in PlaceController.graph.Vertices)
-            {
-                foreach (string target in PlaceController.graph.Vertices)
-                {
-                    Console.WriteLine("from " + source + " to " + target);
-                    Console.WriteLine("");
-                    if (paths.TryGetPath(source, target, out IEnumerable<Edge<string>> path))
-                    {
-                        foreach (var edge in path)
-                        {
-                            Console.WriteLine(edge);
-                        }
-                    }
-                }
-            }*/
-            PlaceController.m_places = new Dictionary<string, Place>();
+            PlaceManager.pathsFloyd = new FloydWarshallAllShortestPathAlgorithm<string, Edge<string>>(PlaceManager.graph, (x) => 1);
+            PlaceManager.pathsFloyd.Compute();
+            
+            PlaceManager.places = new Dictionary<string, Place>();
             foreach (var place in placesList)
-                PlaceController.m_places.Add(place.m_name, place);
+                PlaceManager.places.Add(place.name, place);
 
-            PlaceController.completePlaces();
+            PlaceManager.CompletePlaces();
 
-            jsonstring = File.ReadAllText(m_chaptersPath);
-            var questJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
+            jsonString = File.ReadAllText(m_chaptersPath);
+            var questJsonList = JSONDecoder.Decode(jsonString).ArrayValue;
 
             foreach (var questJson in questJsonList)
             {
@@ -147,11 +110,11 @@ namespace Narrative_Engine
 
                 var questId = (string)questJson["m_id"];
 
-                StoryController.m_chapters.Add(questId, new Quest(questId, sceneList, (string)questJson["m_next"]));
+                NarrativeEngine.GetQuests().Add(questId, new Quest(questId, sceneList, (string)questJson["m_next"]));
             }
 
-            jsonstring = File.ReadAllText(m_scenesPath);
-            var sceneJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
+            jsonString = File.ReadAllText(m_scenesPath);
+            var sceneJsonList = JSONDecoder.Decode(jsonString).ArrayValue;
 
             foreach(var sceneJson in sceneJsonList)
             {
@@ -163,11 +126,13 @@ namespace Narrative_Engine
 
                 var sceneId = (string)sceneJson["m_id"];
 
-                StoryController.m_storyScenes.Add(sceneId, new StoryScene(sceneId, (string)sceneJson["m_place"], (string)sceneJson["m_next"], (string) sceneJson["m_itemToGive"], (string)sceneJson["m_itemToTake"], dialogueList));
+                NarrativeEngine.GetStoryScenes().Add(sceneId, new StoryScene(sceneId, 
+                    (string)sceneJson["m_place"], (string)sceneJson["m_next"], (string) 
+                    sceneJson["m_itemToGive"], (string)sceneJson["m_itemToTake"], dialogueList));
             }
 
-            jsonstring = File.ReadAllText(m_storyFolder);
-            var storiesJsonList = JSONDecoder.Decode(jsonstring).ArrayValue;
+            jsonString = File.ReadAllText(m_storyFolder);
+            var storiesJsonList = JSONDecoder.Decode(jsonString).ArrayValue;
 
             foreach (var storyJson in storiesJsonList)
             {
@@ -181,15 +146,15 @@ namespace Narrative_Engine
                 string source = null;
                 foreach (var chapter in chaptersJson) { 
                     chapterList.Add((string)chapter);
-                    totalScenes += StoryController.m_chapters[(string)chapter].m_scenes.Count;
-                    foreach (var scene in StoryController.m_chapters[(string)chapter].m_scenes)
+                    totalScenes += NarrativeEngine.GetQuests()[(string)chapter].sceneNames.Count;
+                    foreach (var scene in NarrativeEngine.GetQuests()[(string)chapter].sceneNames)
                     {
                         if (source != null)
                         {
-                            var places = PlaceController.PathBetweenPlaces(source, StoryController.m_storyScenes[scene].m_place);
+                            var places = PlaceManager.PathBetweenPlaces(source, NarrativeEngine.GetStoryScenes()[scene].place);
                             placesInvolved.UnionWith(places);
                         }
-                        source = StoryController.m_storyScenes[scene].m_place;
+                        source = NarrativeEngine.GetStoryScenes()[scene].place;
                     }
                 }
 
@@ -211,20 +176,17 @@ namespace Narrative_Engine
                 foreach (var c in storyCharactersJson)
                 {
                     storyCharactersList.Add((string)c);
-                    storyCharacterImportance += CharacterController.characters[(string)c].relevance;
+                    storyCharacterImportance += CharacterManager.characters[(string)c].relevance;
                 }
 
-                // StoryController.m_stories.Add(new Story((StoryType)(byte)storyJson["m_storyType"], chapterList));
-                StoryController.m_stories.Add(new Story(chapterList, storyCharactersList, placesInvolved, totalScenes, storyCharacterImportance));
+                StoryManager.stories.Add(new Story(chapterList, storyCharactersList, placesInvolved, totalScenes, storyCharacterImportance));
             }
-            for(int i = 0; i < StoryController.m_stories.Count; i++)
+            for(int i = 0; i < StoryManager.stories.Count; i++)
             {
-                Console.WriteLine(StoryController.m_stories.ElementAt(i).m_chapters[0] + " " + StoryController.m_stories.ElementAt(i).m_importance.ToString());
+                Console.WriteLine(StoryManager.stories.ElementAt(i).chapters[0] + " " + StoryManager.stories.ElementAt(i).importance.ToString());
             }
-            //Console.WriteLine("Most Important story: " + StoryController.m_stories.First().m_chapters[0] + " " + StoryController.m_stories.First().m_importance.ToString());
-            //Console.WriteLine("Least Important story: " + StoryController.m_stories.Last().m_chapters[0] + " " + StoryController.m_stories.Last().m_importance.ToString());
 
-            PlaceController.CompleteQuestsInPlace();
+            PlaceManager.CompleteQuestsInPlace();
         }
 
         /// <summary>
@@ -259,23 +221,6 @@ namespace Narrative_Engine
 
 
             return new Dialog((string)dialogJson["init"], nodes);
-            /*try
-            {
-            } // try
-            catch(FileLoadException e1)
-            {
-                // If there is any problem loading the file, throw exception
-                Console.Error.WriteLine("File not loaded correctly: " + filePath);
-
-                throw new FileLoadException("File not loaded correctly: " + filePath, e1);
-            } // catch
-            catch(FileNotFoundException e2)
-            {
-                // If the file does not exist, throw exception
-                Console.Error.WriteLine("File not found: " + filePath);
-
-                throw new FileNotFoundException("File not found: " + filePath, e2);
-            } // catch*/
         } // readDialogFile
         
         /// <summary>
@@ -285,12 +230,12 @@ namespace Narrative_Engine
         /// 
         /// </summary>
         /// <returns> (string[]) Files' paths list. </returns>
-        public string[] locateDialogFiles()
+        public string[] LocateDialogFiles()
         {
             return Directory.GetFiles(m_dialogFolder, "*.json", SearchOption.AllDirectories);
         } // locateDialogFiles
 
-        public void makeExampleFiles()
+        public void MakeExampleFiles()
         {
             //var options = new JsonSerializerOptions
             //{
@@ -302,12 +247,12 @@ namespace Narrative_Engine
             List<string> example_quest = new List<string>();
             example_quest.Add("C1");
             example_quest.Add("C2");
-            example_stories.Add(new Story(StoryType.SECONDARY, example_quest));
+            example_stories.Add(new Story(StoryType.Secondary, example_quest));
 
             var example_stories_dict = new List<Dictionary<string, object>>();
 
             foreach (var story in example_stories)
-                example_stories_dict.Add(story.toDictionary());
+                example_stories_dict.Add(story.ToDictionary());
 
             // TODO: Crear constructor con todos los valores de historia que irán en el JSON
 
@@ -345,11 +290,6 @@ namespace Narrative_Engine
 
             jsonString = JSONEncoder.Encode(example_places);
             File.WriteAllText("Example_places.json", jsonString);
-        }
-
-        public List<string> getItems()
-        {
-            return m_items;
         }
     }
 }

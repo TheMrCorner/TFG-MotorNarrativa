@@ -13,7 +13,7 @@ namespace Narrative_Engine
         public int nodePtr { get; }
         public string text { get; }
 
-        public Option(int nodePtr, string text)
+        internal Option(int nodePtr, string text)
         {
             this.nodePtr = nodePtr;
             this.text = text;
@@ -34,7 +34,7 @@ namespace Narrative_Engine
         public string text { get; }
         public List<Option> options { get; }
 
-        public Node(string character, int nextNode, string text, List<Option> options)
+        internal Node(string character, int nextNode, string text, List<Option> options)
         {
             this.character = character;
             this.nextNode = nextNode;
@@ -54,7 +54,7 @@ namespace Narrative_Engine
         public string init { get; } // Character that initializes the dialog
         public List<Node> nodes { get; }
 
-        public Dialog(string init, List<Node> nodes)
+        internal Dialog(string init, List<Node> nodes)
         {
             this.init = init;
             this.nodes = nodes;

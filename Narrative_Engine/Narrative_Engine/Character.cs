@@ -8,44 +8,14 @@ namespace Narrative_Engine
 {
     internal class Character
     {
-        public enum CharacterType
-        {
-            PRIMARYNPC,
-            SECONDARYNPC,
-            PLAYER
-        }
 
-        private string characterName;
+        internal string characterName { get; }
         internal uint relevance { get; }
-        private Place place;
-        private CharacterType type;
-        private Dictionary<Item.ItemType, List<Item>> inventory;
-        // List<Dialog> dialogs; TODO
-        // Other stats
-
-        public Character(string characterName, Place place, CharacterType type)
-        {
-            this.characterName = characterName;
-            this.place = place;
-            this.type = type;
-            inventory = new Dictionary<Item.ItemType, List<Item>>();
-            foreach (Item.ItemType itemType in Enum.GetValues(typeof(Item.ItemType)))
-            {
-                inventory.Add(itemType, new List<Item>());
-            }
-        }
 
         public Character(string characterName, uint relevance)
         {
             this.characterName = characterName;
             this.relevance = relevance;
         }
-
-        public string GetCharacterName() => characterName;
-        public Place GetPlace() => place;
-        public CharacterType GetCharacterType() => type;
-        public void SetPlace(Place place) => this.place = place;
-        public void AddItemToInventory(Item item) => inventory[item.Type].Add(item);
-        public void RemoveItemFromInventory(Item item) => inventory[item.Type].Remove(item);
     }
 }

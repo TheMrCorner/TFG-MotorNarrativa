@@ -9,67 +9,67 @@ namespace Narrative_Engine
 {
     public enum StoryType
     {
-        MAIN = 0,
-        SECONDARY = 1
+        Main = 0,
+        Secondary = 1
     }
 
    
 
     public class Story : IComparable
     {
-        static float s_characterImportanceWeight = 34f;
-        static float s_storyLenghtWeight = 33f;
-        static float s_placesVisitedWeight = 33f;
+        private static float characterImportanceWeight = 34f;
+        private static float storyLenghtWeight = 33f;
+        private static float placesVisitedWeight = 33f;
 
 
-        internal StoryType m_storyType { get; set; }
-        private List<Quest> m_quests = new List<Quest>();
+        internal StoryType storyType { get; set; }
+        private List<Quest> quests = new List<Quest>();
 
-        internal List<string> m_chapters { get; }
-        internal List<string> m_characters { get; }
+        internal List<string> chapters { get; }
+        private List<string> characters;
 
         internal bool consumed { get; set; } = false;
 
-        internal uint m_charactersImportance = 0;
-        internal int m_totalScenes = 0;
-        internal HashSet<string> m_placesInvolved = new HashSet<string>();
+        private uint charactersImportance = 0;
+        private int totalScenes = 0;
+        private HashSet<string> placesInvolved = new HashSet<string>();
 
-        internal float m_importance;
+        internal float importance;
 
-        internal Story(StoryType m_storyType, List<string> m_chapters)
+        internal Story(StoryType storyType, List<string> chapters)
         {
-            this.m_storyType = m_storyType;
-            this.m_chapters = m_chapters;
+            this.storyType = storyType;
+            this.chapters = chapters;
         }
 
-        internal Story(List<string> m_chapters, List<string> m_characters, HashSet<string> m_placesInvolved, int m_totalScenes, uint m_charactersImportance)
+        internal Story(List<string> chapters, List<string> characters, HashSet<string> placesInvolved, int totalScenes, uint charactersImportance)
         {
-            this.m_chapters = m_chapters;
-            this.m_characters = m_characters;
-            this.m_placesInvolved = m_placesInvolved;
-            this.m_totalScenes = m_totalScenes;
-            this.m_charactersImportance = m_charactersImportance;
+            this.chapters = chapters;
+            this.characters = characters;
+            this.placesInvolved = placesInvolved;
+            this.totalScenes = totalScenes;
+            this.charactersImportance = charactersImportance;
 
-            calculateImportance();
+            CalculateImportance();
         }
 
-        internal void addQuest(Quest quest)
+        internal void AddQuest(Quest quest)
         {
-            if (!m_quests.Contains(quest))
-                m_quests.Add(quest);
+            if (!quests.Contains(quest))
+                quests.Add(quest);
         }
 
-        internal Dictionary<string, object> toDictionary()
+        internal Dictionary<string, object> ToDictionary()
         {
             var ret = new Dictionary<string, object>();
 
-            ret.Add("m_storyType", m_storyType);
-            ret.Add("m_chapters", m_chapters);
+            ret.Add("m_storyType", storyType);
+            ret.Add("m_chapters", chapters);
 
             return ret;
         }
 
-        private void calculateImportance()
+        private void CalculateImportance()
         {
             //TODO: get Character Importance
 
@@ -77,11 +77,11 @@ namespace Narrative_Engine
                 + m_totalScenes * s_storyLenghtWeight + m_placesInvolved.Count * s_placesVisitedWeight) 
                 / (s_characterImportanceWeight + s_storyLenghtWeight + s_placesVisitedWeight);*/
 
-            float characterImportance = m_charactersImportance * 100f / CharacterController.totalImportance;
-            float sceneCount = m_totalScenes * 100f / StoryController.m_storyScenes.Count;
-            float placesCount = m_placesInvolved.Count * 100f / PlaceController.m_places.Count;
+            float characterImportance = charactersImportance * 100f / CharacterManager.totalImportance;
+            float sceneCount = totalScenes * 100f / StoryManager.storyScenes.Count;
+            float placesCount = placesInvolved.Count * 100f / PlaceManager.places.Count;
 
-            m_importance = (characterImportance + sceneCount + placesCount) / 3;
+            importance = (characterImportance + sceneCount + placesCount) / 3;
         }
 
 
@@ -91,7 +91,7 @@ namespace Narrative_Engine
 
             Story otherStory = obj as Story;
             if (otherStory != null)
-                return this.m_importance.CompareTo(otherStory.m_importance);
+                return this.importance.CompareTo(otherStory.importance);
             else
                 throw new ArgumentException("Object is not a Story");
         }
